@@ -159,9 +159,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_bind_param($stmt, "sssss", $param_firstname, $param_lastname, $param_contactnum, $param_email, $param_password);
 
             // Set parameters
-			$param_firstname = $firstname;
-			$param_lastname = $lastname;
-			$param_contactnum = $contactnum;
+		       	$param_firstname = $firstname;
+		      	$param_lastname = $lastname;
+			      $param_contactnum = $contactnum;
             $param_email = $email;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
 
@@ -275,7 +275,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           </div>
           <div class="form-group">
             <label for="contactNumber">Contact Number</label>
-            <input type="number" min="11" max="11" name="contactnum" class="form-control <?php echo (!empty($contactnum_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contactnum; ?>" id="contactNumber" placeholder="Enter your contact number">
+            <input type="tel" name="contactnum" class="form-control <?php echo (!empty($contactnum_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contactnum; ?>" id="contactNumber" placeholder="Enter your contact number">
             <span class="invalid-feedback"><?php echo $contactnum_err; ?></span>
           </div>
           <div class="form-group">
