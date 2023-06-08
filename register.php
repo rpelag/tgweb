@@ -1,32 +1,32 @@
 <?php
 // Include config file
 require_once "config.php";
- 
+
 // Define variables and initialize with empty values
 $firstname = $lastname = $contactnum = $email = $password = $confirm_password = "";
 $firstname_err = $lastname_err = $contactnum_err = $email_err = $password_err = $confirm_password_err = "";
- 
+
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-	
+
     // Validate first name
     if(empty(trim($_POST["firstname"]))){
         $firstname_err = "Please enter a First name.";
     } else{
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE firstname = ?";
-        
+
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_firstname);
-            
+
             // Set parameters
             $param_firstname = trim($_POST["firstname"]);
-            
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 /* store result */
-                mysqli_stmt_store_result($stmt); 
+                mysqli_stmt_store_result($stmt);
                 $firstname = trim($_POST["firstname"]);
                // }
             } else{
@@ -44,18 +44,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE lastname = ?";
-        
+
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_lastname);
-            
+
             // Set parameters
             $param_lastname = trim($_POST["lastname"]);
-            
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 /* store result */
-                mysqli_stmt_store_result($stmt); 
+                mysqli_stmt_store_result($stmt);
                 $lastname = trim($_POST["lastname"]);
                // }
             } else{
@@ -73,18 +73,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE contactnum = ?";
-        
+
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_contactnum);
-            
+
             // Set parameters
             $param_lastname = trim($_POST["contactnum"]);
-            
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 /* store result */
-                mysqli_stmt_store_result($stmt); 
+                mysqli_stmt_store_result($stmt);
                 $lastname = trim($_POST["contactnum"]);
                // }
             } else{
@@ -95,26 +95,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_close($stmt);
         }
     }
-    
+
     // Validate email
     if(empty(trim($_POST["email"]))){
         $email_err = "Please enter an email.";
     } else{
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE email = ?";
-        
+
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_email);
-            
+
             // Set parameters
             $param_email = trim($_POST["email"]);
-            
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 /* store result */
                 mysqli_stmt_store_result($stmt);
-                
+
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     $email_err = "This email already exists.";
                 } else{
@@ -128,43 +128,43 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_close($stmt);
         }
     }
-    
+
     // Validate password
     if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter a password.";     
+        $password_err = "Please enter a password.";
     } elseif(strlen(trim($_POST["password"])) < 6){
         $password_err = "Password must have atleast 6 characters.";
     } else{
         $password = trim($_POST["password"]);
     }
-    
+
     // Validate confirm password
     if(empty(trim($_POST["confirm_password"]))){
-        $confirm_password_err = "Please confirm password.";     
+        $confirm_password_err = "Please confirm password.";
     } else{
         $confirm_password = trim($_POST["confirm_password"]);
         if(empty($password_err) && ($password != $confirm_password)){
             $confirm_password_err = "Password did not match.";
         }
     }
-    
+
     // Check input errors before inserting in database
     if(empty($firstname_err) && empty($lastname_err) && empty(contactnum) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
-        
+
         // Prepare an insert statement
         $sql = "INSERT INTO users (firstname, lastname, contactnum, email, password) VALUES (?, ?, ?, ?, ?)";
-         
+
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "sssss", $param_firstname, $param_lastname, $param_contactnum, $param_email, $param_password);
-            
+
             // Set parameters
-			$param_firstname = $firstname;
-			$param_lastname = $lastname;
-			$param_contactnum = $contactnum;
+		       	$param_firstname = $firstname;
+		      	$param_lastname = $lastname;
+			      $param_contactnum = $contactnum;
             $param_email = $email;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-            
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
@@ -235,7 +235,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <ul>
           <li><a class="nav-link scrollto active" href="#home">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-        
+
           <!-- <li><a class="nav-link scrollto" href="#faq">FAQ</a></li> -->
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
@@ -248,70 +248,70 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <!-- ======= home Section ======= -->
 
-  
+
   <section id="home" class="d-flex align-items-center">
-    
+
       <div class="container1" data-aos="zoom-out" data-aos-delay="100">
         <h1>Registration Form</h1>
         <div class="section-title2" data-aos="zoom-out">
           <div class="orange-line"></div>
-        </div> 
+        </div>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="firstName">First Name</label>
-                <input type="text" class="form-control <?php echo (!empty($firstname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $firstname; ?>" id="firstName" placeholder="Enter your first name">
+                <input type="text" name="firstname" class="form-control <?php echo (!empty($firstname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $firstname; ?>" id="firstName" placeholder="Enter your first name">
                 <span class="invalid-feedback"><?php echo $firstname_err; ?></span>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="lastName">Last Name</label>
-                <input type="text" class="form-control <?php echo (!empty($lastname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $lastname; ?>" id="lastName" placeholder="Enter your last name">
+                <input type="text" name="lastname" class="form-control <?php echo (!empty($lastname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $lastname; ?>" id="lastName" placeholder="Enter your last name">
                 <span class="invalid-feedback"><?php echo $lastname_err; ?></span>
               </div>
             </div>
           </div>
           <div class="form-group">
             <label for="contactNumber">Contact Number</label>
-            <input type="text" class="form-control <?php echo (!empty($contactnum_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contactnum; ?>" id="contactNumber" placeholder="Enter your contact number">
+            <input type="tel" name="contactnum" class="form-control <?php echo (!empty($contactnum_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contactnum; ?>" id="contactNumber" placeholder="Enter your contact number">
             <span class="invalid-feedback"><?php echo $contactnum_err; ?></span>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" id="email" placeholder="Enter your email">
+            <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" id="email" placeholder="Enter your email">
             <span class="invalid-feedback"><?php echo $email_err; ?></span>
           </div>
         <div class="row">
         <div class="col-md-6">
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" id="password" placeholder="Enter your password">
-            <span class="invalid-feedback"><?php echo $password_err; ?></span> 
+            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" id="password" placeholder="Enter your password">
+            <span class="invalid-feedback"><?php echo $password_err; ?></span>
           </div>
           </div>
         <div class="col-md-6">
           <div class="form-group">
             <label for="confirmPassword">Confirm Password</label>
-            <input type="password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" id="confirmPassword" placeholder="Confirm your password">
+            <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" id="confirmPassword" placeholder="Confirm your password">
             <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
           </div>
           </div>
           </div>
           <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
         </form>
-      
+
     </div>
-    
+
   </section>
-  
+
 
 
 
     <!-- ======= Clients Section ======= -->
-  
-    
+
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -347,7 +347,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#staffleasing">Staff Leasing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#engineeringservices">Engineering Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#itconsulting">I.T. Consulting</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>           
+              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>
             </ul>
           </div> -->
 
@@ -386,7 +386,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
-      
+
     </div>
   </footer><!-- End Footer -->
 
@@ -403,7 +403,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
+
 
 </body>
 
