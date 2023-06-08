@@ -131,7 +131,7 @@ h6 {
   display: inline-block;
   -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: #ff6600;
-  margin: 0px 0px 0px 1000px;
+  margin: 0px 0px 0px 0px;
 }
 
 .get-started-btn:hover {
