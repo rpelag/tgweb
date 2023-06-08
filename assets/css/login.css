@@ -2295,18 +2295,6 @@ margin: 0;
 
 
    
-
-
-
-
-
-
-
-
-
-
-
-
 #home {
   background-color: #f8f9fa;
   display: flex;
@@ -2363,6 +2351,19 @@ h1 {
 }
 
 
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link a {
+  color: #999;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  color: #ff6600;
+}
 
 
 

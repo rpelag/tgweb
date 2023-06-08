@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
  if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
+    header("location: jobseekeruser.html");
     exit;
 } 
 
@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["email"] = $email;                            
                             
                             // Redirect user to welcome page
-                            header("location: welcome.php");
+                            header("location: jobseekeruser.html");
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid email or password.";
@@ -185,6 +185,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <a href="#">Forgot password?</a>
         </div>
       </form>
+      <div class="register-link">
+      <p>Don't have an account? <a href="#">Register here</a>.</p>
+    </div>
     </div>
     
   </section>
