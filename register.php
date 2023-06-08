@@ -275,7 +275,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           </div>
           <div class="form-group">
             <label for="contactNumber">Contact Number</label>
-            <input type="text" name="contactnum" class="form-control <?php echo (!empty($contactnum_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contactnum; ?>" id="contactNumber" placeholder="Enter your contact number">
+            <input type="number" min="11" max="11" name="contactnum" class="form-control <?php echo (!empty($contactnum_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contactnum; ?>" id="contactNumber" placeholder="Enter your contact number">
             <span class="invalid-feedback"><?php echo $contactnum_err; ?></span>
           </div>
           <div class="form-group">
