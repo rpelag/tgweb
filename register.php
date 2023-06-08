@@ -149,7 +149,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Check input errors before inserting in database
-    if(empty($firstname_err) && empty($lastname_err) && empty($contactnum) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
+    if(empty($firstname_err) && empty($lastname_err) && empty($contactnum_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
 
         // Prepare an insert statement
         $sql = "INSERT INTO users (firstname, lastname, contactnum, email, password) VALUES (?, ?, ?, ?, ?)";
