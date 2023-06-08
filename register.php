@@ -79,13 +79,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_bind_param($stmt, "s", $param_contactnum);
 
             // Set parameters
-            $param_lastname = trim($_POST["contactnum"]);
+            $param_contactnum = trim($_POST["contactnum"]);
 
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 /* store result */
                 mysqli_stmt_store_result($stmt);
-                $lastname = trim($_POST["contactnum"]);
+                $contactnum = trim($_POST["contactnum"]);
                // }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
