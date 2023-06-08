@@ -126,18 +126,22 @@ h6 {
 .get-started-btn {
   margin-left: 30px;
   background: #ff6600;
-  color: #fff;
+  color: #ff6600;
   border-radius: 4px;
   padding: 8px 25px;
   white-space: nowrap;
-  transition: 0.3s; 
+  transition: 0.3s;
   font-size: 14px;
   font-weight: 600;
   display: inline-block;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: #ff6600;
+  background: transparent;
+  border: 3px solid #ff6600;
 }
 
 .get-started-btn:hover {
-  background: #111111;
+  background: #ff6600;
   color: #fff;
 }
 

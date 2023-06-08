@@ -129,9 +129,10 @@ h6 {
   font-size: 14px;
   font-weight: 600;
   display: inline-block;
-  -webkit-text-stroke-width: 0.2px;
-  -webkit-text-stroke-color: #ff6600;
-  margin: 0px 0px 0px 0px;
+  
+  
+ 
+  
 }
 
 .get-started-btn:hover {
@@ -510,9 +511,9 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: #2b2b2b;
+  background: #ff6600;
   min-height: 40px;
-  margin-top: 82px;
+  margin-top: 70px;
   color: #fff;
 }
 
@@ -531,22 +532,23 @@ section {
 }
 
 .breadcrumbs ol a {
-  color: #aaaaaa;
+  color: #ffffff;
 }
 
 .breadcrumbs ol a:hover {
-  color: #fff;
+  color: #cecece;
   transition: 0.3s;
 }
 
 .breadcrumbs ol li+li {
   padding-left: 10px;
+  font-weight: 900;
 }
 
 .breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #ff6600;
+  color: #ffffff;
   content: "/";
 }
 
@@ -2037,7 +2039,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #aaaaaa;
+  color: #ffffff;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -2045,7 +2047,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #ff6600;
 }
 
 #footer .footer-newsletter {
