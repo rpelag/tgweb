@@ -1,6 +1,11 @@
 <?php
 // Initialize the session
 session_start();
+
+if (isset($_SESSION['success_message'])) {
+  echo $_SESSION['success_message'];
+  unset($_SESSION['success_message']); // Clear the session variable
+}
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
  if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
