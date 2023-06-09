@@ -233,18 +233,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-
-          <!-- <li><a class="nav-link scrollto" href="#faq">FAQ</a></li> -->
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto active" href="jobseeker.html#home">Home</a></li>
+          <li><a class="nav-link scrollto" href="jobseeker.html#about">About</a></li>
+          
+          <li class="dropdown active"><a class="nav-link scrollto" href="jobseeker.html#careers">Career<i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="login.php">Office Support</a></li>
+              <li><a href="login.php">Engineering Support</a></li>
+              <li><a href="login.php">I.T. Support</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto " href="jobseeker.html#events">Events</a></li>
+          <li><a class="nav-link scrollto" href="jobseeker.html#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
+      <a href="client.html" class="get-started-btn scrollto">Be a Client</a>
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
   <!-- ======= home Section ======= -->
 
@@ -334,10 +342,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#home">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#about">About</a></li>
-             <!--  <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#servicess">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#careers">Career</a></li> -->
+            <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#home">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#about">About</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#careers">Career</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#events">Events</a></li> 
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#contact">Contact</a></li> 
             </ul>
           </div>
 

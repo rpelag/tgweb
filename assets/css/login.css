@@ -388,7 +388,7 @@ h6 {
 
 #home:before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(133 97 50 / 60%);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -2284,9 +2284,9 @@ margin: 0;
 .section-title2 .orange-line {
   background-color:#ff6600;
   height: 8px;
-  width: 60%;
-  margin-left: 20%;
-  margin-right: 20%;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
   margin-top: -5%;
   position: absolute;
   top: 50%;
@@ -2300,7 +2300,7 @@ margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 110vh;
 }
 
 .container1 {
