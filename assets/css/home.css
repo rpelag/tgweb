@@ -410,6 +410,21 @@ h6 {
   font-weight: 100;
 }
 
+.button:hover {
+  background-color: #ff6600;
+  border-color: white;
+  color: white;
+}
+
+.button span {
+  
+  color: #ff6600;
+}
+
+.button:hover span {
+  color: white;
+}
+
 #home .btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 1000;
@@ -421,10 +436,10 @@ h6 {
   padding: 10px 80px 10px 80px;
   border-radius: 6px;
   transition: 0.5s;
-  
   color: #fff;
   background: transparent;
   border: 3px solid #ff6600;
+
 }
 
 #home .btn-get-started2 {
@@ -745,12 +760,6 @@ section {
   
 }
 
-
-/* .about .content span {
-  font-weight: 700;
-  font-size: 65px;
-  margin-bottom: 30px;
-} */
 
 .about .content h4 {
   font-weight: 700;
