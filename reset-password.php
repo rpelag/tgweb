@@ -17,29 +17,14 @@ from the email, or you have already used the key in which case it is
 deactivated.</p>
 <p><a href="http://172.29.105.55/~teamglobal/forgot-password.php">
 Click here</a> to reset password.</p>';
-	}else{
-  $row = mysqli_fetch_assoc($query);
-  $expDate = $row['expDate'];
-  if ($expDate >= $curDate){
-  ?>
+?>
+
 <?php
 // Initialize the session
 session_start();
 
 include('db.php');
 require_once "config.php";
-
-}else{
-$error .= "<h2>Link Expired</h2>
-<p>The link is expired. You are trying to use the expired link which
-as valid only 24 hours (1 days after request).<br /><br /></p>";
-            }
-      }
-if($error!=""){
-  echo "<div class='error'>".$error."</div><br />";
-  }
-} // isset email key validate end
-
 
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
