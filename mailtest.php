@@ -17,6 +17,7 @@ $mail->Username = "test@teamglobal.site"; // Enter Sender Email
 $mail->Password = "P@ssw0rdP@ssw0rd";
 //If SMTP requires TLS encryption then remove comment from below
 //$mail->SMTPSecure = "tls";
+$mail->SMTPDebug = 3;
 $mail->Port = 587;
 $mail->IsHTML(true);
 $mail->From = $email_from;
