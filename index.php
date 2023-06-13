@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('db.php');
 if(isset($_POST["email"]) && (!empty($_POST["email"]))){
 $email = $_POST["email"];
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
