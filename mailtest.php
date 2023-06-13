@@ -15,6 +15,13 @@ $mail->Host = "112-210-226-158.cprapid.com"; // Enter Your Host/Mail Server
 $mail->SMTPAuth = true;
 $mail->Username = "test@teamglobal.site"; // Enter Sender Email
 $mail->Password = "P@ssw0rdP@ssw0rd";
+$mail->SMTPOptions = array(
+'ssl' => array(
+'verify_peer' => false,
+'verify_peer_name' => false,
+'allow_self_signed' => true
+)
+);
 //If SMTP requires TLS encryption then remove comment from below
 $mail->SMTPSecure = "tls";
 $mail->SMTPDebug = 3;
