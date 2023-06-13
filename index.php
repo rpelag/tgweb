@@ -55,9 +55,15 @@ $mail->Host = "112-210-226-158.cprapid.com"; // Enter your host here
 $mail->SMTPAuth = true;
 $mail->Username = "test@teamglobal.site"; // Enter your email here
 $mail->Password = "P@ssw0rdP@ssw0rd"; //Enter your password here
-$mail->Port = 465;
-$mail->SMTPDebug = 3;
 $mail->SMTPSecure = "ssl";
+$mail->SMTPOptions = array(
+'ssl' => array(
+'verify_peer' => false,
+'verify_peer_name' => false,
+'allow_self_signed' => true
+)
+);
+$mail->Port = 465;
 $mail->IsHTML(true);
 $mail->From = "test@teamglobal.site";
 $mail->FromName = "Test";
