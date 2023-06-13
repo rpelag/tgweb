@@ -1,6 +1,6 @@
 <?php
 include('db.php');
-require_once "config.php";
+
 if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"])
 && ($_GET["action"]=="reset") && !isset($_POST["action"])){
   $key = $_GET["key"];
@@ -23,6 +23,12 @@ Click here</a> to reset password.</p>';
   if ($expDate >= $curDate){
   ?>
 <?php
+// Initialize the session
+session_start();
+
+include('db.php');
+require_once "config.php";
+
 }else{
 $error .= "<h2>Link Expired</h2>
 <p>The link is expired. You are trying to use the expired link which
@@ -73,11 +79,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Set parameters
             $param_password = password_hash($new_password, PASSWORD_DEFAULT);
             $param_id = $_SESSION["id"];
-
+            mysqli_query($con,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Password updated successfully. Destroy the session, and redirect to login page
-                mysqli_query($con,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");
                 session_destroy();
                 header("location: login.php");
                 exit();
