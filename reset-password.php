@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('db.php');
 
 if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"])
@@ -22,10 +21,13 @@ Click here</a> to reset password.</p>';
   $row = mysqli_fetch_assoc($query);
   $expDate = $row['expDate'];
   if ($expDate >= $curDate){
+    ?>
+    <?php
+    session_start();
 
     // Include config file
     require_once "config.php";
-    
+
     // Define variables and initialize with empty values
     $new_password = $confirm_password = "";
     $new_password_err = $confirm_password_err = "";
