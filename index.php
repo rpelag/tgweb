@@ -51,11 +51,11 @@ $fromserver = "test@teamglobal.site";
 require("PHPMailer/PHPMailerAutoload.php");
 $mail = new PHPMailer();
 $mail->IsSMTP();
-$mail->Host = "mail.teamglobal.site"; // Enter your host here
+$mail->Host = "112-210-226-158.cprapid.com"; // Enter your host here
 $mail->SMTPAuth = true;
 $mail->Username = "test@teamglobal.site"; // Enter your email here
 $mail->Password = "P@ssw0rdP@ssw0rd"; //Enter your password here
-$mail->Port = 25;
+$mail->Port = 465;
 $mail->IsHTML(true);
 $mail->From = "test@teamglobal.site";
 $mail->FromName = "Test";
