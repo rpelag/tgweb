@@ -11,7 +11,7 @@ $sender_name = "AllPHPTricks"; // Enter Sender Name
 require("PHPMailer/PHPMailerAutoload.php");
 $mail = new PHPMailer();
 $mail->IsSMTP();
-$mail->Host = "mail.teamglobal.site"; // Enter Your Host/Mail Server
+$mail->Host = "localhost"; // Enter Your Host/Mail Server
 $mail->SMTPAuth = true;
 $mail->Username = "test@teamglobal.site"; // Enter Sender Email
 $mail->Password = "P@ssw0rdP@ssw0rd";
