@@ -12,11 +12,11 @@ require("PHPMailer/PHPMailerAutoload.php");
 $mail = new PHPMailer();
 $mail->IsSMTP();
 $mail->Host = "112-210-226-158.cprapid.com"; // Enter Your Host/Mail Server
-$mail->SMTPAuth = false;
+$mail->SMTPAuth = true;
 $mail->Username = "test@teamglobal.site"; // Enter Sender Email
 $mail->Password = "P@ssw0rdP@ssw0rd";
 //If SMTP requires TLS encryption then remove comment from below
-//$mail->SMTPSecure = "tls";
+$mail->SMTPSecure = "tls";
 $mail->SMTPDebug = 3;
 $mail->Port = 465;
 $mail->IsHTML(true);
