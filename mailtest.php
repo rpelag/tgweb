@@ -11,13 +11,13 @@ $sender_name = "AllPHPTricks"; // Enter Sender Name
 require("PHPMailer/PHPMailerAutoload.php");
 $mail = new PHPMailer();
 $mail->IsSMTP();
-$mail->Host = "localhost"; // Enter Your Host/Mail Server
+$mail->Host = "mail.teamglobal.site"; // Enter Your Host/Mail Server
 $mail->SMTPAuth = true;
 $mail->Username = "test@teamglobal.site"; // Enter Sender Email
 $mail->Password = "P@ssw0rdP@ssw0rd";
 //If SMTP requires TLS encryption then remove comment from below
 //$mail->SMTPSecure = "tls";
-$mail->Port = 25;
+$mail->Port = 587;
 $mail->IsHTML(true);
 $mail->From = $email_from;
 $mail->FromName = $sender_name;
