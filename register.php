@@ -3,8 +3,8 @@
 require_once "config.php";
 
 // Define variables and initialize with empty values
-$firstname = $lastname = $contactnum = $email = $password = $confirm_password = "";
-$firstname_err = $lastname_err = $contactnum_err = $email_err = $password_err = $confirm_password_err = "";
+$firstname = $lastname = $contactnum = $email = $field = $password = $confirm_password = "";
+$firstname_err = $lastname_err = $contactnum_err = $email_err = $field_err = $password_err = $confirm_password_err = "";
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -129,6 +129,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
+    // Validate last name
+    if(empty(trim($_POST["field"]))){
+        $field_err = "Please enter a Field of Interest.";
+    } else{
+        // Prepare a select statement
+        $sql = "SELECT id FROM users WHERE field = ?";
+
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_field);
+
+            // Set parameters
+            $param_field = trim($_POST["field"]);
+
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                $field = trim($_POST["field"]);
+               // }
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+
     // Validate password
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";
@@ -149,20 +178,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Check input errors before inserting in database
-    if(empty($firstname_err) && empty($lastname_err) && empty($contactnum_err) && empty($email_err) && empty($password_err) && empty($confirm_password_err)){
+    if(empty($firstname_err) && empty($lastname_err) && empty($contactnum_err) && empty($email_err) && empty($field_err) && empty($password_err) && empty($confirm_password_err)){
 
         // Prepare an insert statement
-        $sql = "INSERT INTO users (firstname, lastname, contactnum, email, password) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (firstname, lastname, contactnum, email, field, password) VALUES (?, ?, ?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssss", $param_firstname, $param_lastname, $param_contactnum, $param_email, $param_password);
+            mysqli_stmt_bind_param($stmt, "ssssss", $param_firstname, $param_lastname, $param_contactnum, $param_email, $param_field, $param_password);
 
             // Set parameters
 		       	$param_firstname = $firstname;
 		      	$param_lastname = $lastname;
 			      $param_contactnum = $contactnum;
             $param_email = $email;
+            $param_field = $field;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
 
             // Attempt to execute the prepared statement
@@ -235,7 +265,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <ul>
           <li><a class="nav-link scrollto active" href="jobseeker.html#home">Home</a></li>
           <li><a class="nav-link scrollto" href="jobseeker.html#about">About</a></li>
-          
+
           <li class="dropdown active"><a class="nav-link scrollto" href="jobseeker.html#careers">Career<i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="login.php">Office Support</a></li>
@@ -291,6 +321,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" id="email" placeholder="Enter your email">
             <span class="invalid-feedback"><?php echo $email_err; ?></span>
           </div>
+          <div class="form-group">
+            <label for="field">Field of Interest</label>
+            <select class="form-select" name="field" aria-label="Default select example" class="form-control <?php echo (!empty($field_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $field; ?>" id="field">
+              <option selected>Select your Field of Interest</option>
+              <option value="1">IT Support</option>
+              <option value="2">Engineering Support</option>
+              <option value="3">HR Support</option>
+            </select>
+            <span class="invalid-feedback"><?php echo $field_err; ?></span>
+          </div>
         <div class="row">
         <div class="col-md-6">
           <div class="form-group">
@@ -345,8 +385,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#home">Home</a></li>
               <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#about">About</a></li>
               <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#careers">Career</a></li>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#events">Events</a></li> 
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#contact">Contact</a></li> 
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#events">Events</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#contact">Contact</a></li>
             </ul>
           </div>
 
