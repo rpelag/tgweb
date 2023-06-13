@@ -324,10 +324,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           <div class="form-group">
             <label for="field">Field of Interest</label>
             <select class="form-select" name="field" aria-label="Default select example" class="form-control <?php echo (!empty($field_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $field; ?>" id="field">
-              <!-- <option selected>Select your Field of Interest</option> -->
               <option value="IT_Support">IT Support</option>
               <option value="Engineering_Support">Engineering Support</option>
-              <option value="HR_Support">HR Support</option>
+              <option value="Office_Support">Office Support</option>
             </select>
             <span class="invalid-feedback"><?php echo $field_err; ?></span>
           </div>
