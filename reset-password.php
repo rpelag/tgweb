@@ -1,5 +1,6 @@
 <?php
 include('db.php');
+
 if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"])
 && ($_GET["action"]=="reset") && !isset($_POST["action"])){
   $key = $_GET["key"];
@@ -14,7 +15,7 @@ if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"])
 <p>The link is invalid/expired. Either you did not copy the correct link
 from the email, or you have already used the key in which case it is
 deactivated.</p>
-<p><a href="http://172.29.105.55/~teamglobal/index.php">
+<p><a href="http://172.29.105.55/~teamglobal/forgot-password.php">
 Click here</a> to reset password.</p>';
 	}else{
   $row = mysqli_fetch_assoc($query);
@@ -60,7 +61,7 @@ $error.= "<p>Password do not match, both password should be same.<br /><br /></p
   if($error!=""){
 echo "<div class='error'>".$error."</div><br />";
 }else{
-$pass1 = password_hash($pass1);
+$pass1 = password_hash($pass1, PASSWORD_DEFAULT);
 mysqli_query($con,
 "UPDATE `users` SET `password`='".$pass1."' WHERE `email`='".$email."';");
 
