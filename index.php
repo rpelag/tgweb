@@ -51,7 +51,7 @@ $fromserver = "test@teamglobal.site";
 require("PHPMailer/PHPMailerAutoload.php");
 $mail = new PHPMailer();
 $mail->IsSMTP();
-$mail->Host = "localhost"; // Enter your host here
+$mail->Host = "mail.teamglobal.site"; // Enter your host here
 $mail->SMTPAuth = true;
 $mail->Username = "test@teamglobal.site"; // Enter your email here
 $mail->Password = "P@ssw0rdP@ssw0rd"; //Enter your password here
