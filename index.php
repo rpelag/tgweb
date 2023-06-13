@@ -57,6 +57,7 @@ $mail->Username = "test@teamglobal.site"; // Enter your email here
 $mail->Password = "P@ssw0rdP@ssw0rd"; //Enter your password here
 $mail->Port = 465;
 $mail->SMTPDebug = 3;
+$mail->SMTPSecure = "ssl";
 $mail->IsHTML(true);
 $mail->From = "test@teamglobal.site";
 $mail->FromName = "Test";
