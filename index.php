@@ -22,7 +22,8 @@ if (!$email) {
    date("H"), date("i"), date("s"), date("m") ,date("d")+1, date("Y")
    );
    $expDate = date("Y-m-d H:i:s",$expFormat);
-   $key = md5(2418*2+$email);
+   //$key = md5(2418*2+$email);
+   $key = md5($email);
    $addKey = substr(md5(uniqid(rand(),1)),3,10);
    $key = $key . $addKey;
 // Insert Temp Table
