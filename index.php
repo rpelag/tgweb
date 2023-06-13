@@ -33,10 +33,8 @@ VALUES ('".$email."', '".$key."', '".$expDate."');");
 $output='<p>Dear user,</p>';
 $output.='<p>Please click on the following link to reset your password.</p>';
 $output.='<p>-------------------------------------------------------------</p>';
-$output.='<p><a href="http://172.29.105.55/~teamglobal/reset-password.php?
-key='.$key.'&email='.$email.'&action=reset" target="_blank">
-http://172.29.105.55/~teamglobal/reset-password.php
-?key='.$key.'&email='.$email.'&action=reset</a></p>';
+$output.='<p><a href="http://172.29.105.55/~teamglobal/reset-password.php?key='.$key.'&email='.$email.'&action=reset" target="_blank">
+http://172.29.105.55/~teamglobal/reset-password.php?key='.$key.'&email='.$email.'&action=reset</a></p>';
 $output.='<p>-------------------------------------------------------------</p>';
 $output.='<p>Please be sure to copy the entire link into your browser.
 The link will expire after 1 day for security reason.</p>';
@@ -53,7 +51,7 @@ $fromserver = "test@teamglobal.site";
 require("PHPMailer/PHPMailerAutoload.php");
 $mail = new PHPMailer();
 $mail->IsSMTP();
-$mail->Host = "112-210-226-158.cprapid.com"; // Enter your host here
+$mail->Host = "localhost"; // Enter your host here
 $mail->SMTPAuth = true;
 $mail->Username = "test@teamglobal.site"; // Enter your email here
 $mail->Password = "P@ssw0rdP@ssw0rd"; //Enter your password here
