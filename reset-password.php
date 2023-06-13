@@ -57,6 +57,17 @@ Click here</a> to reset password.</p>';
     </body>
     </html>
 <?php
+}else{
+$error .= "<h2>Link Expired</h2>
+<p>The link is expired. You are trying to use the expired link which
+as valid only 24 hours (1 days after request).<br /><br /></p>";
+            }
+      }
+if($error!=""){
+  echo "<div class='error'>".$error."</div><br />";
+  }
+} // isset email key validate end
+
 session_start();
 
 // Include config file
@@ -99,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Set parameters
             $param_password = password_hash($new_password, PASSWORD_DEFAULT);
-            $param_email = $email
+            $param_email = $_GET["email"];
 
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -119,15 +130,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($link);
 }
-
-}else{
-$error .= "<h2>Link Expired</h2>
-<p>The link is expired. You are trying to use the expired link which
-as valid only 24 hours (1 days after request).<br /><br /></p>";
-            }
-      }
-if($error!=""){
-  echo "<div class='error'>".$error."</div><br />";
-  }
-} // isset email key validate end
 ?>
