@@ -23,7 +23,7 @@ $mail->SMTPOptions = array(
 )
 );
 //If SMTP requires TLS encryption then remove comment from below
-$mail->SMTPSecure = "tls";
+$mail->SMTPSecure = "ssl";
 $mail->SMTPDebug = 3;
 $mail->Port = 465;
 $mail->IsHTML(true);
