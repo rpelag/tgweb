@@ -1,5 +1,6 @@
 <?php
 include('db.php');
+include('config.php');
 if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"])
 && ($_GET["action"]=="reset") && !isset($_POST["action"])){
   $key = $_GET["key"];
@@ -14,26 +15,13 @@ if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"])
 <p>The link is invalid/expired. Either you did not copy the correct link
 from the email, or you have already used the key in which case it is
 deactivated.</p>
-<p><a href="http://172.29.105.55/~teamglobal/index.php">
+<p><a href="http://172.29.105.55/~teamglobal/forgot-password.php">
 Click here</a> to reset password.</p>';
 	}else{
   $row = mysqli_fetch_assoc($query);
   $expDate = $row['expDate'];
   if ($expDate >= $curDate){
   ?>
-  <br />
-  <form method="post" action="" name="update">
-  <input type="hidden" name="action" value="update" />
-  <br /><br />
-  <label><strong>Enter New Password:</strong></label><br />
-  <input type="password" name="pass1" maxlength="15" required />
-  <br /><br />
-  <label><strong>Re-Enter New Password:</strong></label><br />
-  <input type="password" name="pass2" maxlength="15" required/>
-  <br /><br />
-  <input type="hidden" name="email" value="<?php echo $email;?>"/>
-  <input type="submit" value="Reset Password" />
-  </form>
 <?php
 }else{
 $error .= "<h2>Link Expired</h2>
