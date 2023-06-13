@@ -21,8 +21,6 @@ Click here</a> to reset password.</p>';
   $row = mysqli_fetch_assoc($query);
   $expDate = $row['expDate'];
   if ($expDate >= $curDate){
-    ?>
-    <?php
     session_start();
 
     // Include config file
