@@ -28,8 +28,6 @@ $result=mysqli_query($link,$query);
     <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/tableExport.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF/jspdf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.21.4/dist/extensions/export/bootstrap-table-export.min.js"></script>
 	</head>
 	<body>
 
@@ -66,7 +64,6 @@ $result=mysqli_query($link,$query);
         $table.bootstrapTable('destroy').bootstrapTable({
           exportDataType: $(this).val(),
           exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
-          url: 'json.php',
           columns: [
             {
               field: 'firstname',
