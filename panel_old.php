@@ -7,7 +7,6 @@ if($_SESSION['email'] != 'forgot@teamglobal.site') {
     //could redirect page here
     die('This page is not available to non-administrators.');
 }
-}
 
 include_once('config.php');
 $query="select * from applicants";
