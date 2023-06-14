@@ -208,14 +208,19 @@ $(function() {
         {
           field: 'id',
           title: 'ID'
+          sortable: true
         }, {
           field: 'name',
           title: 'Item Name'
+          sortable: true
         }, {
           field: 'price',
           title: 'Item Price'
+          sortable: true
         }
       ]
+      sortName: 'firstname', // Default sorting column
+          sortOrder: 'asc' // Default sorting order
     })
   }).trigger('change')
 })
