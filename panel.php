@@ -4,7 +4,7 @@
 session_start();
 
 // Check if the user is logged in, otherwise redirect to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if (isset($_GET['user']) && $_GET['user'] === test){
     header("location: login.php");
     exit;
 }
@@ -12,7 +12,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 include_once('config.php');
 $query="select * from applicants";
-$result=mysqli_query($con,$query);
+$result=mysqli_query($link,$query);
 
 ?>
 
@@ -24,22 +24,23 @@ $result=mysqli_query($con,$query);
 	<body>
 	<table align="center" border="1px" style="width:600px; line-height:40px;">
 	<tr>
-		<th colspan="4"><h2>Student Record</h2></th>
+		<th colspan="4"><h2>Applicants</h2></th>
 		</tr>
-			  <th> ID </th>
-			  <th> Name </th>
+			  <th> First Name </th>
+			  <th> Last Name </th>
+			  <th> Contact Number </th>
 			  <th> Email </th>
-			  <th> Country </th>
-
+        <th> Field of Interest </th>
 		</tr>
 
 		<?php while($rows=mysql_fetch_assoc($result))
 		{
 		?>
-		<tr> <td><?php echo $rows['ID']; ?></td>
-		<td><?php echo $rows['Name']; ?></td>
-		<td><?php echo $rows['Email']; ?></td>
-		<td><?php echo $rows['Country']; ?></td>
+		<tr> <td><?php echo $rows['firstname']; ?></td>
+		<td><?php echo $rows['lastname']; ?></td>
+		<td><?php echo $rows['contactnum']; ?></td>
+		<td><?php echo $rows['email']; ?></td>
+    <td><?php echo $rows['field']; ?></td>
 		</tr>
 	<?php
                }
