@@ -56,7 +56,7 @@ $result=mysqli_query($link,$query);
     data-toolbar="#toolbar"
     data-show-toggle="true"
     data-show-columns="true"
-    data-url="json.php">
+    data-url="https://112-210-226-158.cprapid.com/~teamglobal/json.php">
   </table>
 
     <script>
