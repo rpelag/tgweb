@@ -1,17 +1,5 @@
 <?php
 
-// Initialize the session
-session_start();
-
-// Check if the user is logged in, otherwise redirect to login page
-if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] === 1){
-    header("location: login.php");
-    exit;
-}
-
-include_once('config.php');
-$query="select * from applicants";
-$result=mysqli_query($link,$query);
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +16,8 @@ $result=mysqli_query($link,$query);
     <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/tableExport.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF/jspdf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.4/dist/extensions/export/bootstrap-table-export.min.js"></script>
 	</head>
 	<body>
 
