@@ -57,6 +57,8 @@ $result=mysqli_query($link,$query);
     data-click-to-select="true"
     data-toolbar="#toolbar"
     data-show-toggle="true"
+    data-search="true"
+    data-toggle="table"
     data-show-columns="true"
     data-url="json1.php">
   </table>
