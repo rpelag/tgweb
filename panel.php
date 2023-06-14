@@ -56,17 +56,17 @@ $result=mysqli_query($link,$query);
         data-toolbar="#toolbar"
         data-show-toggle="true"
         data-show-columns="true"
-        data-url= <?php while($rows=mysqli_fetch_assoc($result)) ?>
-        <?php while($rows=mysqli_fetch_assoc($result))
-                {
-                ?>
-                <tr>
-                  <td><?php echo $rows['firstname']; ?></td>
-                  <td><?php echo $rows['lastname']; ?></td>
-                  <td><?php echo $rows['contactnum']; ?></td>
-                  <td><?php echo $rows['email']; ?></td>
-                  <td><?php echo $rows['field']; ?></td>
-                </tr>
+        <tbody>
+          <?php while($rows=mysqli_fetch_assoc($result))
+          {
+          ?>
+            <td><?php echo $rows['firstname']; ?></td>
+            <td><?php echo $rows['lastname']; ?></td>
+            <td><?php echo $rows['contactnum']; ?></td>
+            <td><?php echo $rows['email']; ?></td>
+            <td><?php echo $rows['field']; ?></td>
+          </tr>
+        </tbody>
     </table>
         <?php
                      }
@@ -96,10 +96,10 @@ $result=mysqli_query($link,$query);
               field: 'price',
               title: 'Contact Number'
             },  {
-              field: 'email',
+              field: 'name',
               title: 'Email'
             }, {
-              field: <?php echo $rows['field']; ?>
+              field: 'name',
               title: 'Field of Interest'
             }
           ]
