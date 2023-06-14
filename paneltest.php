@@ -104,7 +104,7 @@ $result=mysqli_query($link,$query);
   data-toolbar="#toolbar"
   data-show-toggle="true"
   data-show-columns="true"
-  data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data">
+  data-url="json.php">
 </table>
       
     </div>
@@ -192,38 +192,50 @@ $result=mysqli_query($link,$query);
   <script src="assets/js/main.js"></script>
   
   <script>
-   var $table = $('#table')
-
-$(function() {
-  $('#toolbar').find('select').change(function () {
-    $table.bootstrapTable('destroy').bootstrapTable({
-      exportDataType: $(this).val(),
-      exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
-      columns: [
-        {
-          field: 'state',
-          checkbox: true,
-          visible: $(this).val() === 'selected'
-        },
-        {
-          field: 'id',
-          title: 'ID',
-          sortable: true
-        }, {
-          field: 'name',
-          title: 'Item Name',
-          sortable: true
-        }, {
-          field: 'price',
-          title: 'Item Price',
-          sortable: true
-        }
-      ],
-      sortName: 'id',
-        sortOrder: 'asc' 
-    })
-  }).trigger('change')
-})
+  var $table = $('#table')
+  
+  $(function() {
+    $('#toolbar').find('select').change(function () {
+      $table.bootstrapTable('destroy').bootstrapTable({
+        exportDataType: $(this).val(),
+        exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
+        columns: [
+          {
+            field: 'state',
+            checkbox: true,
+            visible: $(this).val() === 'selected'
+          },
+          {
+            field: 'firstname',
+            title: 'First Name',
+            sortable: true // Enable sorting for this column
+          },
+          {
+            field: 'lastname',
+            title: 'Last Name',
+            sortable: true // Enable sorting for this column
+          },
+          {
+            field: 'contactnum',
+            title: 'Contact Number',
+            sortable: true // Enable sorting for this column
+          },
+          {
+            field: 'email',
+            title: 'Email',
+            sortable: true // Enable sorting for this column
+          },
+          {
+            field: 'field',
+            title: 'Field of Interest',
+            sortable: true // Enable sorting for this column
+          }
+        ],
+        sortName: 'firstname', // Default sorting column
+        sortOrder: 'asc' // Default sorting order
+      })
+    }).trigger('change')
+  })
   </script>
   
   
