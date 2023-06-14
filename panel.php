@@ -25,21 +25,37 @@ $result=mysqli_query($link,$query);
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/tableExport.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF/jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.4/dist/extensions/export/bootstrap-table-export.min.js"></script>
 	</head>
 	<body>
-	<table align="center" border="1px" style="width:900px; line-height:40px;">
-    <div class="container">
-      <h2>Bordered Table</h2>
-      <table class="table table-responsive">
-        <thead>
-          <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Contact Number</th>
-            <th>Email</th>
-            <th>Field of Interest</th>
-          </tr>
-        </thead>
+
+    <style>
+  #toolbar {
+    margin: 0;
+  }
+  </style>
+
+  <div id="toolbar" class="select">
+    <select class="form-control">
+      <option value="">Export Basic</option>
+      <option value="all">Export All</option>
+      <option value="selected">Export Selected</option>
+    </select>
+  </div>
+
+	<table id="table"
+        data-show-export="true"
+        data-pagination="true"
+        data-side-pagination="server"
+        data-click-to-select="true"
+        data-toolbar="#toolbar"
+        data-show-toggle="true"
+        data-show-columns="true"
         <tbody>
           <?php while($rows=mysqli_fetch_assoc($result))
           {
@@ -52,10 +68,46 @@ $result=mysqli_query($link,$query);
             <td><?php echo $rows['field']; ?></td>
           </tr>
         </tbody>
+    </table>
         <?php
                      }
                 ?>
       </table>
-    </div>
+    <script>
+    var $table = $('#table')
+
+    $(function() {
+      $('#toolbar').find('select').change(function () {
+        $table.bootstrapTable('destroy').bootstrapTable({
+          exportDataType: $(this).val(),
+          exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
+          columns: [
+            {
+              field: 'state',
+              checkbox: true,
+              visible: $(this).val() === 'selected'
+            },
+            {
+              field: 'id',
+              title: 'Firstname'
+            }, {
+              field: 'name',
+              title: 'Lastname'
+            }, {
+              field: 'price',
+              title: 'Contact Number'
+            },  {
+              field: 'name',
+              title: 'Email'
+            }, {
+              field: 'name',
+              title: 'Field of Interest'
+            }
+          ]
+        })
+      }).trigger('change')
+    })
+  </script>
+
 	</body>
 	</html>
