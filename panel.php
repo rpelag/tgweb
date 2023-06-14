@@ -44,7 +44,6 @@ $result=mysqli_query($link,$query);
 
   <div id="toolbar" class="select">
     <select class="form-control">
-      <option value="">Export Basic</option>
       <option value="all">Export All</option>
       <option value="selected">Export Selected</option>
     </select>
