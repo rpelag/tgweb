@@ -56,7 +56,6 @@ $result=mysqli_query($link,$query);
         data-toolbar="#toolbar"
         data-show-toggle="true"
         data-show-columns="true"
-        <tbody>
           <?php while($rows=mysqli_fetch_assoc($result))
           {
           ?>
@@ -67,47 +66,10 @@ $result=mysqli_query($link,$query);
             <td><?php echo $rows['email']; ?></td>
             <td><?php echo $rows['field']; ?></td>
           </tr>
-        </tbody>
     </table>
         <?php
                      }
                 ?>
       </table>
-    <script>
-    var $table = $('#table')
-
-    $(function() {
-      $('#toolbar').find('select').change(function () {
-        $table.bootstrapTable('destroy').bootstrapTable({
-          exportDataType: $(this).val(),
-          exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
-          columns: [
-            {
-              field: 'state',
-              checkbox: true,
-              visible: $(this).val() === 'selected'
-            },
-            {
-              field: 'id',
-              title: 'Firstname'
-            }, {
-              field: 'name',
-              title: 'Lastname'
-            }, {
-              field: 'price',
-              title: 'Contact Number'
-            },  {
-              field: 'name',
-              title: 'Email'
-            }, {
-              field: 'name',
-              title: 'Field of Interest'
-            }
-          ]
-        })
-      }).trigger('change')
-    })
-  </script>
-
 	</body>
 	</html>
