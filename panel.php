@@ -48,30 +48,17 @@ $result=mysqli_query($link,$query);
     </select>
   </div>
 
-	<table id="table"
-        data-show-export="true"
-        data-pagination="true"
-        data-side-pagination="server"
-        data-click-to-select="true"
-        data-toolbar="#toolbar"
-        data-show-toggle="true"
-        data-show-columns="true"
-        <tbody>
-          <?php while($rows=mysqli_fetch_assoc($result))
-          {
-          ?>
-            <td><?php echo $rows['firstname']; ?></td>
-            <td><?php echo $rows['lastname']; ?></td>
-            <td><?php echo $rows['contactnum']; ?></td>
-            <td><?php echo $rows['email']; ?></td>
-            <td><?php echo $rows['field']; ?></td>
-          </tr>
-        </tbody>
-    </table>
-        <?php
-                     }
-                ?>
-      </table>
+  <table id="table"
+    data-show-export="true"
+    data-pagination="true"
+    data-side-pagination="server"
+    data-click-to-select="true"
+    data-toolbar="#toolbar"
+    data-show-toggle="true"
+    data-show-columns="true"
+    data-url="json.php">
+  </table>
+
     <script>
     var $table = $('#table')
 
@@ -87,19 +74,19 @@ $result=mysqli_query($link,$query);
               visible: $(this).val() === 'selected'
             },
             {
-              field: 'id',
-              title: 'Firstname'
+              field: 'firstname',
+              title: 'First Name'
             }, {
-              field: 'name',
-              title: 'Lastname'
+              field: 'lastname',
+              title: 'Last Name'
             }, {
-              field: 'price',
+              field: 'contactnum',
               title: 'Contact Number'
             },  {
-              field: 'name',
+              field: 'email',
               title: 'Email'
             }, {
-              field: 'name',
+              field: 'field',
               title: 'Field of Interest'
             }
           ]
