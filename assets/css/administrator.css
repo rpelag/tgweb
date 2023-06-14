@@ -2054,3 +2054,31 @@ margin: 0;
 padding: 0;
 }
 
+
+/* TABLE */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: #ddd;
+}
+
+.asc:after {
+  content: ' ▲';
+}
+
+.desc:after {
+  content: ' ▼';
+}
+
