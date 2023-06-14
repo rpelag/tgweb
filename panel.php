@@ -30,7 +30,7 @@ $result=mysqli_query($link,$query);
 	<table align="center" border="1px" style="width:900px; line-height:40px;">
     <div class="container">
       <h2>Bordered Table</h2>
-      <table class="table table-condensed">
+      <table class="table table-responsive">
         <thead>
           <tr>
             <th>Firstname</th>
