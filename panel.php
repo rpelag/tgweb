@@ -1,12 +1,25 @@
 <?php
+
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, otherwise redirect to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+
+
 include_once('config.php');
 $query="select * from applicants";
-$result=mysql_query($query);
+$result=mysqli_query($con,$query);
+
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Fetch Data From Database </title> 
+		<title> Fetch Data From Database </title>
 	</head>
 	<body>
 	<table align="center" border="1px" style="width:600px; line-height:40px;">

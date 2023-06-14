@@ -6,7 +6,7 @@ if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"])
   $key = $_GET["key"];
   $email = $_GET["email"];
   $curDate = date("Y-m-d H:i:s");
-  $query = mysqli_query($con,
+  $query = mysqli_query($link,
   "SELECT * FROM `password_reset_temp` WHERE `key`='".$key."' and `email`='".$email."';"
   );
   $row = mysqli_num_rows($query);
@@ -51,8 +51,8 @@ if($error!=""){
 if(isset($_POST["email"]) && isset($_POST["action"]) &&
  ($_POST["action"]=="update")){
 $error="";
-$pass1 = mysqli_real_escape_string($con,$_POST["pass1"]);
-$pass2 = mysqli_real_escape_string($con,$_POST["pass2"]);
+$pass1 = mysqli_real_escape_string($link,$_POST["pass1"]);
+$pass2 = mysqli_real_escape_string($link,$_POST["pass2"]);
 $email = $_POST["email"];
 $curDate = date("Y-m-d H:i:s");
 if ($pass1!=$pass2){
@@ -62,10 +62,10 @@ $error.= "<p>Password do not match, both password should be same.<br /><br /></p
 echo "<div class='error'>".$error."</div><br />";
 }else{
 $pass1 = password_hash($pass1, PASSWORD_DEFAULT);
-mysqli_query($con,
+mysqli_query($link,
 "UPDATE `applicants` SET `password`='".$pass1."' WHERE `email`='".$email."';");
 
-mysqli_query($con,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");
+mysqli_query($link,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");
 
 echo '<div class="error"><p>Congratulations! Your password has been updated successfully.</p>
 <p><a href="http://172.29.105.55/~teamglobal/login.php">
