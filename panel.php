@@ -56,7 +56,7 @@ $result=mysqli_query($link,$query);
     data-toolbar="#toolbar"
     data-show-toggle="true"
     data-show-columns="true"
-    data-url="json.php">
+    data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data">
   </table>
 
     <script>
