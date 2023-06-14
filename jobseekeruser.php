@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,8 +57,8 @@
       <a href="jobseekeruser.html" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
-        
-       
+
+
       </nav><!-- .navbar -->
 
       <a href="logout.php" class="get-started-btn scrollto">Sign out</a>
@@ -66,14 +77,14 @@
           <a href="#careers" class="btn-get-started scrollto">Find Opportunity</a>
         </div>
       </div>
-      
+
     </div>
 
   </section><!-- End home -->
 
   <main id="main">
 
-  
+
 
     <section id="careers" class="careers">
       <div class="container" data-aos="fade-up">
@@ -83,12 +94,12 @@
           <p>Take the first step to be part of Team Global. Be part of the team that is made up of talented individuals that cater to clients needs.</p>
         </div>
 
-  
+
         <div class="row">
 
           <div class="col-md-4">
             <div class="box" data-aos="fade-up" data-aos-delay="100">
-        
+
               <h4>Engineering Services</h4>
               <ul>
                 <li>Engineering support are expert services offered by Team Global engineers to help organizations
@@ -103,10 +114,10 @@
 
           <div class="col-md-4 mt-4 mt-md-0">
             <div class="box " data-aos="fade-up" data-aos-delay="100">
-              
+
               <h4>Office Services</h4>
               <ul>
-                <li>Office support pertains primarily to the administrative and clerical duties required for an office or workplace to run 
+                <li>Office support pertains primarily to the administrative and clerical duties required for an office or workplace to run
                   efficiently. To guarantee that the office runs smoothly and successfully, assistance and support are provided.<br><br><br><br></li>
               </ul>
               <div class="btn-wrap">
@@ -120,7 +131,7 @@
               <h4>I.T. Services</h4>
               <ul>
                 <li>I.T. services are professional services provided by Team Global specializing in information technology to
-                   assist clients or organizations in managing, implementing, and optimizing their IT systems and infrastructure. 
+                   assist clients or organizations in managing, implementing, and optimizing their IT systems and infrastructure.
                    Team Global I.T. services encompass a wide range of activities and offerings aimed at supporting the technology needs of your businesses.</li>
                 <!-- <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
@@ -133,7 +144,7 @@
             </div>
           </div>
         </div>
-    </div>  
+    </div>
     </section>
 
 
@@ -203,7 +214,7 @@
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
-      
+
     </div>
   </footer><!-- End Footer -->
 
@@ -220,7 +231,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
+
 
 </body>
 

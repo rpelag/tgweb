@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,10 +64,9 @@
       </nav>
       <!-- .navbar -->
 
-      <a href="logout.php" class="get-started-btn scrollto">Sign Out</a>
+      <a href="logout.php" class="get-started-btn scrollto">Logout</a>
     </div>
   </header>
-
   <!-- End Header -->
 
   <main id="main">
@@ -67,7 +77,7 @@
 
         <ol>
           <li><a href="jobseekeruser.html">Home</a></li>
-          <li>Engineering Service</li>
+          <li>Office Service</li>
         </ol>
         <h2>Job Vacancies</h2>
 
@@ -89,7 +99,7 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">Shift Enginner/Supervisor</a>
+                <a href="blog-single.html">In-house Reliever</a>
               </h2>
 
               <div class="entry-meta">
@@ -102,11 +112,11 @@
 
               <div class="entry-content">
                 <p>
-                  Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team, 
+                  Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team,
                   perform preventative maintenance, take orders, keep records, and control inventory.
                 </p>
                 <div class="read-more">
-                  <a href="shiftengineer.html">Read more</a>
+                  <a href="inhousereliever.html">Read more</a>
                 </div>
               </div>
 
@@ -291,7 +301,13 @@
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
-      
+     <!--  <div class="social-links text-center text-md-end pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div> -->
     </div>
   </footer><!-- End Footer -->
 
