@@ -68,6 +68,7 @@ $result=mysqli_query($link,$query);
         $table.bootstrapTable('destroy').bootstrapTable({
           exportDataType: $(this).val(),
           exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
+          pagination: true,
           columns: [
             {
               field: 'state',
