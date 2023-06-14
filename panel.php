@@ -30,8 +30,7 @@ $result=mysqli_query($link,$query);
 	<table align="center" border="1px" style="width:900px; line-height:40px;">
     <div class="container">
       <h2>Bordered Table</h2>
-      <p>The .table-bordered class adds borders to a table:</p>
-      <table class="table table-bordered">
+      <table class="table table-condensed">
         <thead>
           <tr>
             <th>Firstname</th>
