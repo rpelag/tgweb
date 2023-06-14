@@ -3,10 +3,10 @@
 // Initialize the session
 session_start();
 
-// Check if the user is logged in, otherwise redirect to login page
-if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] === 1){
-    header("location: login.php");
-    exit;
+if($_SESSION['email'] != 'forgot@teamglobal.site') {
+    //could redirect page here
+    die('This page is not available to non-administrators.');
+}
 }
 
 include_once('config.php');

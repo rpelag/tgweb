@@ -8,8 +8,6 @@ session_start();
     exit;
 }
 
-
-
 // Include config file
 require_once "config.php";
 
