@@ -60,7 +60,7 @@ $result=mysqli_query($link,$query);
     data-search="true"
     data-toggle="table"
     data-show-columns="true"
-    data-url="json1.php">
+    >
   </table>
 
     <script>
@@ -71,6 +71,7 @@ $result=mysqli_query($link,$query);
         $table.bootstrapTable('destroy').bootstrapTable({
           exportDataType: $(this).val(),
           exportTypes: ['csv', 'excel', 'pdf'],
+          url: 'json1.php',
           columns: [
             {
               field: 'state',
@@ -79,21 +80,28 @@ $result=mysqli_query($link,$query);
             },
             {
               field: 'firstname',
-              title: 'First Name'
+              title: 'First Name',
+              sortable: true
             }, {
               field: 'lastname',
-              title: 'Last Name'
+              title: 'Last Name',
+              sortable: true
             }, {
               field: 'contactnum',
-              title: 'Contact Number'
+              title: 'Contact Number',
+              sortable: true
             },  {
               field: 'email',
-              title: 'Email'
+              title: 'Email',
+              sortable: true
             }, {
               field: 'field',
-              title: 'Field of Interest'
+              title: 'Field of Interest',
+              sortable: true
             }
-          ]
+          ],
+          sortName: 'firstname', // Default sorting column
+          sortOrder: 'asc' // Default sorting order
         })
       }).trigger('change')
     })
