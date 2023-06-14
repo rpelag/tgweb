@@ -1,7 +1,7 @@
 <?php
 
 include_once('config.php');
-$query="select firstname,lastname,contact,email,field from applicants";
+$query="select firstname,lastname,contactnum,email,field from applicants";
 $result=mysqli_query($link,$query) or die("Error in Selecting " . mysqli_error($connection));
 
 //create an array
