@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,10 +58,10 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="jobseekeruser.html">Home</a></li>          
+          <li><a class="nav-link scrollto active" href="jobseekeruser.html">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-       
+
       </nav><!-- .navbar -->
 
       <a href="logout.php" class="get-started-btn scrollto">Sign out</a>
@@ -67,9 +78,8 @@
         <ol>
           <li><a href="jobseekeruser.html">Home</a></li>
           <li><a href="itsupport.html">I.T. Support</a></li>
-          <li>Multi-skilled Technician</li>
         </ol>
-        <h2>Multi-skilled Technician</h2>
+        <h2>In-house Reliever</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
@@ -89,22 +99,22 @@
               </div>
 
               <h2 class="entry-title">
-                <a>Multi-skilled Technician</a>
+                <a>In-house Reliever</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Technical Support</a></li>
                   <!-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li> -->
-                 
+
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Specialised knowledge and skills and is primarily responsible for the installation, maintenance and repair of
-                   systems, machines and equipment while following the relevant safety measures.
-                </p>        
+                  Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
+                  Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut dolores velit.
+                </p>
 
               </div>
 
@@ -151,14 +161,22 @@
                   </div>
                 </section>
                 <div class="d-flex justify-content-between read-more">
-                  <a href="itsupport.html">BACK</a>
-                  <a href="mailto:ITrecruitment@teamglobal.com.ph?subject=Application for Multi-skilled Technician">APPLY</a>
-                  
+                  <a href="officesupport.html">BACK</a>
+                  <a href="mailto:recruitment@teamglobal.com.ph?subject=Application for In-house Reliever">APPLY</a>
+
                 </div>
-              </div>  
+              </div>
+
+
               </div>
 
             </article><!-- End blog entry -->
+
+
+
+
+
+
         </div>
 
       </div>
@@ -237,7 +255,13 @@
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
-      
+     <!--  <div class="social-links text-center text-md-end pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div> -->
     </div>
   </footer><!-- End Footer -->
 

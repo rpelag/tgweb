@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +16,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Presento Bootstrap Template - Index</title>
+  <title>Blog Single - Presento Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,7 +37,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/careertg.css" rel="stylesheet">
+  <link href="assets/css/subcareer.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Presento - v3.10.0
@@ -43,83 +54,78 @@
     <div class="container d-flex align-items-center">
       <!-- <h1 class="logo me-auto"><a href="index.html">Presento<span>.</span></a></h1>-->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.html" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
+      <a href="jobseekeruser.html" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-          <li class="dropdown active"><a href="index.html#servicess"><span>Service</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="services-tg.html#staffleasing">Staff Leasing</a></li>
-              <li><a href="services-tg.html#officesupport">Office Support Services</a></li>
-              <li><a href="services-tg.html#technicalservices">Technical Services</a></li>
-              <li><a href="services-tg.html#contractingservices">Contracting Services</a></li>
-              <li><a href="services-tg.html#specialservice">Special Project</a></li>
-              <li><a href="services-tg.html#itservice">I.T. Consulting Services</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto " href="index.html#portfolio">Events</a></li>
-          <li class="dropdown active"><a href="index.html#careers"><span>Career</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="multiskilledtechnician.html">Multi-skilled Technician</a></li>
-              <li><a href="shiftengineer.html">Shift Engineers/Supervisor</a></li>
-              <li><a href="inhousereliever.html">In-house Reliever</a></li>
-              <li><a href="quickresponseteam.html">Quick Response Team</a></li>
-              <li><a href="itspecialist.html">I.T. Specialist</a></li>
-              <li><a href="projectmanager.html">Project Manager</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="index.html#faq">FAQ</a></li>
-          <!-- <li><a href="blog.html">Blog</a></li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+          <li><a class="nav-link scrollto active" href="jobseekeruser.html">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+
       </nav><!-- .navbar -->
 
-      <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
+      <a href="logout.php" class="get-started-btn scrollto">Sign out</a>
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
-  <main id="services">
+  <main id="main">
 
-    
-    
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
 
-    <!-- ======= Blog Section ======= -->
+        <ol>
+          <li><a href="jobseekeruser.html">Home</a></li>
+          <li><a href="itsupport.html">I.T. Support</a></li>
+          <li>Multi-skilled Technician</li>
+        </ol>
+        <h2>Multi-skilled Technician</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
-        <br> <br> <br>
+
         <div class="row">
+
           <div class="col-lg-10 offset-md-1 entries">
-            <article class="entry">
-              <div class="entry-img">               
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="assets/img/tg3.jpg" alt="" class="img-fluid">
               </div>
+
               <h2 class="entry-title">
-                <a href="blog-single.html">I.T. Specialist</a>
+                <a>Multi-skilled Technician</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>Description</li>                  
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Technical Support</a></li>
+                  <!-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li> -->
+
                 </ul>
               </div>
 
               <div class="entry-content">
+                <p>
+                  Specialised knowledge and skills and is primarily responsible for the installation, maintenance and repair of
+                   systems, machines and equipment while following the relevant safety measures.
+                </p>
+
+              </div>
+
+                <div class="entry-content">
                 <section id="tabs" class="tabs">
                   <div class="container" data-aos="fade-up">
                       <div class="tab-pane" id="tab-2">
                         <div class="row">
                           <p class="fst-italic">
-                            <b>QUALIFICATIONS</b>
+                            <b><h3>QUALIFICATIONS</h3></b>
                           </p>
                           <div class="col-lg-12 ">
                             <ul>
@@ -136,7 +142,7 @@
                           </div>
 
                           <p class="fst-italic">
-                            <b>DUTIES AND RESPONSIBILITIES</b>
+                            <b><h3>DUTIES AND RESPONSIBILITIES</h3></b>
                           </p>
                           <div class="col-lg-12">
                             <ul>
@@ -156,18 +162,18 @@
                   </div>
                 </section>
                 <div class="d-flex justify-content-between read-more">
-                  <a href="index.html#careers">BACK</a>
-                  <a href="mailto:crosswindproject2021@gmail.com?subject=Application for Multi-skilled Technician">APPLY</a>
-                  
+                  <a href="itsupport.html">BACK</a>
+                  <a href="mailto:ITrecruitment@teamglobal.com.ph?subject=Application for Multi-skilled Technician">APPLY</a>
+
                 </div>
+              </div>
               </div>
 
             </article><!-- End blog entry -->
-
         </div>
 
       </div>
-    </section><!-- End Blog Section -->
+    </section><!-- End Blog Single Section -->
 
   </main><!-- End #main -->
 
@@ -192,22 +198,18 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="index.html#about">About</a></li>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="index.html#servicess">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="index.html#careers">Career</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseekeruser.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseekeruser.html#careers">Career</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Careers</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#staffleasing">Staff Leasing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#officesupport">Office Support Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#technicalservices">Technical Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#contractingservices">Contracting Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#specialservice">Special Project</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#itservice">I.T. Consulting Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="officesupport.html">Office Support </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="engineeringsupport.html">Engineering Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="itsupport.html">I.T. Support</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>            -->
             </ul>
           </div>
 
@@ -246,6 +248,7 @@
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
+
     </div>
   </footer><!-- End Footer -->
 

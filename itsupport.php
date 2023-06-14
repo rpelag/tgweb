@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,7 +111,7 @@
 
               <div class="entry-content">
                 <p>
-                  Specialised knowledge and skills and is primarily responsible for the installation, maintenance and 
+                  Specialised knowledge and skills and is primarily responsible for the installation, maintenance and
                   repair of systems, machines and equipment while following the relevant safety measures.
                 </p>
                 <div class="read-more">

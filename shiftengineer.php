@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +16,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Blog - Presento Bootstrap Template</title>
+  <title>Blog Single - Presento Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -47,13 +58,13 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="jobseekeruser.html">Home</a></li>
+          <li><a class="nav-link scrollto active" href="jobseekeruser.html">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
 
-      <a href="logout.php" class="get-started-btn scrollto">Logout</a>
+      </nav><!-- .navbar -->
+
+      <a href="logout.php" class="get-started-btn scrollto">Sign out</a>
     </div>
   </header>
   <!-- End Header -->
@@ -66,14 +77,14 @@
 
         <ol>
           <li><a href="jobseekeruser.html">Home</a></li>
-          <li>Office Service</li>
+          <li><a href="engineeringsupport.html">Engineering Support</a></li>
         </ol>
-        <h2>Job Vacancies</h2>
+        <h2>Shift Engineer/Supervisor</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Blog Section ======= -->
+    <!-- ======= Blog Single Section ======= -->
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
 
@@ -81,141 +92,95 @@
 
           <div class="col-lg-10 offset-md-1 entries">
 
-            <article class="entry">
+            <article class="entry entry-single">
 
               <div class="entry-img">
                 <img src="assets/img/tg3.jpg" alt="" class="img-fluid">
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">In-house Reliever</a>
+                <a>Shift Engineer/Supervisor</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Description</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Technical Support</a></li>
                   <!-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li> -->
-                  <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li> -->
+
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team, 
-                  perform preventative maintenance, take orders, keep records, and control inventory.
+                  Specialised knowledge and skills and is primarily responsible for the installation, maintenance and repair of
+                   systems, machines and equipment while following the relevant safety measures.
                 </p>
-                <div class="read-more">
-                  <a href="inhousereliever.html">Read more</a>
+
+              </div>
+
+                <div class="entry-content">
+                <section id="tabs" class="tabs">
+                  <div class="container" data-aos="fade-up">
+                      <div class="tab-pane" id="tab-2">
+                        <div class="row">
+                          <p class="fst-italic">
+                            <b><h3>QUALIFICATIONS</h3></b>
+                          </p>
+                          <div class="col-lg-12 ">
+                            <ul>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Graduate of Technical Vocational Course with NC2 or Vocational certificates</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must have undergone training on the proper operation and maintenance of electro-mechanical equipment</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Provide expertise in Electrical, Auxiliary, HVAC, Mechanical and Sanitary  system</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Performed facilities, machine, and equipment checklist </li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Customer-Oriented</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be of good moral character, honest and has no criminal record</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must possess good communication skills</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be physically fit and have passed medical examinations</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be presentable and no evident tattoos</li></h3>
+                            </ul>
+                          </div>
+
+                          <p class="fst-italic">
+                            <b><h3>DUTIES AND RESPONSIBILITIES</h3></b>
+                          </p>
+                          <div class="col-lg-12">
+                            <ul>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>To carry out planned and responsive repairs and installations as required in tenants.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>To provide technical expertise within the relevant trade area.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>To provide multi-skilled expertise within additional trades offering a high-quality repairs and replacement service</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>To be willing to up-skill and develop, to enable completion of all types of multi-skilled work.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>To work alongside other trades people, providing support and training as necessary where apprentices are used.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>To use hand and electric/hydraulic machine tools and be prepared to undergo training for this.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>To use and be responsible for a company mobile phone as required by the Group, ensuring it is used responsibly in accordance with the Group’s instructions</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>To complete all necessary associated work documentation </li></h3>
+                            </ul>
+                          </div>
+
+                        </div>
+                      </div>
+                  </div>
+                </section>
+                <div class="d-flex justify-content-between read-more">
+                  <a href="engineeringsupport.html">BACK</a>
+                  <a href="mailto:engineeringHR@teamglobal.com.ph	?subject=Application for Shift Engineer">APPLY</a>
+
                 </div>
+              </div>
+
+
               </div>
 
             </article><!-- End blog entry -->
 
-            <article class="entry">
 
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-              </div>
 
-              <h2 class="entry-title">
-                <a href="blog-single.html">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
 
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                  Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam.
-                  Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.
-                </p>
-                <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div>
-              </div>
-
-            </article><!-- End blog entry -->
-
-            <article class="entry">
-
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="blog-single.html">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                  Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
-                  Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut dolores velit.
-                </p>
-                <div class="read-more">
-                  <a href="multiskilledtechnicians.html">Read More</a>
-                </div>
-              </div>
-
-            </article><!-- End blog entry -->
-
-            <article class="entry">
-
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="blog-single.html">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                  Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
-                  Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.
-                </p>
-                <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div>
-              </div>
-
-            </article><!-- End blog entry -->
-
-            <div class="blog-pagination">
-              <ul class="justify-content-center">
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>
-
-          </div><!-- End blog entries list -->
 
 
         </div>
 
       </div>
-    </section><!-- End Blog Section -->
+    </section><!-- End Blog Single Section -->
 
   </main><!-- End #main -->
 
@@ -290,13 +255,7 @@
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
-     <!--  <div class="social-links text-center text-md-end pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div> -->
+
     </div>
   </footer><!-- End Footer -->
 
