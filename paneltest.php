@@ -72,7 +72,7 @@ $result=mysqli_query($link,$query);
     <div class="container d-flex align-items-center">
       <!-- <h1 class="logo me-auto"><a href="index.html">Presento<span>.</span></a></h1>-->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="#" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
+      <a href="jobseekeruser.html" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         
@@ -87,6 +87,7 @@ $result=mysqli_query($link,$query);
   <!-- ======= home Section ======= -->
   <section id="home" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
+
      <div id="toolbar" class="select">
     <select class="form-control">
       <option value="">Export Basic</option>
@@ -196,10 +197,8 @@ $result=mysqli_query($link,$query);
     $(function() {
       $('#toolbar').find('select').change(function () {
         $table.bootstrapTable('destroy').bootstrapTable({
-          pageSize: 10,
           exportDataType: $(this).val(),
           exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
-          pagination: true,
           columns: [
             {
               field: 'state',
@@ -231,8 +230,9 @@ $result=mysqli_query($link,$query);
               title: 'Field of Interest',
               sortable: true // Enable sorting for this column
             }
-          ]
-         
+          ],
+          sortName: 'firstname', // Default sorting column
+          sortOrder: 'asc' // Default sorting order
         })
       }).trigger('change')
     })
