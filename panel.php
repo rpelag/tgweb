@@ -17,7 +17,6 @@ $result=mysqli_query($link,$query);
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Fetch Data From Database </title>
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -56,7 +55,7 @@ $result=mysqli_query($link,$query);
     data-toolbar="#toolbar"
     data-show-toggle="true"
     data-show-columns="true"
-    data-url="https://112-210-226-158.cprapid.com/~teamglobal/json.php">
+    data-url="json.php">
   </table>
 
     <script>
@@ -67,6 +66,7 @@ $result=mysqli_query($link,$query);
         $table.bootstrapTable('destroy').bootstrapTable({
           exportDataType: $(this).val(),
           exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
+          url: 'json.php',
           columns: [
             {
               field: 'firstname',
