@@ -70,6 +70,11 @@ $result=mysqli_query($link,$query);
           exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
           columns: [
             {
+              field: 'state',
+              checkbox: true,
+              visible: $(this).val() === 'selected'
+            },
+            {
               field: 'firstname',
               title: 'First Name'
             }, {
