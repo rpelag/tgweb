@@ -97,15 +97,15 @@ $result=mysqli_query($link,$query);
   </div>
 
   <table id="table"
-    data-show-export="true"
-    data-pagination="true"
-    data-side-pagination="server"
-    data-click-to-select="true"
-    data-toolbar="#toolbar"
-    data-show-toggle="true"
-    data-show-columns="true"
-    data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data">
-  </table>
+  data-show-export="true"
+  data-pagination="true"
+  data-side-pagination="server"
+  data-click-to-select="true"
+  data-toolbar="#toolbar"
+  data-show-toggle="true"
+  data-show-columns="true"
+  data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data">
+</table>
       
     </div>
 
@@ -192,7 +192,7 @@ $result=mysqli_query($link,$query);
   <script src="assets/js/main.js"></script>
   
   <script>
-    var $table = $('#table')
+   var $table = $('#table')
 
 $(function() {
   $('#toolbar').find('select').change(function () {
@@ -207,20 +207,20 @@ $(function() {
         },
         {
           field: 'id',
-          title: 'ID'
+          title: 'ID',
           sortable: true
         }, {
           field: 'name',
-          title: 'Item Name'
+          title: 'Item Name',
           sortable: true
         }, {
           field: 'price',
-          title: 'Item Price'
+          title: 'Item Price',
           sortable: true
         }
-      ]
-      sortName: 'firstname', // Default sorting column
-          sortOrder: 'asc' // Default sorting order
+      ],
+      sortName: 'id',
+        sortOrder: 'asc' 
     })
   }).trigger('change')
 })
