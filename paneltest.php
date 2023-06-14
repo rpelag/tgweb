@@ -104,7 +104,7 @@ $result=mysqli_query($link,$query);
     data-toolbar="#toolbar"
     data-show-toggle="true"
     data-show-columns="true"
-    data-url="json.php">
+    data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data">
   </table>
       
     </div>
@@ -193,49 +193,32 @@ $result=mysqli_query($link,$query);
   
   <script>
     var $table = $('#table')
-  
-    $(function() {
-      $('#toolbar').find('select').change(function () {
-        $table.bootstrapTable('destroy').bootstrapTable({
-          exportDataType: $(this).val(),
-          exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
-          columns: [
-            {
-              field: 'state',
-              checkbox: true,
-              visible: $(this).val() === 'selected'
-            },
-            {
-              field: 'firstname',
-              title: 'First Name',
-              sortable: true // Enable sorting for this column
-            },
-            {
-              field: 'lastname',
-              title: 'Last Name',
-              sortable: true // Enable sorting for this column
-            },
-            {
-              field: 'contactnum',
-              title: 'Contact Number',
-              sortable: true // Enable sorting for this column
-            },
-            {
-              field: 'email',
-              title: 'Email',
-              sortable: true // Enable sorting for this column
-            },
-            {
-              field: 'field',
-              title: 'Field of Interest',
-              sortable: true // Enable sorting for this column
-            }
-          ],
-          sortName: 'firstname', // Default sorting column
-          sortOrder: 'asc' // Default sorting order
-        })
-      }).trigger('change')
+
+$(function() {
+  $('#toolbar').find('select').change(function () {
+    $table.bootstrapTable('destroy').bootstrapTable({
+      exportDataType: $(this).val(),
+      exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
+      columns: [
+        {
+          field: 'state',
+          checkbox: true,
+          visible: $(this).val() === 'selected'
+        },
+        {
+          field: 'id',
+          title: 'ID'
+        }, {
+          field: 'name',
+          title: 'Item Name'
+        }, {
+          field: 'price',
+          title: 'Item Price'
+        }
+      ]
     })
+  }).trigger('change')
+})
   </script>
   
   
