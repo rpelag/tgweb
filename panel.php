@@ -36,7 +36,9 @@ $result=mysqli_query($link,$query);
           <tr>
             <th>Firstname</th>
             <th>Lastname</th>
+            <th>Contact Number</th>
             <th>Email</th>
+            <th>Field of Interest</th>
           </tr>
         </thead>
         <tbody>
@@ -45,17 +47,9 @@ $result=mysqli_query($link,$query);
           ?>
           <tr>
             <td><?php echo $rows['firstname']; ?></td>
-          </tr>
-          <tr>
             <td><?php echo $rows['lastname']; ?></td>
-          </tr>
-          <tr>
             <td><?php echo $rows['contactnum']; ?></td>
-          </tr>
-          <tr>
             <td><?php echo $rows['email']; ?></td>
-          </tr>
-          <tr>
             <td><?php echo $rows['field']; ?></td>
           </tr>
         </tbody>
