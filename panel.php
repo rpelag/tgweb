@@ -68,8 +68,7 @@ $result=mysqli_query($link,$query);
       $('#toolbar').find('select').change(function () {
         $table.bootstrapTable('destroy').bootstrapTable({
           exportDataType: $(this).val(),
-          exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
-          pagination: true,
+          exportTypes: ['csv', 'excel', 'pdf'],
           columns: [
             {
               field: 'state',
