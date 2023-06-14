@@ -104,7 +104,7 @@ $result=mysqli_query($link,$query);
   data-toolbar="#toolbar"
   data-show-toggle="true"
   data-show-columns="true"
-  data-url="json.php">
+  data-url="json1.php">
 </table>
       
     </div>
