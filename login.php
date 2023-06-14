@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["email"] = $email;
 
                             // Redirect user to welcome page
-                            header("location: jobseekeruser.html");
+                            header("location: jobseekeruser.php");
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid email or password.";
