@@ -3,7 +3,7 @@
 // Initialize the session
 session_start();
 
-if($_SESSION['email'] != 'forgot@teamglobal.site') {
+if(!isset($_SESSION["email"]) || $_SESSION['email'] != 'forgot@teamglobal.site') {
     //could redirect page here
     die('This page is not available to non-administrators.');
 }
