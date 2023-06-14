@@ -63,7 +63,7 @@ echo "<div class='error'>".$error."</div><br />";
 }else{
 $pass1 = password_hash($pass1, PASSWORD_DEFAULT);
 mysqli_query($con,
-"UPDATE `users` SET `password`='".$pass1."' WHERE `email`='".$email."';");
+"UPDATE `applicants` SET `password`='".$pass1."' WHERE `email`='".$email."';");
 
 mysqli_query($con,"DELETE FROM `password_reset_temp` WHERE `email`='".$email."';");
 

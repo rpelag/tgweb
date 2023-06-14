@@ -7,7 +7,7 @@ $email = filter_var($email, FILTER_VALIDATE_EMAIL);
 if (!$email) {
    $error .="<p>Invalid email address please type a valid email address!</p>";
    }else{
-   $sel_query = "SELECT * FROM `users` WHERE email='".$email."'";
+   $sel_query = "SELECT * FROM `applicants` WHERE email='".$email."'";
    $results = mysqli_query($con,$sel_query);
    $row = mysqli_num_rows($results);
    if ($row==""){

@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $firstname_err = "Please enter a First name.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE firstname = ?";
+        $sql = "SELECT id FROM applicants WHERE firstname = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $lastname_err = "Please enter a Last name.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE lastname = ?";
+        $sql = "SELECT id FROM applicants WHERE lastname = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -72,7 +72,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $contactnum_err = "Please enter a Contact number.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE contactnum = ?";
+        $sql = "SELECT id FROM applicants WHERE contactnum = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $email_err = "Please enter an email.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE email = ?";
+        $sql = "SELECT id FROM applicants WHERE email = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -134,7 +134,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $field_err = "Please enter a Field of Interest.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE field = ?";
+        $sql = "SELECT id FROM applicants WHERE field = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -181,7 +181,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($firstname_err) && empty($lastname_err) && empty($contactnum_err) && empty($email_err) && empty($field_err) && empty($password_err) && empty($confirm_password_err)){
 
         // Prepare an insert statement
-        $sql = "INSERT INTO users (firstname, lastname, contactnum, email, field, password) VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO applicants (firstname, lastname, contactnum, email, field, password) VALUES (?, ?, ?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters

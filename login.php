@@ -1,70 +1,70 @@
 <?php
 // Initialize the session
 session_start();
- 
+
 // Check if the user is already logged in, if yes then redirect him to welcome page
  if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: jobseekeruser.html");
     exit;
-} 
+}
 
 
- 
+
 // Include config file
 require_once "config.php";
- 
+
 // Define variables and initialize with empty values
 $email = $password = "";
 $email_err = $password_err = $login_err = "";
- 
+
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
+
     // Check if email is empty
     if(empty(trim($_POST["email"]))){
         $email_err = "Please enter email.";
     } else{
         $email = trim($_POST["email"]);
     }
-    
+
     // Check if password is empty
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";
     } else{
         $password = trim($_POST["password"]);
     }
-    
+
     // Validate credentials
     if(empty($email_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, email, password FROM users WHERE email = ?";
-        
+        $sql = "SELECT id, email, password FROM applicants WHERE email = ?";
+
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_email);
-            
+
             // Set parameters
             $param_email = $email;
-            
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Store result
                 mysqli_stmt_store_result($stmt);
-                
+
                 // Check if email exists, if yes then verify password
-                if(mysqli_stmt_num_rows($stmt) == 1){                    
+                if(mysqli_stmt_num_rows($stmt) == 1){
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $id, $email, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
                             session_start();
-                            
+
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["email"] = $email;                            
-                            
+                            $_SESSION["email"] = $email;
+
                             // Redirect user to welcome page
                             header("location: jobseekeruser.html");
                         } else{
@@ -84,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_close($stmt);
         }
     }
-    
+
     // Close connection
     mysqli_close($link);
 }
@@ -142,7 +142,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <ul>
           <li><a class="nav-link scrollto active" href="jobseeker.html#home">Home</a></li>
           <li><a class="nav-link scrollto" href="jobseeker.html#about">About</a></li>
-          
+
           <li class="dropdown active"><a class="nav-link scrollto" href="jobseeker.html#careers">Career<i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="login.php">Office Support</a></li>
@@ -163,18 +163,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <!-- ======= home Section ======= -->
 
-  
+
   <section id="home" class="d-flex align-items-center">
     <div class="container1" data-aos="zoom-out" data-aos-delay="100">
       <h1>Login to your account</h1>
       <div class="section-title2" data-aos="zoom-out">
         <div class="orange-line"></div>
-      </div> 
+      </div>
 
-      <?php 
+      <?php
         if(!empty($login_err)){
             echo '<div class="alert alert-danger">' . $login_err . '</div>';
-        }        
+        }
         ?>
 
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -197,15 +197,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <p>Don't have an account? <a href="register.php">Register here</a>.</p>
     </div>
     </div>
-    
+
   </section>
-  
+
 
 
 
     <!-- ======= Clients Section ======= -->
-  
-    
+
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -231,8 +231,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#home">Home</a></li>
               <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#about">About</a></li>
               <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#careers">Career</a></li>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#events">Events</a></li> 
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#contact">Contact</a></li> 
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#events">Events</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseeker.html#contact">Contact</a></li>
             </ul>
           </div>
 
@@ -242,7 +242,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#staffleasing">Staff Leasing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#engineeringservices">Engineering Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#itconsulting">I.T. Consulting</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>           
+              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>
             </ul>
           </div> -->
 
@@ -281,7 +281,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
-      
+
     </div>
   </footer><!-- End Footer -->
 
