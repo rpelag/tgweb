@@ -98,7 +98,7 @@
                     successful projects, ensuring quality compliance with engineering standards and requirements.<br><br></li>
               </ul>
               <div class="btn-wrap">
-                <a href="engineeringsupport.html" class="btn-buy">Learn more</a>
+                <a href="engineeringsupport.php" class="btn-buy">Learn more</a>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@
                   efficiently. To guarantee that the office runs smoothly and successfully, assistance and support are provided.<br><br><br><br></li>
               </ul>
               <div class="btn-wrap">
-                <a href="officesupport.html" class="btn-buy">Learn more</a>
+                <a href="officesupport.php" class="btn-buy">Learn more</a>
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@
                 <li>Massa ultricies mi</li> -->
               </ul>
               <div class="btn-wrap">
-                <a href="itsupport.html" class="btn-buy">Learn more</a>
+                <a href="itsupport.php" class="btn-buy">Learn more</a>
               </div>
             </div>
           </div>
