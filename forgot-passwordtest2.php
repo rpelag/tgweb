@@ -159,13 +159,14 @@ if (isset($_POST["email"]) && (!empty($_POST["email"]))) {
 
     <form method="post" action="" name="reset">
       <div class="form-group">
-        <label for="email"><strong>Enter Your Email Address:</strong></label>
+        <label for="email" class="center-label"><strong>Enter Your Email Address:</strong></label>
         <input type="email" name="email" id="email" class="form-control" placeholder="username@email.com">
       </div>
       <button type="submit" class="btn btn-primary">Reset Password</button>
     </form>
   </div>
 </section>
+
 
 
 

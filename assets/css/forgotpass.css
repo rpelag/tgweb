@@ -2369,6 +2369,13 @@ h1 {
   margin-top: -20px;
 }
 
+.center-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 
 
 
