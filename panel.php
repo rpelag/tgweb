@@ -15,6 +15,8 @@ $result=mysqli_query($link,$query);
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,15 +35,6 @@ $result=mysqli_query($link,$query);
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 
-   <!-- js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<link href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/tableExport.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF/jspdf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
-<script src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
-<script src="https://unpkg.com/bootstrap-table@1.21.4/dist/extensions/export/bootstrap-table-export.min.js"></script>
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -57,9 +50,15 @@ $result=mysqli_query($link,$query);
   <!-- Template Main CSS File -->
   <link href="assets/css/administrator.css" rel="stylesheet">
 
+  <!-- Add the following CSS and JS files -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+
+
 <!-- Template Main CSS File -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.1/css/buttons.dataTables.min.css" />
+<Script src="https://code.jquery.com/jquery-1.12.3.js" type="text/javascript"></Script>
 <Script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></Script>
 <Script src="https://cdn.datatables.net/buttons/1.2.1/js/dataTables.buttons.min.js" type="text/javascript"></Script>
 <Script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" type="text/javascript"></Script>
@@ -100,32 +99,35 @@ $result=mysqli_query($link,$query);
 
   <section id="home" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <table id="example" class="display"
-cellspacing="0" width="100%">
+      <table id="example" class="display" cellspacing="0" width="100%">
     <thead>
-    <tr>
-    <th> First Name </th>
-    <th> Last Name </th>
-    <th> Contact Number </th>
-    <th> Email </th>
-    <th> Field of Interest </th>
-    </tr>
-    
-    </tbody>
-
+        <tr>
+              <th> First Name </th>
+              <th> Last Name </th>
+              <th> Contact Number </th>
+              <th> Email </th>
+              <th> Field of Interest </th>
+              <th> Date Created </th>
+        </tr>
+    </thead>
+    <tbody>
     <?php while($rows=mysqli_fetch_assoc($result))
 		{
 		?>
-		<tr> 
+		<tr>
     <td><?php echo $rows['firstname']; ?></td>
 		<td><?php echo $rows['lastname']; ?></td>
 		<td><?php echo $rows['contactnum']; ?></td>
 		<td><?php echo $rows['email']; ?></td>
     <td><?php echo $rows['field']; ?></td>
+    <td><?php echo $rows['created_at']; ?></td>
 		</tr>
 	<?php
                }
           ?>
+          </tbody>
+
+
 </table>
 
 
@@ -238,38 +240,37 @@ cellspacing="0" width="100%">
 
 
 </html>
+
 <script>
-  $(document).ready(function () {
-      $(document).ready(function () {
-          $('table').DataTable({
-              dom: 'Blfrtip',
-              buttons: [{
-                  text: 'Export To Excel',
-                  extend: 'excelHtml5',
-                  exportOptions: {
-                      modifier: {
-                          selected: true
-                      },
-                      columns: [0, 1, 2, 3],
-                      format: {
-                          header: function (data, columnIdx) {
-                              return data;
-                          },
-                          body: function (data, column, row) {
-                              // Strip $ from salary column to make it numeric
-                              debugger;
-                              return column === 4 ? "" : data;
-                          }
-                      }
-                  },
-                  footer: false,
-                  customize: function (xlsx) {
-                      var sheet = xlsx.xl.worksheets['sheet1.xml'];
-                      //$('c[r=A1] t', sheet).text( 'Custom text' );
-                      //$('row c[r^="C"]', sheet).attr('s', '2');
-                  }
-              }]
-          });
-      });
+$(document).ready(function() {
+  $('table').DataTable({
+    dom: 'Blfrtip',
+    buttons: [{
+      text: 'Export To Excel',
+      extend: 'excelHtml5',
+      exportOptions: {
+        modifier: {
+          selected: true
+        },
+        columns: [0, 1, 2, 3, 4, 5],
+        format: {
+          header: function (data, columnIdx) {
+            return data;
+          },
+          body: function (data, column, row) {
+            // Strip $ from salary column to make it numeric
+            // debugger;
+            return column ===  6 ? "" : data;
+          }
+        }
+      },
+      footer: false,
+      customize: function (xlsx) {
+        var sheet = xlsx.xl.worksheets['sheet1.xml'];
+        //$('c[r=A1] t', sheet).text( 'Custom text' );
+        //$('row c[r^="C"]', sheet).attr('s', '2');
+      }
+    }]
   });
+});
 </script>
