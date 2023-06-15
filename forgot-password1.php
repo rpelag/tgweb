@@ -11,7 +11,7 @@ if (!$email) {
    $results = mysqli_query($link,$sel_query);
    $row = mysqli_num_rows($results);
    if ($row==""){
-   $error .= "<p>No user is registered with this email address!</p>";
+   $error = "<p>No user is registered with this email address!</p>";
    }
   }
    if($error!=""){
