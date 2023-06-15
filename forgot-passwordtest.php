@@ -5,7 +5,7 @@ if (isset($_POST["email"]) && (!empty($_POST["email"]))) {
   $email = $_POST["email"];
   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
   $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-  
+
   $error = ""; // Initialize the error variable
 
   if (!$email) {
@@ -17,11 +17,14 @@ if (isset($_POST["email"]) && (!empty($_POST["email"]))) {
 
     if ($row == 0) { // Check if the row count is 0, indicating no user with that email
       $error .= "<p>No user is registered with this email address!</p>";
+      echo "<script>alert('".$error."'); location.href='javascript:history.go(-1)';</script>";
+      exit();
     }
   }
-  
+
   if ($error != "") {
-    echo "<div class='error'>".$error."</div><br /><a href='javascript:history.go(-1)'>Go Back</a>";
+    echo "<script>alert('".$error."'); location.href='javascript:history.go(-1)';</script>";
+    exit();
   } else {
     $expFormat = mktime(
       date("H"), date("i"), date("s"), date("m"), date("d") + 1, date("Y")
@@ -82,11 +85,8 @@ if (isset($_POST["email"]) && (!empty($_POST["email"]))) {
     if (!$mail->Send()) {
       echo "Mailer Error: " . $mail->ErrorInfo;
     } else {
-      echo "<div class='success'>
-        <p>An email has been sent to you with instructions on how to reset your password.</p>
-      </div><br /><br /><br />";
-      header("Location: login.php"); // Redirect to login page
-      exit(); // Terminate the current script
+      echo "<script>alert('An email has been sent to you with instructions on how to reset your password.'); location.href='login.php';</script>";
+      exit();
     }
   }
 } else {
