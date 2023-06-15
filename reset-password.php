@@ -86,7 +86,7 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/login.css" rel="stylesheet">
+  <link href="assets/css/reset.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Presento - v3.10.0
@@ -119,19 +119,34 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
     </div>
 
     <form method="post" action="" name="update">
-    <div class="formgroup">
-        <input type="hidden" name="action" value="update">
-        <label><strong>Enter New Password:</strong></label>
-        <input type="password" name="pass1" maxlength="15" required>
-        <label><strong>Re-Enter New Password:</strong></label>
-        <input type="password" name="pass2" maxlength="15" required>
-        <input type="hidden" name="email" value="<?php echo $email; ?>">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="pass1"><strong>Enter New Password:</strong></label>
+              <input type="password" id="pass1" class="form-control" name="pass1" maxlength="15" required>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary">Reset Password</button>   
-</form>
-  
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="pass2"><strong>Re-Enter New Password:</strong></label>
+              <input type="password" id="pass2" class="form-control" name="pass2" maxlength="15" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <input type="hidden" name="email" value="<?php echo $email; ?>">
+            <button type="submit" class="btn btn-primary">Reset Password</button>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 </section>
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
