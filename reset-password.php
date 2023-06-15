@@ -126,10 +126,10 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
         <label><strong>Re-Enter New Password:</strong></label>
         <input type="password" name="pass2" maxlength="15" required>
         <input type="hidden" name="email" value="<?php echo $email; ?>">
-        <input type="submit" value="Reset Password">
-    </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Reset Password</button>   
 </form>
-   
+  
   </div>
 </section>
 
