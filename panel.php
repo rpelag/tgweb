@@ -105,7 +105,7 @@ $result=mysqli_query($link,$query);
               <th> Contact Number </th>
               <th> Email </th>
               <th> Field of Interest </th>
-              <th> Date Created </th>
+              <th> Date Registered </th>
         </tr>
     </thead>
     <tbody>
