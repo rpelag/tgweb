@@ -45,7 +45,7 @@
     <div class="container d-flex align-items-center">
       <!-- <h1 class="logo me-auto"><a href="index.html">Presento<span>.</span></a></h1>-->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="jobseekeruser.html" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
+      <a href="jobseekeruser.php" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
 
