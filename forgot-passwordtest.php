@@ -78,6 +78,7 @@ if(isset($_POST["email"]) && (!empty($_POST["email"]))){
            echo "Mailer Error: " . $mail->ErrorInfo;
        }else{
            echo "<script>showPrompt();</script>";
+           echo "<script>setTimeout(function() { window.location.href = 'login.php'; }, 3000);</script>";
        }
     }
 }else{
