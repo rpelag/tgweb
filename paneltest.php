@@ -1,33 +1,5 @@
-<?php
-
-// Initialize the session
-session_start();
-
-// Check if the user is logged in, otherwise redirect to login page
-if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] === 1){
-    header("location: login.php");
-    exit;
-}
-
-include_once('config.php');
-$query="select * from applicants";
-$result=mysqli_query($link,$query);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Required js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.js"></script>
-<script src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/tableExport.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF/jspdf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin@1.10.21/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
-<script src="https://unpkg.com/bootstrap-table@1.21.4/dist/extensions/export/bootstrap-table-export.min.js"></script>
 
 <head>
   <meta charset="utf-8">
@@ -37,15 +9,17 @@ $result=mysqli_query($link,$query);
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -56,6 +30,15 @@ $result=mysqli_query($link,$query);
 
   <!-- Template Main CSS File -->
   <link href="assets/css/administrator.css" rel="stylesheet">
+  
+<!-- Template Main CSS File -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />     
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.1/css/buttons.dataTables.min.css" />     
+<Script src="https://code.jquery.com/jquery-1.12.3.js" type="text/javascript"></Script>     
+<Script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></Script>     
+<Script src="https://cdn.datatables.net/buttons/1.2.1/js/dataTables.buttons.min.js" type="text/javascript"></Script>     
+<Script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" type="text/javascript"></Script>     
+<Script src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.html5.min.js" type="text/javascript"></Script>
 
   <!-- =======================================================
   * Template Name: Presento - v3.10.0
@@ -72,52 +55,66 @@ $result=mysqli_query($link,$query);
     <div class="container d-flex align-items-center">
       <!-- <h1 class="logo me-auto"><a href="index.html">Presento<span>.</span></a></h1>-->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="jobseekeruser.html" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
+      <a href="index.html" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
-        
-       
+        <ul>
+          <li>Welcome ADMIN</li>
+    
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="logout.php" class="get-started-btn scrollto">Sign out</a>
+      <a href="logout.php" class="get-started-btn scrollto">Logout</a>
     </div>
   </header>
   <!-- End Header -->
 
   <!-- ======= home Section ======= -->
+
+  
   <section id="home" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
-
-     <div id="toolbar" class="select">
-    <select class="form-control">
-      <option value="">Export Basic</option>
-      <option value="all">Export All</option>
-      <option value="selected">Export Selected</option>
-    </select>
-  </div>
-
-  <table id="table"
-  data-show-export="true"
-  data-pagination="true"
-  data-side-pagination="server"
-  data-click-to-select="true"
-  data-toolbar="#toolbar"
-  data-show-toggle="true"
-  data-show-columns="true"
-  data-url="json1.php">
+      <table id="example" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+              <th> First Name </th>
+              <th> Last Name </th>
+              <th> Contact Number </th>
+              <th> Email </th>
+              <th> Field of Interest </th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php while($rows=mysqli_fetch_assoc($result))
+		{
+		?>
+		<tr> 
+    <td><?php echo $rows['firstname']; ?></td>
+		<td><?php echo $rows['lastname']; ?></td>
+		<td><?php echo $rows['contactnum']; ?></td>
+		<td><?php echo $rows['email']; ?></td>
+    <td><?php echo $rows['field']; ?></td>
+		</tr>
+	<?php
+               }
+          ?>
+      
+    </tbody>
 </table>
       
+       
     </div>
-
-  </section><!-- End home -->
+  </section>
+  
 
   <main id="main">
 
+    <!-- ======= Clients Section ======= -->
   
+   
 
-
-  </main>
-  <!-- End #main -->
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -137,6 +134,24 @@ $result=mysqli_query($link,$query);
             </p>
           </div>
 
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#home">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#about">About</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#contact">Contact</a></li> 
+            </ul>
+          </div>
+
+        <!--   <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#staffleasing">Staff Leasing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#engineeringservices">Engineering Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#itconsulting">I.T. Consulting</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>           
+            </ul>
+          </div> -->
 
           <div class="social-links  col-lg-2 col-md-6 footer-links ">
             <h4>Social Media</h4>
@@ -191,55 +206,45 @@ $result=mysqli_query($link,$query);
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   
-  <script>
-  var $table = $('#table')
-  
-  $(function() {
-    $('#toolbar').find('select').change(function () {
-      $table.bootstrapTable('destroy').bootstrapTable({
-        exportDataType: $(this).val(),
-        exportTypes: ['json', 'xml', 'csv', 'txt', 'sql', 'excel', 'pdf'],
-        columns: [
-          {
-            field: 'state',
-            checkbox: true,
-            visible: $(this).val() === 'selected'
-          },
-          {
-            field: 'firstname',
-            title: 'First Name',
-            sortable: true // Enable sorting for this column
-          },
-          {
-            field: 'lastname',
-            title: 'Last Name',
-            sortable: true // Enable sorting for this column
-          },
-          {
-            field: 'contactnum',
-            title: 'Contact Number',
-            sortable: true // Enable sorting for this column
-          },
-          {
-            field: 'email',
-            title: 'Email',
-            sortable: true // Enable sorting for this column
-          },
-          {
-            field: 'field',
-            title: 'Field of Interest',
-            sortable: true // Enable sorting for this column
-          }
-        ],
-        sortName: 'firstname', // Default sorting column
-        sortOrder: 'asc' // Default sorting order
-      })
-    }).trigger('change')
-  })
-  </script>
-  
+
   
 
 </body>
 
+
 </html>
+<script>
+  $(document).ready(function () {
+      $(document).ready(function () {
+          $('table').DataTable({                    
+              dom: 'Blfrtip',
+              buttons: [{
+                  text: 'Export To Excel',                       
+                  extend: 'excelHtml5',
+                  exportOptions: {
+                      modifier: {
+                          selected: true
+                      },
+                      columns: [0, 1, 2, 3],
+                      format: {
+                          header: function (data, columnIdx) {
+                              return data;
+                          },
+                          body: function (data, column, row) {
+                              // Strip $ from salary column to make it numeric
+                              debugger;
+                              return column === 4 ? "" : data;
+                          }
+                      }
+                  },
+                  footer: false,
+                  customize: function (xlsx) {
+                      var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                      //$('c[r=A1] t', sheet).text( 'Custom text' );
+                      //$('row c[r^="C"]', sheet).attr('s', '2');
+                  }
+              }]
+          });
+      });
+  });
+</script>

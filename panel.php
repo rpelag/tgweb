@@ -116,7 +116,8 @@ cellspacing="0" width="100%">
     <?php while($rows=mysqli_fetch_assoc($result))
 		{
 		?>
-		<tr> <td><?php echo $rows['firstname']; ?></td>
+		<tr> 
+    <td><?php echo $rows['firstname']; ?></td>
 		<td><?php echo $rows['lastname']; ?></td>
 		<td><?php echo $rows['contactnum']; ?></td>
 		<td><?php echo $rows['email']; ?></td>
