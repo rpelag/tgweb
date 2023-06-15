@@ -2534,6 +2534,7 @@ th:hover {
   font-weight: 900;
   background-color: #fff;
   padding: 10px;
+  padding-top: 30px!important;
   box-sizing: border-box;
   z-index: 9999;
 }
@@ -2562,7 +2563,6 @@ table.dataTable tbody tr:hover td {
     padding: 10px;
   }
 }
-
 
 
 
