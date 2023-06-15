@@ -6,17 +6,18 @@ if(isset($_POST["email"]) && (!empty($_POST["email"]))){
     $email = filter_var($email, FILTER_VALIDATE_EMAIL);
     if (!$email) {
        $error .="<p>Invalid email address please type a valid email address!</p>";
-    } else {
+    }else{
        $sel_query = "SELECT * FROM `applicants` WHERE email='".$email."'";
        $results = mysqli_query($link,$sel_query);
        $row = mysqli_num_rows($results);
-       if ($row=="") {
-           echo "<script>showPrompt('This Email does not exist in the Database.');</script>";
+       if ($row==""){
+           $error .= "<p>No user is registered with this email address!</p>";
        }
     }
     if($error!=""){
-       echo "<div class='error'>".$error."</div>";
-    } else {
+       echo "<div class='error'>".$error."</div>
+       <br /><a href='javascript:history.go(-1)'>Go Back</a>";
+    }else{
        $expFormat = mktime(
        date("H"), date("i"), date("s"), date("m") ,date("d")+1, date("Y")
        );
@@ -75,13 +76,12 @@ if(isset($_POST["email"]) && (!empty($_POST["email"]))){
        $mail->AddAddress($email_to);
        if(!$mail->Send()){
            echo "Mailer Error: " . $mail->ErrorInfo;
-       } else {
-           echo "<script>showPrompt('An email has been sent to you with instructions on how to reset your password.');</script>";
-           echo "<script>setTimeout(function() { window.location.href = 'another_page.php'; }, 3000);</script>";
-           exit(); // Added to stop executing further code
+       }else{
+           echo "<script>showPrompt();</script>";
+           echo "<script>setTimeout(function() { window.location.href = 'login.php'; }, 3000);</script>";
        }
     }
-}
+}else{
 ?>
 <form method="post" action="" name="reset"><br /><br />
     <label><strong>Enter Your Email Address:</strong></label><br /><br />
@@ -93,7 +93,8 @@ if(isset($_POST["email"]) && (!empty($_POST["email"]))){
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <script>
-    function showPrompt(message) {
-        alert(message);
+    function showPrompt() {
+        alert("An email has been sent to you with instructions on how to reset your password.");
     }
 </script>
+<?php } ?>
