@@ -85,7 +85,7 @@
               <th> Field of Interest </th>
         </tr>
     </thead>
-    <tbody>
+  
     <?php while($rows=mysqli_fetch_assoc($result))
 		{
 		?>
@@ -100,7 +100,7 @@
                }
           ?>
       
-    </tbody>
+    
 </table>
       
        
