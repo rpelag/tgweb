@@ -82,7 +82,6 @@ echo "<div class='error'>
 	}
    }
 }else{
-  
 ?>
 <?php } ?>
 
@@ -153,6 +152,7 @@ echo "<div class='error'>
        </div>
        <button type="submit" class="btn btn-primary">Reset Password</button>
      </form>
+     
    </div>
  </section>
 
