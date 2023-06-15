@@ -65,7 +65,7 @@ $mail->SMTPOptions = array(
 )
 );
 $mail->Port = 465;
-$mail->SMTPDebug = 3;
+//$mail->SMTPDebug = 3;
 $mail->IsHTML(true);
 $mail->From = "test@teamglobal.site";
 $mail->FromName = "Test";
