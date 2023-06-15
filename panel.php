@@ -115,10 +115,11 @@ cellspacing="0" width="100%">
     <?php while($rows=mysql_fetch_assoc($result))
 		{
 		?>
-		<tr> <td><?php echo $rows['ID']; ?></td>
-		<td><?php echo $rows['Name']; ?></td>
-		<td><?php echo $rows['Email']; ?></td>
-		<td><?php echo $rows['Country']; ?></td>
+		<tr> <td><?php echo $rows['firstname']; ?></td>
+		<td><?php echo $rows['lastname']; ?></td>
+		<td><?php echo $rows['contactnum']; ?></td>
+		<td><?php echo $rows['email']; ?></td>
+    <td><?php echo $rows['field']; ?></td>
 		</tr>
 	<?php
                }
