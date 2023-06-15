@@ -64,7 +64,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["email"] = $email;
 
                             // Redirect user to welcome page
-                            header("location: jobseekeruser.php");
+                            //header("location: jobseekeruser.php");
+
+                            if (!isset($_SESSION["email"]) || $_SESSION['email'] != 'forgot@teamglobal.site') { // check the value of the 'status' in the db
+                                //Redirect user to welcome page
+                                header("location: jobseekeruser.php");
+                            } else {
+                                //go to panel
+                                header("Location: panel.php");
+                            }
+
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid email or password.";
