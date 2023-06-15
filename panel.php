@@ -12,6 +12,7 @@ if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] === 1){
 include_once('config.php');
 $query="select * from applicants";
 $result=mysqli_query($link,$query);
+
 ?>
 
 <!DOCTYPE html>
@@ -112,7 +113,7 @@ cellspacing="0" width="100%">
 </tr>
     </tbody>
 
-    <?php while($rows=mysql_fetch_assoc($result))
+    <?php while($rows=mysqli_fetch_assoc($result))
 		{
 		?>
 		<tr> <td><?php echo $rows['firstname']; ?></td>
