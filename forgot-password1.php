@@ -83,7 +83,7 @@ echo "<div class='error'>
    }
 }else{
 ?>
-<?php } ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
