@@ -16,7 +16,7 @@ if (isset($_POST["email"]) && (!empty($_POST["email"]))) {
     $row = mysqli_num_rows($results);
 
     if ($row == 0) { // Check if the row count is 0, indicating no user with that email
-      $error .= "<p>No user is registered with this email address!</p>";
+      $error .= "No user is registered with this email address!";
       echo "<script>alert('".$error."'); location.href='javascript:history.go(-1)';</script>";
       exit();
     }
@@ -151,22 +151,22 @@ if (isset($_POST["email"]) && (!empty($_POST["email"]))) {
 
 
   <section id="home" class="d-flex align-items-center">
-    <div class="container1" data-aos="zoom-out" data-aos-delay="100">
-      <h1>Login to your account</h1>
-      <div class="section-title2" data-aos="zoom-out">
-        <div class="orange-line"></div>
-      </div>
-
-      <form method="post" action="" name="reset"><br /><br />
-  <label><strong>Enter Your Email Address:</strong></label><br /><br />
-  <input type="email" name="email" placeholder="username@email.com" />
-  <br /><br />
-  <input type="submit" value="Reset Password"/>
-</form>
-     
+  <div class="container1" data-aos="zoom-out" data-aos-delay="100">
+    <h1>Forgot Password</h1>
+    <div class="section-title2" data-aos="zoom-out">
+      <div class="orange-line"></div>
     </div>
 
-  </section>
+    <form method="post" action="" name="reset">
+      <div class="form-group">
+        <label for="email"><strong>Enter Your Email Address:</strong></label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="username@email.com">
+      </div>
+      <button type="submit" class="btn btn-primary">Reset Password</button>
+    </form>
+  </div>
+</section>
+
 
 
 
