@@ -382,6 +382,14 @@ h6 {
   padding-top: 82px;
 }
 
+@media (max-width: 768px) {
+  /* Styles for screens smaller than or equal to 768px (e.g., mobile devices) */
+  #home h1{
+    min-height: auto;
+    padding-top: 60px;
+  }
+}
+
 
 
 #home:before {
