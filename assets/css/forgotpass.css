@@ -2231,7 +2231,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #dd5800;
+  background: #af4600;
   color: #fff;
   text-decoration: none;
 }
@@ -2368,14 +2368,6 @@ h1 {
 .form-group  {
   margin-top: -20px;
 }
-
-.center-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 
 
 
