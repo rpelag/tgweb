@@ -122,16 +122,18 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
     </div>
 
     <form method="post" action="" name="update">
-        <input type="hidden" name="action" value="update" />
-        <br /><br />
-        <label><strong>Enter New Password:</strong></label><br />
-        <input type="password" name="pass1" maxlength="15" required />
-        <br /><br />
-        <label><strong>Re-Enter New Password:</strong></label><br />
-        <input type="password" name="pass2" maxlength="15" required/>
-        <br /><br />
-        <input type="hidden" name="email" value="<?php echo $email; ?>"/>
-        <input type="submit" value="Reset Password" />
+        <input type="hidden" name="action" value="update">
+        <div class="form-group">
+        <label><strong>Enter New Password:</strong></label>
+        <input type="password" name="pass1" class="form-control" maxlength="15" required>
+</div>
+<div class="form-group">
+        <label><strong>Re-Enter New Password:</strong></label>
+        <input type="password" name="pass2" class="form-control" maxlength="15" required>
+        </div>
+        <input type="hidden" name="email" value="<?php echo $email; ?>">
+        <button type="submit" class="btn btn-primary" value="Reset Password">Reset Password</button>
+        
       </form>
 
   
