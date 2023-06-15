@@ -33,8 +33,8 @@ $result=mysqli_query($link,$query);
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  
-  
+
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -54,14 +54,14 @@ $result=mysqli_query($link,$query);
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css">
 <script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
 
-  
+
 <!-- Template Main CSS File -->
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />     
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.1/css/buttons.dataTables.min.css" />     
-<Script src="https://code.jquery.com/jquery-1.12.3.js" type="text/javascript"></Script>     
-<Script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></Script>     
-<Script src="https://cdn.datatables.net/buttons/1.2.1/js/dataTables.buttons.min.js" type="text/javascript"></Script>     
-<Script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" type="text/javascript"></Script>     
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.1/css/buttons.dataTables.min.css" />
+<Script src="https://code.jquery.com/jquery-1.12.3.js" type="text/javascript"></Script>
+<Script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></Script>
+<Script src="https://cdn.datatables.net/buttons/1.2.1/js/dataTables.buttons.min.js" type="text/javascript"></Script>
+<Script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" type="text/javascript"></Script>
 <Script src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.html5.min.js" type="text/javascript"></Script>
 
   <!-- =======================================================
@@ -84,7 +84,7 @@ $result=mysqli_query($link,$query);
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li>Welcome ADMIN</li>
-    
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -96,7 +96,7 @@ $result=mysqli_query($link,$query);
 
   <!-- ======= home Section ======= -->
 
-  
+
   <section id="home" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <table id="example" class="display" cellspacing="0" width="100%">
@@ -107,37 +107,39 @@ $result=mysqli_query($link,$query);
               <th> Contact Number </th>
               <th> Email </th>
               <th> Field of Interest </th>
+              <th> Date Created </th>
         </tr>
     </thead>
     <tbody>
     <?php while($rows=mysqli_fetch_assoc($result))
 		{
 		?>
-		<tr> 
+		<tr>
     <td><?php echo $rows['firstname']; ?></td>
 		<td><?php echo $rows['lastname']; ?></td>
 		<td><?php echo $rows['contactnum']; ?></td>
 		<td><?php echo $rows['email']; ?></td>
     <td><?php echo $rows['field']; ?></td>
+    <td><?php echo $rows['created_at']; ?></td>
 		</tr>
 	<?php
                }
           ?>
           </tbody>
-      
-    
+
+
 </table>
-      
-       
+
+
     </div>
   </section>
-  
+
 
   <main id="main">
 
     <!-- ======= Clients Section ======= -->
-  
-   
+
+
 
   </main><!-- End #main -->
 
@@ -164,7 +166,7 @@ $result=mysqli_query($link,$query);
             <ul>
               <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#home">Home</a></li>
               <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#about">About</a></li>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#contact">Contact</a></li> 
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </ul>
           </div>
 
@@ -174,7 +176,7 @@ $result=mysqli_query($link,$query);
               <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#staffleasing">Staff Leasing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#engineeringservices">Engineering Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#itconsulting">I.T. Consulting</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>           
+              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>
             </ul>
           </div> -->
 
@@ -213,7 +215,7 @@ $result=mysqli_query($link,$query);
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
-      
+
     </div>
   </footer><!-- End Footer -->
 
@@ -230,9 +232,9 @@ $result=mysqli_query($link,$query);
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
 
-  
+
+
 
 </body>
 
@@ -272,5 +274,3 @@ $(document).ready(function() {
   });
 });
 </script>
-
-
