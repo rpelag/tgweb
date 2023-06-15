@@ -12,6 +12,7 @@ if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] === 1){
 include_once('config.php');
 $query="select * from applicants";
 $result=mysqli_query($link,$query);
+
 ?>
 
 <!DOCTYPE html>
@@ -102,23 +103,24 @@ $result=mysqli_query($link,$query);
       <table id="example" class="display"
 cellspacing="0" width="100%">
     <thead>
-    </tr>
+    <tr>
     <th> First Name </th>
     <th> Last Name </th>
     <th> Contact Number </th>
     <th> Email </th>
     <th> Field of Interest </th>
-
-</tr>
+    </tr>
+    
     </tbody>
 
-    <?php while($rows=mysql_fetch_assoc($result))
+    <?php while($rows=mysqli_fetch_assoc($result))
 		{
 		?>
-		<tr> <td><?php echo $rows['ID']; ?></td>
-		<td><?php echo $rows['Name']; ?></td>
-		<td><?php echo $rows['Email']; ?></td>
-		<td><?php echo $rows['Country']; ?></td>
+		<tr> <td><?php echo $rows['firstname']; ?></td>
+		<td><?php echo $rows['lastname']; ?></td>
+		<td><?php echo $rows['contactnum']; ?></td>
+		<td><?php echo $rows['email']; ?></td>
+    <td><?php echo $rows['field']; ?></td>
 		</tr>
 	<?php
                }
