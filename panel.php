@@ -103,14 +103,14 @@ $result=mysqli_query($link,$query);
       <table id="example" class="display"
 cellspacing="0" width="100%">
     <thead>
-    </tr>
+    <tr>
     <th> First Name </th>
     <th> Last Name </th>
     <th> Contact Number </th>
     <th> Email </th>
     <th> Field of Interest </th>
-
-</tr>
+    </tr>
+    
     </tbody>
 
     <?php while($rows=mysqli_fetch_assoc($result))
