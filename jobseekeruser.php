@@ -1,15 +1,5 @@
 <?php include 'protect.php'?>
 
-<?php
-if (!isset($_SESSION["email"]) || $_SESSION['email'] != 'forgot@teamglobal.site') { // check the value of the 'status' in the db
-    //do nothing
-    exit
-} else {
-    //go to panel
-    header("Location: panel.php");
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
