@@ -1,3 +1,22 @@
+<?php
+
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, otherwise redirect to login page
+if (isset($_SESSION["UserID"]) && $_SESSION["UserID"] === 1){
+    header("location: login.php");
+    exit;
+}
+
+include_once('config.php');
+$query="select * from applicants";
+$result=mysqli_query($link,$query);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,7 +109,7 @@
               <th> Field of Interest </th>
         </tr>
     </thead>
-  
+    <tbody>
     <?php while($rows=mysqli_fetch_assoc($result))
 		{
 		?>
@@ -104,6 +123,7 @@
 	<?php
                }
           ?>
+          </tbody>
       
     
 </table>
@@ -219,11 +239,6 @@
 
 </html>
 
-<script>
-$(document).ready(function() {
-  $('table').DataTable(); // Initialize DataTables
-});
-</script>
 <script>
 $(document).ready(function() {
   $('table').DataTable({
