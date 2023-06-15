@@ -9,7 +9,7 @@ if (isset($_POST["email"]) && (!empty($_POST["email"]))) {
   $error = ""; // Initialize the error variable
 
   if (!$email) {
-    $error .= "<p>Invalid email address. Please type a valid email address!</p>";
+    $error .= "Invalid email address. Please type a valid email address!";
   } else {
     $sel_query = "SELECT * FROM `applicants` WHERE email='".$email."'";
     $results = mysqli_query($link, $sel_query);
