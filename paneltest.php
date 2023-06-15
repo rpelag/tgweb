@@ -250,15 +250,15 @@ $(document).ready(function() {
         modifier: {
           selected: true
         },
-        columns: [0, 1, 2, 3, 4],
+        columns: [0, 1, 2, 3, 4, 5],
         format: {
           header: function (data, columnIdx) {
             return data;
           },
           body: function (data, column, row) {
             // Strip $ from salary column to make it numeric
-            // debugger;
-            // return column ===  ? "" : data;
+            debugger;
+            return column ===  6 ? "" : data;
           }
         }
       },
