@@ -11,7 +11,7 @@ if(isset($_POST["email"]) && (!empty($_POST["email"]))){
        $results = mysqli_query($link,$sel_query);
        $row = mysqli_num_rows($results);
        if ($row==""){
-           $error .= "<p>No user is registered with this email address!</p>";
+           echo "<script>showPrompt('This Email does not exist in the Database.');</script>";
        }
     }
     if($error!=""){
@@ -77,8 +77,8 @@ if(isset($_POST["email"]) && (!empty($_POST["email"]))){
        if(!$mail->Send()){
            echo "Mailer Error: " . $mail->ErrorInfo;
        }else{
-           echo "<script>showPrompt();</script>";
-           echo "<script>setTimeout(function() { window.location.href = 'login.php'; }, 3000);</script>";
+           echo "<script>showPrompt('An email has been sent to you with instructions on how to reset your password.');</script>";
+           echo "<script>setTimeout(function() { window.location.href = 'another_page.php'; }, 3000);</script>";
        }
     }
 }else{
@@ -93,8 +93,8 @@ if(isset($_POST["email"]) && (!empty($_POST["email"]))){
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <script>
-    function showPrompt() {
-        alert("An email has been sent to you with instructions on how to reset your password.");
+    function showPrompt(message) {
+        alert(message);
     }
 </script>
 <?php } ?>
