@@ -30,6 +30,11 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/administrator.css" rel="stylesheet">
+
+  <!-- Add the following CSS and JS files -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+
   
 <!-- Template Main CSS File -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />     
@@ -213,38 +218,44 @@
 
 
 </html>
+
 <script>
-  $(document).ready(function () {
-      $(document).ready(function () {
-          $('table').DataTable({                    
-              dom: 'Blfrtip',
-              buttons: [{
-                  text: 'Export To Excel',                       
-                  extend: 'excelHtml5',
-                  exportOptions: {
-                      modifier: {
-                          selected: true
-                      },
-                      columns: [0, 1, 2, 3],
-                      format: {
-                          header: function (data, columnIdx) {
-                              return data;
-                          },
-                          body: function (data, column, row) {
-                              // Strip $ from salary column to make it numeric
-                              debugger;
-                              return column === 4 ? "" : data;
-                          }
-                      }
-                  },
-                  footer: false,
-                  customize: function (xlsx) {
-                      var sheet = xlsx.xl.worksheets['sheet1.xml'];
-                      //$('c[r=A1] t', sheet).text( 'Custom text' );
-                      //$('row c[r^="C"]', sheet).attr('s', '2');
-                  }
-              }]
-          });
-      });
-  });
+$(document).ready(function() {
+  $('table').DataTable(); // Initialize DataTables
+});
 </script>
+<script>
+$(document).ready(function() {
+  $('table').DataTable({
+    dom: 'Blfrtip',
+    buttons: [{
+      text: 'Export To Excel',
+      extend: 'excelHtml5',
+      exportOptions: {
+        modifier: {
+          selected: true
+        },
+        columns: [0, 1, 2, 3],
+        format: {
+          header: function (data, columnIdx) {
+            return data;
+          },
+          body: function (data, column, row) {
+            // Strip $ from salary column to make it numeric
+            debugger;
+            return column === 4 ? "" : data;
+          }
+        }
+      },
+      footer: false,
+      customize: function (xlsx) {
+        var sheet = xlsx.xl.worksheets['sheet1.xml'];
+        //$('c[r=A1] t', sheet).text( 'Custom text' );
+        //$('row c[r^="C"]', sheet).attr('s', '2');
+      }
+    }]
+  });
+});
+</script>
+
+
