@@ -3,9 +3,12 @@
 session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
- if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: jobseekeruser.php");
-    exit;
+if (!isset($_SESSION["email"]) || $_SESSION['email'] = 'forgot@teamglobal.site') { // check the value of the 'status' in the db
+    //go to admin area
+    header("Location: panel.php");
+} else {
+    //go to members area
+    header("Location: jobseekeruser.php");  
 }
 
 // Include config file
