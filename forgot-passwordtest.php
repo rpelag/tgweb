@@ -77,9 +77,7 @@ if(isset($_POST["email"]) && (!empty($_POST["email"]))){
        if(!$mail->Send()){
            echo "Mailer Error: " . $mail->ErrorInfo;
        }else{
-           echo "<div class='success'>
-           <p>An email has been sent to you with instructions on how to reset your password.</p>
-           </div><br /><br /><br />";
+           echo "<script>showPrompt();</script>";
        }
     }
 }else{
