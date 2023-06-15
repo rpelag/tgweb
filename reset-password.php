@@ -19,7 +19,7 @@ if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"]) && ($
     if ($expDate >= $curDate) {
       ?>
       <br />
-     
+  
     <?php
     } else {
       $error .= "<h2>Link Expired</h2>
@@ -57,6 +57,7 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +65,7 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Team Global Facility Solutions Inc.</title>
+  <title>Presento Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -86,7 +87,7 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/reset.css" rel="stylesheet">
+  <link href="assets/css/login.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Presento - v3.10.0
@@ -111,41 +112,38 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
   <!-- End Header -->
 
   <!-- ======= home Section ======= -->
+
+
   <section id="home" class="d-flex align-items-center">
   <div class="container1" data-aos="zoom-out" data-aos-delay="100">
-    <h1>Reset Password</h1>
+    <h1>Forgot Password</h1>
     <div class="section-title2" data-aos="zoom-out">
       <div class="orange-line"></div>
     </div>
 
     <form method="post" action="" name="update">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="form-group">
-              <label for="pass1"><strong>Enter New Password:</strong></label>
-              <input type="password" id="pass1" class="form-control" name="pass1" maxlength="15" required>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="form-group">
-              <label for="pass2"><strong>Re-Enter New Password:</strong></label>
-              <input type="password" id="pass2" class="form-control" name="pass2" maxlength="15" required>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <input type="hidden" name="email" value="<?php echo $email; ?>">
-            <button type="submit" class="btn btn-primary">Reset Password</button>
-          </div>
-        </div>
-      </div>
-    </form>
+        <input type="hidden" name="action" value="update" />
+        <br /><br />
+        <label><strong>Enter New Password:</strong></label><br />
+        <input type="password" name="pass1" maxlength="15" required />
+        <br /><br />
+        <label><strong>Re-Enter New Password:</strong></label><br />
+        <input type="password" name="pass2" maxlength="15" required/>
+        <br /><br />
+        <input type="hidden" name="email" value="<?php echo $email; ?>"/>
+        <input type="submit" value="Reset Password" />
+      </form>
+
+  
   </div>
 </section>
+
+
+
+
+
+    <!-- ======= Clients Section ======= -->
+
 
 
   <!-- ======= Footer ======= -->
@@ -244,3 +242,4 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
 </body>
 
 </html>
+
