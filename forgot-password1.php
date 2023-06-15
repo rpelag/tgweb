@@ -5,21 +5,21 @@ $email = $_POST["email"];
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 $email = filter_var($email, FILTER_VALIDATE_EMAIL);
 if (!$email) {
-   $error .= "<script>
+   $error .= <script>
        function showPrompt() {
            alert("Invalid email address please type a valid email address!");
        }
-   </script>";
+   </script>;
    }else{
    $sel_query = "SELECT * FROM `applicants` WHERE email='".$email."'";
    $results = mysqli_query($link,$sel_query);
    $row = mysqli_num_rows($results);
    if ($row==""){
-   $error .= "<script>
+   $error .= <script>
        function showPrompt() {
            alert("No user is registered with this email address!");
        }
-   </script>";
+   </script>;
    }
   }
    if($error!=""){
@@ -84,13 +84,13 @@ $mail->AddAddress($email_to);
 if(!$mail->Send()){
 echo "Mailer Error: " . $mail->ErrorInfo;
 }else{
-echo "<div class='error'>
+echo <div class='error'>
 <script>
     function showPrompt() {
         alert("An email has been sent to you with instructions on how to reset your password.");
     }
 </script>
-</div><br /><br /><br />";
+</div><br /><br /><br />;
 	}
    }
 }else{
