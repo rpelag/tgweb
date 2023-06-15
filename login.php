@@ -8,10 +8,6 @@ session_start();
     exit;
 }
 
-if(!isset($_SESSION["email"]) || $_SESSION['email'] = 'forgot@teamglobal.site') {
-    //could redirect page here
-    header("location: panel.php");
-}
 // Include config file
 require_once "config.php";
 
