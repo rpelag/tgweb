@@ -2491,7 +2491,17 @@ th:hover {
     left: 0;
   }
 
-  .dataTables_length,
+  .dataTables_length{
+    position: sticky;
+    background-color: #fff;
+    z-index: 1;
+    white-space: nowrap;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 30px;
+  }
   .dataTables_filter,
   button.dt-button {
     position: sticky;
@@ -2534,6 +2544,7 @@ th:hover {
   font-weight: 900;
   background-color: #fff;
   padding: 10px;
+  margin-top: 30px!important;
   box-sizing: border-box;
   z-index: 9999;
 }
@@ -2563,11 +2574,6 @@ table.dataTable tbody tr:hover td {
   }
 }
 
-.dataTables_length {
-  position: relative;
-  margin-top: 80px;
-  padding-top: 80px;
-}
 
 
 
