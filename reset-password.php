@@ -50,7 +50,9 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
   $email = $_POST["email"];
   $curDate = date("Y-m-d H:i:s");
   if ($pass1 != $pass2) {
-    $error .= "<p>Password do not match, both password should be same.<br /><br /></p>";
+    echo '<script>alert("Your passwords do not match.");</script>';
+    echo '<script>window.location.href = window.location.href;</script>';
+    exit;
   }
   if ($error != "") {
     echo "<div class='error'>" . $error . "</div><br />";
