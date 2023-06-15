@@ -39,7 +39,7 @@ if (isset($_POST["email"]) && (!empty($_POST["email"]))) {
       "INSERT INTO `password_reset_temp` (`email`, `key`, `expDate`)
       VALUES ('".$email."', '".$key."', '".$expDate."');");
 
-    $output = '<p>Hello!,</p>';
+    $output = '<p>Hello,</p>';
     $output .= '<p>Please click on the following link to reset your password.</p>';
     $output .= '<p>-------------------------------------------------------------</p>';
     $output .= '<p><a href="http://172.29.105.55/~teamglobal/reset-password.php?key='.$key.'&email='.$email.'&action=reset" target="_blank">
