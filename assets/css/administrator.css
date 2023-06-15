@@ -2563,5 +2563,10 @@ table.dataTable tbody tr:hover td {
   }
 }
 
+.dataTables_length {
+  position: relative;
+  margin-top: 10px;
+}
+
 
 
