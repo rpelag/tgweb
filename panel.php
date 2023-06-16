@@ -81,7 +81,7 @@ $result=mysqli_query($link,$query);
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li>Welcome ADMIN</li>
+          <li>HR Panel</li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
