@@ -9,7 +9,7 @@ if(!isset($_SESSION["email"]) || $_SESSION['email'] != 'forgot@teamglobal.site')
 }
 
 include_once('config.php');
-$query="select * from applicants where email != forgot@teamglobal.site";
+$query="select * from applicants where email != 'forgot@teamglobal.site'";
 $result=mysqli_query($link,$query);
 ?>
 
