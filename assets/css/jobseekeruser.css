@@ -1225,6 +1225,7 @@ section {
 --------------------------------------------------------------*/
 .careers .box {
   padding: 20px;
+  min-height: 50vh;
   background: #ff6600;
   text-align: center;
   border-radius: 8px;

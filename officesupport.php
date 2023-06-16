@@ -43,13 +43,11 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
-      <!-- <h1 class="logo me-auto"><a href="index.html">Presento<span>.</span></a></h1>-->
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="jobseekeruser.html" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
+      <a href="jobseekeruser.php" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="jobseekeruser.html">Home</a></li>
+          <li><a class="nav-link scrollto " href="jobseekeruser.php">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -67,7 +65,7 @@
       <div class="container">
 
         <ol>
-          <li><a href="jobseekeruser.html">Home</a></li>
+          <li><a href="jobseekeruser.php">Home</a></li>
           <li>Office Service</li>
         </ol>
         <h2>Job Vacancies</h2>
@@ -90,7 +88,7 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">In-house Reliever</a>
+                <a href="inhousereliever.php">In-house Reliever</a>
               </h2>
 
               <div class="entry-meta">
@@ -107,7 +105,7 @@
                   perform preventative maintenance, take orders, keep records, and control inventory.
                 </p>
                 <div class="read-more">
-                  <a href="inhousereliever.html">Read more</a>
+                  <a href="inhousereliever.php">Read more</a>
                 </div>
               </div>
 
@@ -137,7 +135,7 @@
                   Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.
                 </p>
                 <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                  <a href="#">Read More</a>
                 </div>
               </div>
 
@@ -167,7 +165,7 @@
                   Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut dolores velit.
                 </p>
                 <div class="read-more">
-                  <a href="multiskilledtechnicians.html">Read More</a>
+                  <a href="#">Read More</a>
                 </div>
               </div>
 
@@ -197,7 +195,7 @@
                   Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.
                 </p>
                 <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                  <a href="#">Read More</a>
                 </div>
               </div>
 
@@ -242,18 +240,17 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseekeruser.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseekeruser.html#careers">Career</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseekeruser.php">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseekeruser.php#careers">Career</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Careers</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="officesupport.html">Office Support </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="engineeringsupport.html">Engineering Support</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="itsupport.html">I.T. Support</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>            -->
+              <li><i class="bx bx-chevron-right"></i> <a href="officesupport.php">Office Support </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="engineeringsupport.php">Engineering Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="itsupport.php">I.T. Support</a></li>
             </ul>
           </div>
 

@@ -74,60 +74,40 @@
   </section><!-- End home -->
 
   <main id="main">
-
-
-
     <section id="careers" class="careers">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <span class="orange-text"><h2>CAREER</h2></span>
           <p>Take the first step to be part of Team Global. Be part of the team that is made up of talented individuals that cater to clients needs.</p>
         </div>
-
-
         <div class="row">
-
           <div class="col-md-4">
             <div class="box" data-aos="fade-up" data-aos-delay="100">
-
               <h4>Engineering Services</h4>
               <ul>
-                <li>Engineering support are expert services offered by Team Global engineers to help organizations
-                   and clients with a variety of engineering tasks and projects. These services are essential in delivering
-                    successful projects, ensuring quality compliance with engineering standards and requirements.<br><br></li>
+                <li>Engineering support are expert services offered by Team Global engineers to help organizations and clients with a variety of engineering tasks and projects. These services are essential in delivering successful projects, ensuring quality compliance with engineering standards and requirements.</li>
               </ul>
               <div class="btn-wrap">
                 <a href="engineeringsupport.php" class="btn-buy">Learn more</a>
               </div>
             </div>
           </div>
-
           <div class="col-md-4 mt-4 mt-md-0">
             <div class="box " data-aos="fade-up" data-aos-delay="100">
-
               <h4>Office Services</h4>
               <ul>
-                <li>Office support pertains primarily to the administrative and clerical duties required for an office or workplace to run
-                  efficiently. To guarantee that the office runs smoothly and successfully, assistance and support are provided.<br><br><br><br></li>
+                <li>Office support pertains primarily to the administrative and clerical duties required for an office or workplace to run efficiently. To guarantee that the office runs smoothly and successfully, assistance and support are provided to ensure a productive and well-functioning work environment.</li>
               </ul>
               <div class="btn-wrap">
                 <a href="officesupport.php" class="btn-buy">Learn more</a>
               </div>
             </div>
           </div>
-
           <div class="col-md-4 mt-4 mt-md-0">
             <div class="box" data-aos="fade-up" data-aos-delay="100">
               <h4>I.T. Services</h4>
               <ul>
-                <li>I.T. services are professional services provided by Team Global specializing in information technology to
-                   assist clients or organizations in managing, implementing, and optimizing their IT systems and infrastructure.
-                   Team Global I.T. services encompass a wide range of activities and offerings aimed at supporting the technology needs of your businesses.</li>
-                <!-- <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li> -->
+                <li>I.T. services are professional services provided by Team Global specializing in information technology to assist clients or organizations in managing, implementing, and optimizing their IT systems and infrastructure. It encompass a wide range of offerings aimed at supporting the technology needs of your businesses.</li>
               </ul>
               <div class="btn-wrap">
                 <a href="itsupport.php" class="btn-buy">Learn more</a>
@@ -135,11 +115,10 @@
             </div>
           </div>
         </div>
-    </div>
+      </div>
     </section>
-
-
-  </main><!-- End #main -->
+  </main>
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -163,30 +142,17 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Careers</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="officesupport.html">Office Support </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="engineeringsupport.html">Engineering Support</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="itsupport.html">I.T. Support</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>            -->
+              <li><i class="bx bx-chevron-right"></i> <a href="officesupport.php">Office Support </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="engineeringsupport.php">Engineering Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="itsupport.php">I.T. Support</a></li>
             </ul>
           </div>
 
           <div class="social-links  col-lg-2 col-md-6 footer-links ">
             <h4>Social Media</h4>
-            <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
             <a href="https://www.facebook.com/teamglobalfacilitysolutions" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-            <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
             <a href="https://www.linkedin.com/company/team-global-facility-solutions-inc-/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
           </div>
-
-          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Description</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div> -->
-
         </div>
       </div>
     </div>

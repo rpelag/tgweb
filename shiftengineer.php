@@ -43,13 +43,13 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
-      <!-- <h1 class="logo me-auto"><a href="index.html">Presento<span>.</span></a></h1>-->
+      <!-- <h1 class="logo me-auto"><a href="index.php">Presento<span>.</span></a></h1>-->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="jobseekeruser.html" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
+      <a href="jobseekeruser.php" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="jobseekeruser.html">Home</a></li>
+          <li><a class="nav-link scrollto active" href="jobseekeruser.php">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
 
@@ -67,8 +67,9 @@
       <div class="container">
 
         <ol>
-          <li><a href="jobseekeruser.html">Home</a></li>
-          <li><a href="engineeringsupport.html">Engineering Support</a></li>
+          <li><a href="jobseekeruser.php">Home</a></li>
+          <li><a href="engineeringsupport.php">Engineering Support</a></li>
+          <li>shift Engineer</li>
         </ol>
         <h2>Shift Engineer/Supervisor</h2>
 
@@ -95,7 +96,7 @@
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Technical Support</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>Technical Support</li>
                   <!-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li> -->
 
                 </ul>
@@ -152,7 +153,7 @@
                   </div>
                 </section>
                 <div class="d-flex justify-content-between read-more">
-                  <a href="engineeringsupport.html">BACK</a>
+                  <a href="engineeringsupport.php">BACK</a>
                   <a href="mailto:engineeringHR@teamglobal.com.ph	?subject=Application for Shift Engineer">APPLY</a>
 
                 </div>
@@ -196,18 +197,17 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseekeruser.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseekeruser.html#careers">Career</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseekeruser.php">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i><a class="nav-link scrollto" href="jobseekeruser.php#careers">Career</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Careers</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="officesupport.html">Office Support </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="engineeringsupport.html">Engineering Support</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="itsupport.html">I.T. Support</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>            -->
+              <li><i class="bx bx-chevron-right"></i> <a href="officesupport.php">Office Support </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="engineeringsupport.php">Engineering Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="itsupport.php">I.T. Support</a></li>
             </ul>
           </div>
 
