@@ -19,7 +19,7 @@ if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"]) && ($
     if ($expDate >= $curDate) {
       ?>
       <br />
-  
+
     <?php
     } else {
       $error .= "<h2>Link Expired</h2>
@@ -65,7 +65,7 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Presento Bootstrap Template - Index</title>
+  <title>Team Global Facility Solutions Inc.</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -133,10 +133,10 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
         </div>
         <input type="hidden" name="email" value="<?php echo $email; ?>">
         <button type="submit" class="btn btn-primary" value="Reset Password">Reset Password</button>
-        
+
       </form>
 
-  
+
   </div>
 </section>
 
@@ -244,4 +244,3 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
 </body>
 
 </html>
-
