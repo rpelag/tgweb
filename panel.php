@@ -12,26 +12,26 @@ if(!isset($_SESSION["email"]) || $_SESSION['email'] != 'forgot@teamglobal.site')
 $inactivity_time = 1 * 60;
 
 // Check if the last_timestamp is set
-// and last_timestamp is greater then inactivity time
+// and last_timestamp is greater than the inactivity time
 // then unset $_SESSION variable & destroy session data
 if (isset($_SESSION['last_timestamp']) && (time() - $_SESSION['last_timestamp']) > $inactivity_time) {
     session_unset();
     session_destroy();
 
-    //Redirect user to login page
-    header("Location: login.php");
+    // Display alert prompt and redirect user to login page
+    echo '<script>alert("Page has timed out. Please login again."); window.location.href = "login.php";</script>';
     exit();
-  }else{
+} else {
     // Regenerate new session id and delete old one to prevent session fixation attack
     session_regenerate_id(true);
 
     // Update the last timestamp
     $_SESSION['last_timestamp'] = time();
-  }
+}
 
 include_once('config.php');
-$query="select * from applicants where email != 'forgot@teamglobal.site'";
-$result=mysqli_query($link,$query);
+$query = "SELECT * FROM applicants WHERE email != 'forgot@teamglobal.site'";
+$result = mysqli_query($link, $query);
 
 
 ?>
