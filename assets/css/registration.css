@@ -2351,6 +2351,22 @@ h1 {
   color: #555;
 }
 
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link a {
+  color: #717070;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  color: #ff6600;
+}
+
+
+
 
 
 
