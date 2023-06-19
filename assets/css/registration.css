@@ -377,7 +377,7 @@ h6 {
 --------------------------------------------------------------*/
 #home {
   width: 100%;
-  min-height: 130vh;
+  min-height: 140vh;
   background: url("../img/wallpaper.jpg") top center no-repeat;
   background-size: cover;
   position: relative;
@@ -2305,8 +2305,8 @@ margin: 0;
 
 .container1 {
   max-width: 1000px;
-  margin-top: 160px;
-  margin-bottom: 120px;
+  margin-top: 140px;
+  margin-bottom: 140px;
   padding: 40px;
   background-color: #fff;
   border-radius: 5px;
