@@ -8,11 +8,22 @@ if(!isset($_SESSION["email"]) || $_SESSION['email'] != 'forgot@teamglobal.site')
     die('This page is not available to non-administrators.');
 }
 
+$now = time();
+if (isset($_SESSION['discard_after']) && $now > $_SESSION['discard_after']) {
+    // this session has worn out its welcome; kill it and start a brand new one
+    session_unset();
+    session_destroy();
+    session_start();
+}
+
+// either new or old, it should live at most for another hour
+$_SESSION['discard_after'] = $now + 60;
+
 include_once('config.php');
 $query="select * from applicants where email != 'forgot@teamglobal.site'";
 $result=mysqli_query($link,$query);
 
-ini_set('session.gc_maxlifetime', 60*1);
+
 ?>
 
 
