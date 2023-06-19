@@ -197,13 +197,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
-                // Show success alert
-                echo '<script>alert("Registration successful!");</script>';
-                // Redirect to login page
-                header("location: login.php");
-            } else {
-                echo "Oops! Something went wrong. Please try again later.";
-            }
+              // Show success alert
+              echo '<script>alert("Registration successful!");</script>';
+              // Redirect to login page
+              header("location: login.php");
+              exit; // Add this line to stop further execution
+          } else {
+              echo "Oops! Something went wrong. Please try again later.";
+          }
+          
+
 
             // Close statement
             mysqli_stmt_close($stmt);
@@ -293,7 +296,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <section id="home" class="d-flex align-items-center">
 
       <div class="container1" data-aos="zoom-out" data-aos-delay="100">
-        <h1>Registration Form11</h1>
+        <h1>Registration Form111</h1>
         <div class="section-title2" data-aos="zoom-out">
           <div class="orange-line"></div>
         </div>
