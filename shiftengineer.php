@@ -69,7 +69,7 @@
         <ol>
           <li><a href="jobseekeruser.php">Home</a></li>
           <li><a href="engineeringsupport.php">Engineering Support</a></li>
-          <li>shift Engineer</li>
+          <li>Shift Engineer</li>
         </ol>
         <h2>Shift Engineer/Supervisor</h2>
 
