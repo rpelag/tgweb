@@ -7,16 +7,16 @@ $firstname = $lastname = $contactnum = $email = $field = $password = $confirm_pa
 $firstname_err = $lastname_err = $contactnum_err = $email_err = $field_err = $password_err = $confirm_password_err = "";
 
 // Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate first name
-    if(empty(trim($_POST["firstname"]))){
+    if (empty(trim($_POST["firstname"]))) {
         $firstname_err = "Please enter a First name.";
-    } else{
+    } else {
         // Prepare a select statement
         $sql = "SELECT id FROM applicants WHERE firstname = ?";
 
-        if($stmt = mysqli_prepare($link, $sql)){
+        if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_firstname);
 
@@ -24,12 +24,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_firstname = trim($_POST["firstname"]);
 
             // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
+            if (mysqli_stmt_execute($stmt)) {
                 /* store result */
                 mysqli_stmt_store_result($stmt);
                 $firstname = trim($_POST["firstname"]);
-               // }
-            } else{
+                // }
+            } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
 
@@ -39,13 +39,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate last name
-    if(empty(trim($_POST["lastname"]))){
+    if (empty(trim($_POST["lastname"]))) {
         $lastname_err = "Please enter a Last name.";
-    } else{
+    } else {
         // Prepare a select statement
         $sql = "SELECT id FROM applicants WHERE lastname = ?";
 
-        if($stmt = mysqli_prepare($link, $sql)){
+        if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_lastname);
 
@@ -53,12 +53,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_lastname = trim($_POST["lastname"]);
 
             // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
+            if (mysqli_stmt_execute($stmt)) {
                 /* store result */
                 mysqli_stmt_store_result($stmt);
                 $lastname = trim($_POST["lastname"]);
-               // }
-            } else{
+                // }
+            } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
 
@@ -68,13 +68,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate contact number
-    if(empty(trim($_POST["contactnum"]))){
+    if (empty(trim($_POST["contactnum"]))) {
         $contactnum_err = "Please enter a Contact number.";
-    } else{
+    } else {
         // Prepare a select statement
         $sql = "SELECT id FROM applicants WHERE contactnum = ?";
 
-        if($stmt = mysqli_prepare($link, $sql)){
+        if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_contactnum);
 
@@ -82,12 +82,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_contactnum = trim($_POST["contactnum"]);
 
             // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
+            if (mysqli_stmt_execute($stmt)) {
                 /* store result */
                 mysqli_stmt_store_result($stmt);
                 $contactnum = trim($_POST["contactnum"]);
-               // }
-            } else{
+                // }
+            } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
 
@@ -97,13 +97,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate email
-    if(empty(trim($_POST["email"]))){
+    if (empty(trim($_POST["email"]))) {
         $email_err = "Please enter an email.";
-    } else{
+    } else {
         // Prepare a select statement
         $sql = "SELECT id FROM applicants WHERE email = ?";
 
-        if($stmt = mysqli_prepare($link, $sql)){
+        if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_email);
 
@@ -111,16 +111,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_email = trim($_POST["email"]);
 
             // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
+            if (mysqli_stmt_execute($stmt)) {
                 /* store result */
                 mysqli_stmt_store_result($stmt);
 
-                if(mysqli_stmt_num_rows($stmt) == 1){
+                if (mysqli_stmt_num_rows($stmt) == 1) {
                     $email_err = "This email already exists.";
-                } else{
+                } else {
                     $email = trim($_POST["email"]);
                 }
-            } else{
+            } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
 
@@ -130,13 +130,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate last name
-    if(empty(trim($_POST["field"]))){
+    if (empty(trim($_POST["field"]))) {
         $field_err = "Please enter a Field of Interest.";
-    } else{
+    } else {
         // Prepare a select statement
         $sql = "SELECT id FROM applicants WHERE field = ?";
 
-        if($stmt = mysqli_prepare($link, $sql)){
+        if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_field);
 
@@ -144,12 +144,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_field = trim($_POST["field"]);
 
             // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
+            if (mysqli_stmt_execute($stmt)) {
                 /* store result */
                 mysqli_stmt_store_result($stmt);
                 $field = trim($_POST["field"]);
-               // }
-            } else{
+                // }
+            } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
 
@@ -159,50 +159,51 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate password
-    if(empty(trim($_POST["password"]))){
+    if (empty(trim($_POST["password"]))) {
         $password_err = "Please enter a password.";
-    } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "Password must have atleast 6 characters.";
-    } else{
+    } elseif (strlen(trim($_POST["password"])) < 6) {
+        $password_err = "Password must have at least 6 characters.";
+    } else {
         $password = trim($_POST["password"]);
     }
 
     // Validate confirm password
-    if(empty(trim($_POST["confirm_password"]))){
+    if (empty(trim($_POST["confirm_password"]))) {
         $confirm_password_err = "Please confirm password.";
-    } else{
+    } else {
         $confirm_password = trim($_POST["confirm_password"]);
-        if(empty($password_err) && ($password != $confirm_password)){
+        if (empty($password_err) && ($password != $confirm_password)) {
             $confirm_password_err = "Password did not match.";
         }
     }
 
     // Check input errors before inserting in database
-    if(empty($firstname_err) && empty($lastname_err) && empty($contactnum_err) && empty($email_err) && empty($field_err) && empty($password_err) && empty($confirm_password_err)){
+    if (empty($firstname_err) && empty($lastname_err) && empty($contactnum_err) && empty($email_err) && empty($field_err) && empty($password_err) && empty($confirm_password_err)) {
 
         // Prepare an insert statement
         $sql = "INSERT INTO applicants (firstname, lastname, contactnum, email, field, password) VALUES (?, ?, ?, ?, ?, ?)";
 
-        if($stmt = mysqli_prepare($link, $sql)){
+        if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "ssssss", $param_firstname, $param_lastname, $param_contactnum, $param_email, $param_field, $param_password);
 
             // Set parameters
-		       	$param_firstname = $firstname;
-		      	$param_lastname = $lastname;
-			      $param_contactnum = $contactnum;
+            $param_firstname = $firstname;
+            $param_lastname = $lastname;
+            $param_contactnum = $contactnum;
             $param_email = $email;
             $param_field = $field;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
 
             // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Redirect to login page
-                header("location: login.php");
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-
+            if (mysqli_stmt_execute($stmt)) {
+              // Show success alert and redirect to login page
+              echo "<script>alert('Registration successful!'); location.href='login.php';</script>";
+              exit();
+          } else {
+              echo "Oops! Something went wrong. Please try again later.";
+          }
+        
             // Close statement
             mysqli_stmt_close($stmt);
         }
@@ -211,6 +212,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
 ?>
+
 
 
 <!DOCTYPE html>
