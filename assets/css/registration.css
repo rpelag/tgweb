@@ -2305,7 +2305,8 @@ margin: 0;
 
 .container1 {
   max-width: 1000px;
-  margin-top: 80px;
+  margin-top: 90px;
+  margin-bottom: 100px;
   padding: 40px;
   background-color: #fff;
   border-radius: 5px;
