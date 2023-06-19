@@ -8,16 +8,26 @@ if(!isset($_SESSION["email"]) || $_SESSION['email'] != 'forgot@teamglobal.site')
     die('This page is not available to non-administrators.');
 }
 
-$now = time();
-if (isset($_SESSION['discard_after']) && $now > $_SESSION['discard_after']) {
-    // this session has worn out its welcome; kill it and start a brand new one
+// Set the inactivity time
+$inactivity_time = 1 * 60;
+
+// Check if the last_timestamp is set
+// and last_timestamp is greater then inactivity time
+// then unset $_SESSION variable & destroy session data
+if (isset($_SESSION['last_timestamp']) && (time() - $_SESSION['last_timestamp']) > $inactivity_time) {
     session_unset();
     session_destroy();
-    session_start();
-}
 
-// either new or old, it should live at most for another hour
-$_SESSION['discard_after'] = $now + 60;
+    //Redirect user to login page
+    header("Location: login.php");
+    exit();
+  }else{
+    // Regenerate new session id and delete old one to prevent session fixation attack
+    session_regenerate_id(true);
+
+    // Update the last timestamp
+    $_SESSION['last_timestamp'] = time();
+  }
 
 include_once('config.php');
 $query="select * from applicants where email != 'forgot@teamglobal.site'";
