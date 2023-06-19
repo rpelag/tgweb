@@ -2565,6 +2565,19 @@ table.dataTable tbody tr:hover td {
 }
 
 
+h2 {
+  text-align: center!important;
+  font-size: 30px!important;
+  padding-bottom: 40px;
+  font-weight: bold!important;
+  margin-bottom: 20px!important;
+  color: #ff6600!important;
+  font-family: "Raleway", sans-serif!important;
+}
+
+
+
+
 
 
 
