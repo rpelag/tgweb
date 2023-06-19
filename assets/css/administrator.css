@@ -2570,10 +2570,23 @@ h2 {
   font-size: 30px!important;
   padding-bottom: 40px;
   font-weight: bold!important;
-  margin-bottom: 20px!important;
+  margin-bottom: 0px!important;
   color: #ff6600!important;
   font-family: "Raleway", sans-serif!important;
 }
+
+@media (max-width: 767px) {
+  h2 {
+    display: flex!important;
+    font-size: 29px!important;
+    justify-content: center!important;
+    align-items: center!important;
+    flex-wrap: wrap!important;
+    text-align: center!important;
+  }
+}
+
+
 
 
 
