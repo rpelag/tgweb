@@ -9,7 +9,7 @@ if(!isset($_SESSION["email"]) || $_SESSION['email'] != 'forgot@teamglobal.site')
 }
 
 // Set the inactivity time
-$inactivity_time = 1 * 60;
+$inactivity_time = 10 * 600;
 
 // Check if the last_timestamp is set
 // and last_timestamp is greater than the inactivity time
@@ -121,6 +121,7 @@ $result = mysqli_query($link, $query);
   <section id="home" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <table id="example" class="display" cellspacing="0" width="100%">
+        <h1>Registered Applicant</h1>
     <thead>
         <tr>
               <th> First Name </th>
