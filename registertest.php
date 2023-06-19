@@ -293,7 +293,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <section id="home" class="d-flex align-items-center">
 
       <div class="container1" data-aos="zoom-out" data-aos-delay="100">
-        <h1>Registration Form1</h1>
+        <h1>Registration Form11</h1>
         <div class="section-title2" data-aos="zoom-out">
           <div class="orange-line"></div>
         </div>
