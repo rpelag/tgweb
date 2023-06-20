@@ -446,9 +446,20 @@ h6 {
   }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 600px) {
   #home {
     height: 120vh;
+    padding-top: 58px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container1 {
+    max-width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 20px;
   }
 }
 
