@@ -58,20 +58,8 @@
   <!-- End Header -->
 
   <!-- ======= home Section ======= -->
-  <section id="home" class="d-flex align-items-center">
-    <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <div class="row">
-        <div class="col-xl-7">
-          <h1>Providing your business with a <br><span class="orange-text">Better Solution</span></h1><br>
-           <!-- <h2> We are team of Professional with vast experience and experties in Property Management, Resource Management & I.T. Management </h2>  -->
-          <h2>We are a team of Professional with vast experience in staff leasing and outsourcing for Office Support, Engineering and Technical Support, I.T. Management, and Executive Search services.</h2>
-          <a href="#careers" class="btn-get-started scrollto">Find Opportunity</a>
-        </div>
-      </div>
-
-    </div>
-
-  </section><!-- End home -->
+  
+  <!-- End home -->
 
   <main id="main">
     <section id="careers" class="careers">
