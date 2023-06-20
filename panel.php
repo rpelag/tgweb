@@ -1,41 +1,3 @@
-<?php
-
-// Initialize the session
-session_start();
-
-if(!isset($_SESSION["email"]) || $_SESSION['email'] != 'forgot@teamglobal.site') {
-    //could redirect page here
-    die('This page is not available to non-administrators.');
-}
-
-// Set the inactivity time
-$inactivity_time = 10 * 600;
-
-// Check if the last_timestamp is set
-// and last_timestamp is greater than the inactivity time
-// then unset $_SESSION variable & destroy session data
-if (isset($_SESSION['last_timestamp']) && (time() - $_SESSION['last_timestamp']) > $inactivity_time) {
-    session_unset();
-    session_destroy();
-
-    // Display alert prompt and redirect user to login page
-    echo '<script>alert("Page has timed out. Please login again."); window.location.href = "login.php";</script>';
-    exit();
-} else {
-    // Regenerate new session id and delete old one to prevent session fixation attack
-    session_regenerate_id(true);
-
-    // Update the last timestamp
-    $_SESSION['last_timestamp'] = time();
-}
-
-include_once('config.php');
-$query = "SELECT * FROM applicants WHERE email != 'forgot@teamglobal.site'";
-$result = mysqli_query($link, $query);
-
-
-?>
-
 
 
 <!DOCTYPE html>
@@ -270,6 +232,7 @@ $(document).ready(function() {
     buttons: [{
       text: 'Export To Excel',
       extend: 'excelHtml5',
+      filename: 'TGFI Applicant List',
       exportOptions: {
         modifier: {
           selected: true

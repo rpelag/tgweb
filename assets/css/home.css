@@ -373,31 +373,14 @@ h6 {
 /*--------------------------------------------------------------
 # home Section
 --------------------------------------------------------------*/
+
 #home {
-  width: 100%;
-  min-height: 120vh;
+  min-height: 100vh;
   background: url("../img/wallpaper.jpg") top center no-repeat;
   background-size: cover;
-  position: relative;
-  padding-top: 82px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-@media (max-width: 768px) {
-  /* Styles for screens smaller than or equal to 768px (e.g., mobile devices) */
-  #home {
-    min-height: auto;
-    padding-top: 90px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Styles for screens smaller than or equal to 768px (e.g., mobile devices) */
-  #home h1{
-    min-height: auto;
-    padding-top: 60px;
-  }
-}
-
 
 
 #home:before {
@@ -410,8 +393,10 @@ h6 {
   right: 0;
 }
 
+
 #home h1 {
   margin: 0px;
+  padding-top: 70px;
   font-size: 80px;
   font-weight: 700;
   color: #fff;
@@ -424,6 +409,23 @@ h6 {
   font-size: 24px;
   text-align: center;
   font-weight: 100;
+}
+
+
+@media (max-width: 768px) {
+  #home {
+    text-align: center;
+    padding-top: 58px;
+  }
+
+  #home h1 {
+    font-size: 40px!important;
+  }
+
+  #home h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .button:hover {
@@ -448,6 +450,38 @@ h6 {
     flex-direction: column;
     text-align: center;
     width: 500px; /* Set a fixed width for the buttons */
+    margin: 10px auto; /* Center the buttons horizontally */
+  }
+  
+  #role .box .btn-get-started span,
+  #role .box .btn-get-started2 span {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Styles for screens up to 767px wide (e.g., mobile devices) */
+  #role .box .btn-get-started,
+  #role .box .btn-get-started2 {
+    flex-direction: column;
+    text-align: center;
+    width: 700px; /* Set a fixed width for the buttons */
+    margin: 10px auto; /* Center the buttons horizontally */
+  }
+  
+  #role .box .btn-get-started span,
+  #role .box .btn-get-started2 span {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 381px) {
+  /* Styles for screens up to 767px wide (e.g., mobile devices) */
+  #role .box .btn-get-started,
+  #role .box .btn-get-started2 {
+    flex-direction: column;
+    text-align: center;
+    width: 300px; /* Set a fixed width for the buttons */
     margin: 10px auto; /* Center the buttons horizontally */
   }
   
@@ -526,21 +560,10 @@ h6 {
 }
 
 
-
-
-
-
-
 .button span {
   
   color: #ff6600;
 }
-
-
-
-
-
-
 
 
 
@@ -567,27 +590,8 @@ h6 {
 }
 
 
-@media (max-width: 768px) {
-  #home {
-    text-align: center;
-    padding-top: 58px;
-  }
 
-  #home h1 {
-    font-size: 40px;
-  }
 
-  #home h2 {
-    font-size: 18px;
-    line-height: 24px;
-  }
-}
-
-@media (max-height: 500px) {
-  #home {
-    height: 120vh;
-  }
-}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -931,6 +935,7 @@ section {
     padding-block: 0px;
   }
 }
+
 
 @media (max-width: 768px) {
   .about {
@@ -2562,8 +2567,6 @@ margin: 0;
 .btn-get-started2:hover span {
   color: white; /* Set hover color to white */
 }
-
-
 
 
 

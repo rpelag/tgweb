@@ -259,8 +259,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
-      <!-- <h1 class="logo me-auto"><a href="index.html">Presento<span>.</span></a></h1>-->
-      <!-- Uncomment below if you prefer to use an image logo -->
       <a href="index.html" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -286,82 +284,75 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </header>
   <!-- End Header -->
 
-  <!-- ======= home Section ======= -->
-
-
-  <section id="home" class="d-flex align-items-center">
-
-      <div class="container1" data-aos="zoom-out" data-aos-delay="100">
-        <h1>Registration Form</h1>
-        <div class="section-title2" data-aos="zoom-out">
-          <div class="orange-line"></div>
-        </div>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" name="firstname" class="form-control <?php echo (!empty($firstname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $firstname; ?>" id="firstName" placeholder="Enter your first name">
-                <span class="invalid-feedback"><?php echo $firstname_err; ?></span>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" name="lastname" class="form-control <?php echo (!empty($lastname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $lastname; ?>" id="lastName" placeholder="Enter your last name">
-                <span class="invalid-feedback"><?php echo $lastname_err; ?></span>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="contactNumber">Contact Number</label>
-            <input type="tel" name="contactnum" class="form-control <?php echo (!empty($contactnum_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contactnum; ?>" id="contactNumber" placeholder="Enter your contact number">
-            <span class="invalid-feedback"><?php echo $contactnum_err; ?></span>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" id="email" placeholder="Enter your email">
-            <span class="invalid-feedback"><?php echo $email_err; ?></span>
-          </div>
-          <div class="form-group">
-            <label for="field">Field of Interest</label>
-            <select class="form-select" name="field" aria-label="Default select example" class="form-control <?php echo (!empty($field_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $field; ?>" id="field">
-              <option value="IT_Support">IT Support</option>
-              <option value="Engineering_Support">Engineering Support</option>
-              <option value="Office_Support">Office Support</option>
-            </select>
-            <span class="invalid-feedback"><?php echo $field_err; ?></span>
-          </div>
-        <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" id="password" placeholder="Enter your password">
-            <span class="invalid-feedback"><?php echo $password_err; ?></span>
-          </div>
-          </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="confirmPassword">Confirm Password</label>
-            <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" id="confirmPassword" placeholder="Confirm your password">
-            <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-          </div>
-          </div>
-          </div>
-          <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
-        </form>
-        <div class="register-link">
-          <p>Already have an account? <a href="login.php">Login here</a>.</p>
-        </div>
-
-    </div>
-
-  </section>
-
-
-
-
     <!-- ======= Clients Section ======= -->
+
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="container1" data-aos="zoom-out" data-aos-delay="100">
+          <h1>Registration Form</h1>
+          <div class="section-title2" data-aos="zoom-out">
+            <div class="orange-line"></div>
+          </div>
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" name="firstname" class="form-control <?php echo (!empty($firstname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $firstname; ?>" id="firstName" placeholder="Enter your first name">
+                  <span class="invalid-feedback"><?php echo $firstname_err; ?></span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" name="lastname" class="form-control <?php echo (!empty($lastname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $lastname; ?>" id="lastName" placeholder="Enter your last name">
+                  <span class="invalid-feedback"><?php echo $lastname_err; ?></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactNumber">Contact Number</label>
+              <input type="tel" name="contactnum" class="form-control <?php echo (!empty($contactnum_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contactnum; ?>" id="contactNumber" placeholder="Enter your contact number">
+              <span class="invalid-feedback"><?php echo $contactnum_err; ?></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" id="email" placeholder="Enter your email">
+              <span class="invalid-feedback"><?php echo $email_err; ?></span>
+            </div>
+            <div class="form-group">
+              <label for="field">Field of Interest</label>
+              <select class="form-select <?php echo (!empty($field_err)) ? 'is-invalid' : ''; ?>" name="field" aria-label="Default select example" id="field">
+                <option value="IT_Support">IT Support</option>
+                <option value="Engineering_Support">Engineering Support</option>
+                <option value="Office_Support">Office Support</option>
+              </select>
+              <span class="invalid-feedback"><?php echo $field_err; ?></span>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" id="password" placeholder="Enter your password">
+                  <span class="invalid-feedback"><?php echo $password_err; ?></span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" id="confirmPassword" placeholder="Confirm your password">
+                  <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+          </form>
+          <div class="register-link">
+            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
@@ -394,32 +385,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </ul>
           </div>
 
-        <!--   <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#staffleasing">Staff Leasing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#engineeringservices">Engineering Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#itconsulting">I.T. Consulting</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>
-            </ul>
-          </div> -->
 
           <div class="social-links  col-lg-2 col-md-6 footer-links ">
             <h4>Social Media</h4>
-            <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
-            <a href="https://www.facebook.com/teamglobalfacilitysolutions" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-            <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+            <a href="https://www.facebook.com/teamglobalfacilitysolutions" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>      
             <a href="https://www.linkedin.com/company/team-global-facility-solutions-inc-/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
           </div>
-
-          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Description</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div> -->
 
         </div>
       </div>
