@@ -170,20 +170,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <!-- End Header -->
 
   <!-- ======= home Section ======= -->
-
-
-  <section id="home" class="d-flex align-items-center">
-    <div class="container1" data-aos="zoom-out" data-aos-delay="100">
-      <h1>Login to your account</h1>
+  
+  <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="container1" data-aos="zoom-out" data-aos-delay="100">
+           <h1>Login to your account</h1>
       <div class="section-title2" data-aos="zoom-out">
         <div class="orange-line"></div>
       </div>
 
-      <?php
-        if(!empty($login_err)){
-            echo '<div class="alert alert-danger">' . $login_err . '</div>';
-        }
-        ?>
 
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-group">
@@ -204,14 +199,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <div class="register-link">
       <p>Don't have an account? <a href="register.php">Register here</a>.</p>
     </div>
-    </div>
+         
+         
+        
+        </div>
+      </div>
+    </section>
 
-  </section>
-
-
-
-
-    <!-- ======= Clients Section ======= -->
 
 
 
@@ -244,16 +238,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </ul>
           </div>
 
-        <!--   <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#staffleasing">Staff Leasing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#engineeringservices">Engineering Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#itconsulting">I.T. Consulting</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services-tg.html#executivesearch">Executive Search</a></li>
-            </ul>
-          </div> -->
-
           <div class="social-links  col-lg-2 col-md-6 footer-links ">
             <h4>Social Media</h4>
             <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
@@ -262,15 +246,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
             <a href="https://www.linkedin.com/company/team-global-facility-solutions-inc-/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
           </div>
-
-          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Description</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div> -->
-
         </div>
       </div>
     </div>
