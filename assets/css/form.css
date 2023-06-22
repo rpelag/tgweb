@@ -2298,7 +2298,7 @@ margin: 0;
 h1 {
   text-align: center;
   margin-bottom: 50px;
-  color: #ff5722;
+  color: #ff6600;
   font-weight: 900;
   font-size: 40px;
 }
@@ -2311,23 +2311,28 @@ h1 {
 .btn-primary {
   width: 100%;
   margin-top: 20px;
-  background-color: #ff5722;
-  border-color: #ff5722;
+  background-color: #ff6600;
+  border-color: #ff6600;
 }
 
 .btn-primary1 {
-  width: 20%;
+  width: 10%;
+  color: #ff6600;
+  font-size: 15px;
+  font-weight: 900;
   margin: 20px auto; /* Set margin-top to 20px and use auto for left and right margins */
-  background-color: #ff5722;
-  border-color: #ff5722;
+  background-color: transparent;
+  outline: #ff6600 solid 3px;
   display: block; /* Optional: Set the button to be a block element */
   text-align: center; /* Optional: Center the text within the button */
 }
 
 .btn-primary1:hover {
-  background-color: #b92f11;
-  border-color: #ff451b;
+  background: #ff6600;
+  color: #fff;
 }
+
+
 
 .btn-primary:hover {
   background-color: #ff451b;
@@ -2411,9 +2416,25 @@ h4 {
   cursor: pointer;
 }
 
-.delete-button {
+
+.btn-danger{
   background-color: #ff0000;
-  color: #fff;
+  margin-top: 26px;
+
+}
+.btn-danger:hover{
+  background-color: #d60000;
+ 
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .btn-danger {
+    background-color: #ff0000;
+    margin-top: 30px;
+    font-size: 10px;
+    margin-left: -10px;
+  }
 }
 
 
