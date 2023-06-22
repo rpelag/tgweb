@@ -598,8 +598,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
-        <div class="container1" data-aos="zoom-out" data-aos-delay="100">
-          <h1>Request for quote Form</h1>
+        <div class="container2" data-aos="zoom-out" data-aos-delay="200">
+          <h2>Request for quote Form</h2>
           <div class="section-title2" data-aos="zoom-out">
             <div class="orange-line"></div>
           </div>
@@ -650,57 +650,126 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   </div>
                 </div>
 
+                <div class="row">
+                <h4>Requirement</h4>
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="position"></label>
+                                <label for="position">Position</label>
+                                <select class="form-select <?php echo (!empty($position_err)) ? 'is-invalid' : ''; ?>" name="position" aria-label="Default select example" id="field">
+                                  <option value="">Pick a position</option>
+                                  <option value="Manager">Manager</option>
+                                  <option value="Officer">Officer</option>
+                                  <option value="IT Support">IT support</option>
+                                  <option value="Engineer">Engineer</option>
+                                </select>
+                                <span class="invalid-feedback"><?php echo $position_err; ?></span>
 
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="Count">Count</label>
+                                <input type="number" name="count" class="form-control <?php echo (!empty($count_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $count; ?>" id="managerCount" placeholder="Enter count" min="0">
+                                <span class="invalid-feedback"><?php echo $count_err; ?></span>
+                            </div>
 
+                            </div>
+                            <div class="col-md-5">
+                              <div class="form-group">
+                                <label for="position">Location</label>
+                                <select class="form-select <?php echo (!empty($location_err)) ? 'is-invalid' : ''; ?>" name="location" aria-label="Default select example" id="field">
+                                  <option value="">Pick a Location</option>
+                                  <option value="Manila">Manila</option>
+                                  <option value="Cebu">Cebu</option>
+                                  <option value="Bohol">Bohol</option>
+                                </select>
+                                <span class="invalid-feedback"><?php echo $location_err; ?></span>
+                              </div>
+                            </div>
+                            </div>
 
-                <div class="col-md-12">
-                  <h4>Requirement</h4>
-                  <div id="dynamicRowsContainer">
-                    <div class="row" id="initialRow">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="position">Position</label>
-                          <select class="form-select <?php echo (!empty($position_err)) ? 'is-invalid' : ''; ?>" name="position" aria-label="Default select example" id="field">
-                            <option value="">Pick a position</option>
-                            <option value="pos1">Manager</option>
-                            <option value="pos2">Officer</option>
-                            <option value="pos3">IT support</option>
-                            <option value="pos4">Engineer</option><?php echo $position_err; ?></span>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label for="Count">Count</label>
-                          <input type="number" name="count" class="form-control <?php echo (!empty($count_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $count; ?>" id="managerCount" placeholder="Enter count" min="0">
-                          <span class="invalid-feedback"><?php echo $count_err; ?></span>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="position">Location</label>
-                          <select class="form-select <?php echo (!empty($location_err)) ? 'is-invalid' : ''; ?>" name="location" aria-label="Default select example" id="field">
-                            <option value="">Pick a Location</option>
-                            <option value="pos1">Manila</option>
-                            <option value="pos2">Cebu</option>
-                            <option value="pos3">Bohol</option><?php echo $location_err; ?></span>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <button class="btn btn-primary1" onclick="addRow()">ADD</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                            <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="position"></label>
+                                <label for="position">Position</label>
+                                <select class="form-select <?php echo (!empty($position1_err)) ? 'is-invalid' : ''; ?>" name="position1" aria-label="Default select example" id="field">
+                                  <option value="">Pick a position</option>
+                                  <option value="Manager">Manager</option>
+                                  <option value="Officer">Officer</option>
+                                  <option value="IT Support">IT support</option>
+                                  <option value="Engineer">Engineer</option>
+                                </select>
+                                  <span class="invalid-feedback"><?php echo $position1_err; ?></span>
 
-                <div class="col-md-12">
-                  <h5>Remarks</h5>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="Count">Count</label>
+                                <input type="number" name="count1" class="form-control <?php echo (!empty($count1_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $count1; ?>" id="managerCount" placeholder="Enter count" min="0">
+                                <span class="invalid-feedback"><?php echo $count1_err; ?></span>
+                            </div>
+
+                            </div>
+                            <div class="col-md-5">
+                              <div class="form-group">
+                                <label for="position"></label>
+                                <label for="position">Location</label>
+                                <select class="form-select <?php echo (!empty($location1_err)) ? 'is-invalid' : ''; ?>" name="location1" aria-label="Default select example" id="field">
+                                  <option value="">Pick a Location</option>
+                                  <option value="Manila">Manila</option>
+                                  <option value="Cebu">Cebu</option>
+                                  <option value="Bohol">Bohol</option>
+                                </select>
+                                <span class="invalid-feedback"><?php echo $location1_err; ?></span>
+                              </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="position">Position</label>
+                                <select class="form-select <?php echo (!empty($position2_err)) ? 'is-invalid' : ''; ?>" name="position2" aria-label="Default select example" id="field">
+                                  <option value="">Pick a position</option>
+                                  <option value="Manager">Manager</option>
+                                  <option value="Officer">Officer</option>
+                                  <option value="IT Support">IT support</option>
+                                  <option value="Engineer">Engineer</option>
+                                </select>
+                                <span class="invalid-feedback"><?php echo $position2_err; ?></span>
+
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="Count">Count</label>
+                                <input type="number" name="count2" class="form-control <?php echo (!empty($count2_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $count2; ?>" id="managerCount" placeholder="Enter count" min="0">
+                                <span class="invalid-feedback"><?php echo $count2_err; ?></span>
+                            </div>
+
+                            </div>
+                            <div class="col-md-5">
+                              <div class="form-group">
+                                <label for="position"></label>
+                                <label for="position">Location</label>
+                                <select class="form-select <?php echo (!empty($location2_err)) ? 'is-invalid' : ''; ?>" name="location2" aria-label="Default select example" id="field">
+                                  <option value="">Pick a Location</option>
+                                  <option value="Manila">Manila</option>
+                                  <option value="Cebu">Cebu</option>
+                                  <option value="Bohol">Bohol</option>
+                                </select>
+                                <span class="invalid-feedback"><?php echo $location2_err; ?></span>
+                              </div>
+                            </div>
+                            </div>
+                <div class="col-md-22">
+                  <h4>Remarks</h4>
                   <div class="form-group">
-              <textarea name="remarks" class="form-control form-control-body <?php echo (!empty($remarks_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $remarks; ?>" id="exampleFormControlTextarea1" placeholder="Message"></textarea>
-              <span class="invalid-feedback"><?php echo $remarks_err; ?></span>
+                    <textarea name="remarks" class="form-control form-control-body <?php echo (!empty($remarks_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $remarks; ?>" id="exampleFormControlTextarea2" placeholder="Message"></textarea>
+                    <span class="invalid-feedback"><?php echo $remarks_err; ?></span>
             </div>
 
 
