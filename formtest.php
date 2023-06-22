@@ -423,108 +423,96 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <div class="section-title2" data-aos="zoom-out">
             <div class="orange-line"></div>
           </div>
-          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+          <form>
               <div class="row">
-
+                
                   <h4>Client Info</h4>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label for="companyName">Company Name:</label>
-                    <input type="text" name="companyname" class="form-control <?php echo (!empty($companyname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $companyname; ?>" id="companyName" placeholder="Enter company name">
-                    <span class="invalid-feedback"><?php echo $companyname_err; ?></span>
+                    <input type="text" class="form-control" id="companyName" placeholder="Enter company name" required>
                   </div>
                  </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="address">Company Address:</label>
-                    <input type="text" name="companyadd" class="form-control <?php echo (!empty($companyadd_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $companyadd; ?>" id="address" placeholder="Enter address">
-                    <span class="invalid-feedback"><?php echo $companyadd_err; ?></span>
+                    <input type="text" class="form-control" id="address" placeholder="Enter address" required>
                   </div>
                   </div>
                   <div class="col-md-6">
                   <div class="form-group">
                     <label for="name">Full Name:</label>
-                    <input type="text" name="fullname" class="form-control <?php echo (!empty($fullname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $fullname; ?>" id="name" placeholder="Enter full name">
-                    <span class="invalid-feedback"><?php echo $fullname_err; ?></span>
+                    <input type="text" class="form-control" id="name" placeholder="Enter full name" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="position">Company Position:</label>
-                    <input type="text" name="companypos" class="form-control <?php echo (!empty($companypos_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $companypos; ?>" id="position" placeholder="Enter company position">
-                    <span class="invalid-feedback"><?php echo $companypos_err; ?></span>
+                    <input type="text" class="form-control" id="position" placeholder="Enter company position" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="mobile">Mobile Number:</label>
-                    <input type="tel" name="mobilenum" class="form-control <?php echo (!empty($mobilenum_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $mobilenum; ?>" id="mobile" placeholder="Enter mobile number">
-                    <span class="invalid-feedback"><?php echo $mobilenum_err; ?></span>
+                    <input type="tel" class="form-control" id="mobile" placeholder="Enter mobile number" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="email">Email Address:</label>
-                    <input type="email" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" id="email" placeholder="Enter email address">
-                    <span class="invalid-feedback"><?php echo $email_err; ?></span>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email address" required>
+                  </div>
+                </div>
+                
+                
+            
+                    
+                <div class="col-md-12">
+                  <h4>Requirement</h4>
+                  <div id="dynamicRowsContainer">
+                    <div class="row" id="initialRow">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="position">Position</label>
+                          <select class="form-select" required>
+                            <option value="">Pick a position</option>
+                            <option value="pos1">Manager</option>
+                            <option value="pos2">Officer</option>
+                            <option value="pos3">IT support</option>
+                            <option value="pos4">Engineer</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label for="Count">Count</label>
+                          <input type="number" class="form-control" placeholder="Enter count" min="0" required>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="position">Location</label>
+                          <select class="form-select" required>
+                            <option value="">Pick a Location</option>
+                            <option value="pos1">Manila</option>
+                            <option value="pos2">Cebu</option>
+                            <option value="pos3">Bohol</option>
+                          </select>    
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <button class="btn btn-primary1" onclick="addRow()">ADD</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-
-                  <div class="col-md-12">
-
-                      <h4>Requirement</h4>
-
-                      <div id="dynamicRowsContainer">
-                        <!-- The initial row of code -->
-                        <div class="row">
-                          <div class="col-md-4">
-                            <div class="form-group">
-                              <label for="position"></label>
-                              <select class="form-select <?php echo (!empty($position_err)) ? 'is-invalid' : ''; ?>" name="position" aria-label="Default select example" id="field">
-                                <option value="">Pick a position</option>
-                                <option value="pos1">Manager</option>
-                                <option value="pos2">Officer</option>
-                                <option value="pos3">IT support</option>
-                                <option value="pos4">Engineer</option><?php echo $position_err; ?></span>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-3">
-                            <div class="form-group">
-                              <label for="Count"></label>
-                              <input type="number" name="count" class="form-control <?php echo (!empty($count_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $count; ?>" id="managerCount" placeholder="Enter count" min="0">
-                              <span class="invalid-feedback"><?php echo $count_err; ?></span>
-                            </div>
-                          </div>
-                          <div class="col-md-5">
-                            <div class="form-group">
-                              <label for="position"></label>
-                              <select class="form-select <?php echo (!empty($location_err)) ? 'is-invalid' : ''; ?>" name="location" aria-label="Default select example" id="field">
-                                <option value="">Pick a Location</option>
-                                <option value="pos1">Manila</option>
-                                <option value="pos2">Cebu</option>
-                                <option value="pos3">Bohol</option><?php echo $location_err; ?></span>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-3">
-                            <div class="form-group">
-                              <label for="remarks"></label>
-                              <input type="text" name="remarks" class="form-control <?php echo (!empty($remarks_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $remarks; ?>" id="remarks" placeholder="Enter remarks">
-                              <span class="invalid-feedback"><?php echo $remarks_err; ?></span>
-                            </div>
-                          </div>
-                          <div class="col-md-1">
-                            <div class="add-button" onclick="addRow()">+</div>
-                          </div>
-                          <div class="col-md-12">
-                            <button class="btn btn-primary1" onclick="addRow()" id="submitButton">Add</button>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-
+                <div class="col-md-12">
+                  <h4>Remarks</h4>
+                 
+ 
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -566,7 +554,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
           <div class="social-links  col-lg-2 col-md-6 footer-links ">
             <h4>Social Media</h4>
-            <a href="https://www.facebook.com/teamglobalfacilitysolutions" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.facebook.com/teamglobalfacilitysolutions" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>      
             <a href="https://www.linkedin.com/company/team-global-facility-solutions-inc-/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
           </div>
 
@@ -606,31 +594,92 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    // Function to add a new row
-    function addRow() {
-      var row = document.querySelector('#dynamicRowsContainer .row');
-      var newRow = row.cloneNode(true);
+    var rowCounter = 0; // Counter for dynamically added rows
 
-      // Change the button in the new row to a "Delete" button
-      var addButton = newRow.querySelector('.btn-primary1');
-      addButton.innerText = '-';
-      addButton.classList.remove('btn-primary1');
-      addButton.classList.add('delete-button');
-      addButton.onclick = function() {
-        deleteRow(this);
-      };
+function addRow() {
+  // Create a new row
+  var newRow = document.createElement('div');
+  newRow.className = 'row';
 
-      // Append the new row after the current row
-      document.getElementById('dynamicRowsContainer').appendChild(newRow);
-    }
+  // Add the HTML content for the new row
+  newRow.innerHTML = `
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="position"></label>
+        <select class="form-select" required>
+          <option value="">Pick a position</option>
+          <option value="pos1">Manager</option>
+          <option value="pos2">Officer</option>
+          <option value="pos3">IT support</option>
+          <option value="pos4">Engineer</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="Count"></label>
+        <input type="number" class="form-control" placeholder="Enter count" min="0" required>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="position"></label>
+        <select class="form-select" required>
+          <option value="">Pick a Location</option>
+          <option value="pos1">Manila</option>
+          <option value="pos2">Cebu</option>
+          <option value="pos3">Bohol</option>
+        </select>    
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="form-group">
+        <button class="btn btn-danger" onclick="removeRow(this)">Remove</button>
+      </div>
+    </div>
+  `;
 
-    // Function to delete a row
-    function deleteRow(button) {
-      var row = button.parentNode.parentNode;
-      row.parentNode.removeChild(row);
-    }
-  </script>
+  // Get the container
+  var container = document.getElementById('dynamicRowsContainer');
 
+  // Insert the new row above the "Add" button
+  var addButtonRow = container.lastElementChild;
+  container.insertBefore(newRow, addButtonRow);
+
+  // Increment the row counter
+  rowCounter++;
+
+  // Update the IDs of the elements in the new row to ensure uniqueness
+  updateElementIds(newRow);
+}
+
+function removeRow(button) {
+  // Get the row to be removed
+  var row = button.closest('.row');
+
+  // Remove the row from the container
+  row.parentNode.removeChild(row);
+}
+
+function updateElementIds(row) {
+  // Get all select elements within the row
+  var selects = row.getElementsByTagName('select');
+  // Get all input elements within the row
+  var inputs = row.getElementsByTagName('input');
+
+  // Update the IDs of select elements
+  for (var i = 0; i < selects.length; i++) {
+    var select = selects[i];
+    select.id += '_' + rowCounter; // Append the row counter to the ID
+  }
+
+  // Update the IDs of input elements
+  for (var j = 0; j < inputs.length; j++) {
+    var input = inputs[j];
+    input.id += '_' + rowCounter; // Append the row counter to the ID
+  }
+}
+</script>
 
 </body>
 
