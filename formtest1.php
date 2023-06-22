@@ -429,6 +429,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <h4>Client Info</h4>
                   <div class="col-md-6">
                   <div class="form-group">
+                  <label for="companyName">Company Name:</label>
                     <input type="text" name="companyname" class="form-control <?php echo (!empty($companyname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $companyname; ?>" id="companyName" placeholder="Enter company name">
                     <span class="invalid-feedback"><?php echo $companyname_err; ?></span>
                   </div>
