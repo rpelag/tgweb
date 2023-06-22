@@ -69,9 +69,9 @@
         <ol>
           <li><a href="jobseekeruser.php">Home</a></li>
           <li><a href="engineeringsupport.php">Engineering Support</a></li>
-          <li>Technical Maintenance Personnel</li>
+          <li>Technical Maintenance Supervisor</li>
         </ol>
-        <h2>Technical Maintenance Personnel</h2>
+        <h2>Technical Maintenance Supervisor</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
@@ -91,7 +91,7 @@
               </div>
 
               <h2 class="entry-title">
-                <a>Technical Maintenance Personnel</a>
+                <a>Technical Maintenance Supervisor</a>
               </h2>
 
               <div class="entry-meta">
@@ -120,19 +120,23 @@
                           </p>
                           <div class="col-lg-12 ">
                             <ul>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Graduate of Technical Vocational or Industrial Technology course</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must have at least two years’ experience in the operation and maintenance of electro-mechanical equipment for buildings/properties.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Graduate of Technical Vocational or Engineering/Industrial Technology courses, preferably TESDA graduates or from schools that are TESDA accredited</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must have a three years experience as a technical maintenance supervisor in a building/property maintenance setup</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be computer literate</li></h3>
                               <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Customer-oriented</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Results-oriented</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must possess leadership skills</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be hardworking, resourceful, and innovative</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Can work with minimal supervision</li></h3>
                               <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be of good moral character, honest and has no criminal record</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must possess good communication skills</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Aged 18-40 years old</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must possess good communication skills and must have a good command of the English language</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must have passed the Building Administrator’s interview</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Aged 25-40 years old</li></h3>
                               <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be physically fit and have passed medical examinations</li></h3>
                               <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be neat-looking, presentable and without evident tattoos</li></h3>
                             </ul>
                           </div>
 
-                       
-                        
 
                         </div>
                       </div>

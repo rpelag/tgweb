@@ -89,7 +89,7 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="shiftengineer.php">Shift Enginner/Supervisor</a>
+                <a href="shiftengineer.php">Technical Maintenance Personnel</a>
               </h2>
 
               <div class="entry-meta">
@@ -119,14 +119,12 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">Nisi magni odit consequatur autem nulla dolorem</a>
+                <a href="blog-single.html">Technical Maintenance Supervisor</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Description</a></li>
                 </ul>
               </div>
 
@@ -136,7 +134,7 @@
                   Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.
                 </p>
                 <div class="read-more">
-                  <a href="#">Read More</a>
+                  <a href="maitenancesupervisor.php">Read More</a>
                 </div>
               </div>
 
