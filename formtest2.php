@@ -765,12 +765,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                               </div>
                             </div>
                             </div>
-
-
-
-
-
-
                 <div class="col-md-22">
                   <h4>Remarks</h4>
                   <div class="form-group">
