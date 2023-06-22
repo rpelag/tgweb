@@ -519,10 +519,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="col-md-12">
                   <h5>Remarks</h5>
                   <div class="form-group">
-              <textarea name="body" class="form-control form-control-body" id="exampleFormControlTextarea1" placeholder="Message"></textarea>
+              <textarea name="remarks" class="form-control form-control-body <?php echo (!empty($remarks_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $remarks; ?>" id="exampleFormControlTextarea1" placeholder="Message"></textarea>
+              <span class="invalid-feedback"><?php echo $remarks_err; ?></span>
             </div>
-                 
- 
+
+
               </div>
 
               </div>

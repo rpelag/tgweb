@@ -3,8 +3,8 @@
 require_once "config.php";
 
 // Define variables and initialize with empty values
-$companyname = $fullname = $mobilenum = $companyadd = $companypos = $email = $position = $count = $location =  $remarks = "";
-$companyname_err = $fullname_err = $mobilenum_err = $companyadd_err = $companypos_err = $email_err = $position_err = $count_err = $location_err =  $remarks_err = "";
+$companyname = $fullname = $mobilenum = $companyadd = $companypos = $email = $position = $count = $location = $position1 = $count1 = $location1 = $position2 = $count2 = $location2 =  $remarks = "";
+$companyname_err = $fullname_err = $mobilenum_err = $companyadd_err = $companypos_err = $email_err = $position_err = $count_err = $location_err = $position1_err = $count1_err = $location1_err  = $position2_err = $count2_err = $location2_err = $remarks_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -173,7 +173,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 /* store result */
                 mysqli_stmt_store_result($stmt);
 
-                if (mysqli_stmt_num_rows($stmt) == 1) {
+                if (mysqli_stmt_num_rows($stmt) == 2) {
                     $email_err = "This email already exists.";
                 } else {
                     $email = trim($_POST["email"]);
@@ -274,6 +274,180 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    // Validate position1
+    if (empty(trim($_POST["position1"]))) {
+        $position1_err = "Please select a Position";
+    } else {
+        // Prepare a select statement
+        $sql = "SELECT id FROM clients WHERE position1 = ?";
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_position1);
+
+            // Set parameters
+            $param_position1 = trim($_POST["position1"]);
+
+            // Attempt to execute the prepared statement
+            if (mysqli_stmt_execute($stmt)) {
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                $position1 = trim($_POST["position1"]);
+                // }
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+
+    // Validate count1
+    if (empty(trim($_POST["count1"]))) {
+        $count1_err = "Please add Count";
+    } else {
+        // Prepare a select statement
+        $sql = "SELECT id FROM clients WHERE count1 = ?";
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_count1);
+
+            // Set parameters
+            $param_count1 = trim($_POST["count1"]);
+
+            // Attempt to execute the prepared statement
+            if (mysqli_stmt_execute($stmt)) {
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                $count1 = trim($_POST["count1"]);
+                // }
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+
+    // Validate location1
+    if (empty(trim($_POST["location1"]))) {
+        $location1_err = "Please select Location";
+    } else {
+        // Prepare a select statement
+        $sql = "SELECT id FROM clients WHERE location1 = ?";
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_location1);
+
+            // Set parameters
+            $param_location1 = trim($_POST["location1"]);
+
+            // Attempt to execute the prepared statement
+            if (mysqli_stmt_execute($stmt)) {
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                $location1 = trim($_POST["location1"]);
+                // }
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+
+    // Validate position2
+    if (empty(trim($_POST["position2"]))) {
+        $position2_err = "Please select a Position";
+    } else {
+        // Prepare a select statement
+        $sql = "SELECT id FROM clients WHERE position2 = ?";
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_position2);
+
+            // Set parameters
+            $param_position2 = trim($_POST["position2"]);
+
+            // Attempt to execute the prepared statement
+            if (mysqli_stmt_execute($stmt)) {
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                $position2 = trim($_POST["position2"]);
+                // }
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+
+    // Validate count2
+    if (empty(trim($_POST["count2"]))) {
+        $count2_err = "Please add Count";
+    } else {
+        // Prepare a select statement
+        $sql = "SELECT id FROM clients WHERE count2 = ?";
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_count2);
+
+            // Set parameters
+            $param_count2 = trim($_POST["count2"]);
+
+            // Attempt to execute the prepared statement
+            if (mysqli_stmt_execute($stmt)) {
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                $count2 = trim($_POST["count2"]);
+                // }
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+
+    // Validate location2
+    if (empty(trim($_POST["location2"]))) {
+        $location2_err = "Please select Location";
+    } else {
+        // Prepare a select statement
+        $sql = "SELECT id FROM clients WHERE location2 = ?";
+
+        if ($stmt = mysqli_prepare($link, $sql)) {
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_location2);
+
+            // Set parameters
+            $param_location2 = trim($_POST["location2"]);
+
+            // Attempt to execute the prepared statement
+            if (mysqli_stmt_execute($stmt)) {
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                $location2 = trim($_POST["location2"]);
+                // }
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+
     // Validate remarks
     if (empty(trim($_POST["remarks"]))) {
         $remarks_err = "Please add Remarks, Leave as N/A if none.";
@@ -306,14 +480,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check input errors before inserting in database
 
-    if (empty($companyname_err) && empty($fullname_err) && empty($mobilenum_err) && empty($companyadd_err) && empty($email_err) && empty($position_err) && empty($count_err) && empty($location_err) && empty($remarks_err)) {
+    if (empty($companyname_err) && empty($fullname_err) && empty($mobilenum_err) && empty($companyadd_err) && empty($email_err) && empty($position_err) && empty($count_err) && empty($location_err) && empty($position1_err) && empty($count1_err) && empty($location1_err) && empty($position2_err) && empty($count2_err) && empty($location2_err) && empty($remarks_err)) {
 
         // Prepare an insert statement
-        $sql = "INSERT INTO clients (companyname, fullname, mobilenum, companyadd, companypos, email, position, count, location, remarks) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO clients (companyname, fullname, mobilenum, companyadd, companypos, email, position, count, location,  position1, count1, location1, position2, count2, location2, remarks) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ssssssssss", $param_companyname, $param_fullname, $param_mobilenum, $param_companyadd, $param_companypos, $param_email, $param_position, $param_count, $param_location, $param_remarks);
+            mysqli_stmt_bind_param($stmt, "ssssssssssssssss", $param_companyname, $param_fullname, $param_mobilenum, $param_companyadd, $param_companypos, $param_email, $param_position, $param_count, $param_location,  $param_position1, $param_count1, $param_location1,  $param_position2, $param_count2, $param_location2, $param_remarks);
 
             // Set parameters
             $param_companyname = $companyname;
@@ -325,6 +499,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_position = $position;
             $param_count = $count;
             $param_location = $location;
+            $param_position1 = $position1;
+            $param_count1 = $count1;
+            $param_location1 = $location1;
+            $param_position2 = $position2;
+            $param_count2 = $count2;
+            $param_location2 = $location2;
             $param_remarks = $remarks;
 
             // Attempt to execute the prepared statement
@@ -350,7 +530,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=2.0" name="viewport">
 
   <title>Team Global Facility Solutions Inc.</title>
   <meta content="" name="description">
@@ -377,7 +557,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link href="assets/css/form.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: Presento - v3.10.0
+  * Template Name: Presento - v3.20.0
   * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
@@ -418,8 +598,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
-        <div class="container1" data-aos="zoom-out" data-aos-delay="100">
-          <h1>Request for quote Form</h1>
+        <div class="container2" data-aos="zoom-out" data-aos-delay="200">
+          <h2>Request for quote Form</h2>
           <div class="section-title2" data-aos="zoom-out">
             <div class="orange-line"></div>
           </div>
@@ -475,32 +655,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="col-md-4">
                               <div class="form-group">
                                 <label for="position"></label>
-                                <select class="form-select" id="field" required>
+                                <label for="position">Position</label>
+                                <select class="form-select <?php echo (!empty($position_err)) ? 'is-invalid' : ''; ?>" name="position" aria-label="Default select example" id="field">
                                   <option value="">Pick a position</option>
-                                  <option value="pos1">Manager</option>
-                                  <option value="pos2">Officer</option>
-                                  <option value="pos3">IT support</option>
-                                  <option value="pos4">Engineer</option>
+                                  <option value="Manager">Manager</option>
+                                  <option value="Officer">Officer</option>
+                                  <option value="IT Support">IT support</option>
+                                  <option value="Engineer">Engineer</option>
                                 </select>
-                              
+                                <span class="invalid-feedback"><?php echo $position_err; ?></span>
+
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="Count"></label>
-                                <input type="number" class="form-control" id="managerCount" placeholder="Enter count" min="0" required>
+                                <label for="Count">Count</label>
+                                <input type="number" name="count" class="form-control <?php echo (!empty($count_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $count; ?>" id="managerCount" placeholder="Enter count" min="0">
+                                <span class="invalid-feedback"><?php echo $count_err; ?></span>
                             </div>
-                            
+
                             </div>
                             <div class="col-md-5">
                               <div class="form-group">
-                                <label for="position"></label>
-                                <select class="form-select" id="field" required>
+                                <label for="position">Location</label>
+                                <select class="form-select <?php echo (!empty($location_err)) ? 'is-invalid' : ''; ?>" name="location" aria-label="Default select example" id="field">
                                   <option value="">Pick a Location</option>
-                                  <option value="pos1">Manila</option>
-                                  <option value="pos2">Cebu</option>
-                                  <option value="pos3">Bohol</option>
-                                </select>    
+                                  <option value="Manila">Manila</option>
+                                  <option value="Cebu">Cebu</option>
+                                  <option value="Bohol">Bohol</option>
+                                </select>
+                                <span class="invalid-feedback"><?php echo $location_err; ?></span>
                               </div>
                             </div>
                             </div>
@@ -509,32 +693,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="col-md-4">
                               <div class="form-group">
                                 <label for="position"></label>
-                                <select class="form-select" id="field" required>
+                                <label for="position">Position</label>
+                                <select class="form-select <?php echo (!empty($position1_err)) ? 'is-invalid' : ''; ?>" name="position1" aria-label="Default select example" id="field">
                                   <option value="">Pick a position</option>
-                                  <option value="pos1">Manager</option>
-                                  <option value="pos2">Officer</option>
-                                  <option value="pos3">IT support</option>
-                                  <option value="pos4">Engineer</option>
+                                  <option value="Manager">Manager</option>
+                                  <option value="Officer">Officer</option>
+                                  <option value="IT Support">IT support</option>
+                                  <option value="Engineer">Engineer</option>
                                 </select>
-                              
+                                  <span class="invalid-feedback"><?php echo $position1_err; ?></span>
+
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="Count"></label>
-                                <input type="number" class="form-control" id="managerCount" placeholder="Enter count" min="0" required>
+                                <label for="Count">Count</label>
+                                <input type="number" name="count1" class="form-control <?php echo (!empty($count1_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $count1; ?>" id="managerCount" placeholder="Enter count" min="0">
+                                <span class="invalid-feedback"><?php echo $count1_err; ?></span>
                             </div>
-                            
+
                             </div>
                             <div class="col-md-5">
                               <div class="form-group">
                                 <label for="position"></label>
-                                <select class="form-select" id="field" required>
+                                <label for="position">Location</label>
+                                <select class="form-select <?php echo (!empty($location1_err)) ? 'is-invalid' : ''; ?>" name="location1" aria-label="Default select example" id="field">
                                   <option value="">Pick a Location</option>
-                                  <option value="pos1">Manila</option>
-                                  <option value="pos2">Cebu</option>
-                                  <option value="pos3">Bohol</option>
-                                </select>    
+                                  <option value="Manila">Manila</option>
+                                  <option value="Cebu">Cebu</option>
+                                  <option value="Bohol">Bohol</option>
+                                </select>
+                                <span class="invalid-feedback"><?php echo $location1_err; ?></span>
                               </div>
                             </div>
                             </div>
@@ -542,33 +731,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="row">
                             <div class="col-md-4">
                               <div class="form-group">
-                                <label for="position"></label>
-                                <select class="form-select" id="field" required>
+                                <label for="position">Position</label>
+                                <select class="form-select <?php echo (!empty($position2_err)) ? 'is-invalid' : ''; ?>" name="position2" aria-label="Default select example" id="field">
                                   <option value="">Pick a position</option>
-                                  <option value="pos1">Manager</option>
-                                  <option value="pos2">Officer</option>
-                                  <option value="pos3">IT support</option>
-                                  <option value="pos4">Engineer</option>
+                                  <option value="Manager">Manager</option>
+                                  <option value="Officer">Officer</option>
+                                  <option value="IT Support">IT support</option>
+                                  <option value="Engineer">Engineer</option>
                                 </select>
-                              
+                                <span class="invalid-feedback"><?php echo $position2_err; ?></span>
+
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="Count"></label>
-                                <input type="number" class="form-control" id="managerCount" placeholder="Enter count" min="0" required>
+                                <label for="Count">Count</label>
+                                <input type="number" name="count2" class="form-control <?php echo (!empty($count2_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $count2; ?>" id="managerCount" placeholder="Enter count" min="0">
+                                <span class="invalid-feedback"><?php echo $count2_err; ?></span>
                             </div>
-                            
+
                             </div>
                             <div class="col-md-5">
                               <div class="form-group">
                                 <label for="position"></label>
-                                <select class="form-select" id="field" required>
+                                <label for="position">Location</label>
+                                <select class="form-select <?php echo (!empty($location2_err)) ? 'is-invalid' : ''; ?>" name="location2" aria-label="Default select example" id="field">
                                   <option value="">Pick a Location</option>
-                                  <option value="pos1">Manila</option>
-                                  <option value="pos2">Cebu</option>
-                                  <option value="pos3">Bohol</option>
-                                </select>    
+                                  <option value="Manila">Manila</option>
+                                  <option value="Cebu">Cebu</option>
+                                  <option value="Bohol">Bohol</option>
+                                </select>
+                                <span class="invalid-feedback"><?php echo $location2_err; ?></span>
                               </div>
                             </div>
                             </div>
@@ -577,13 +770,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-                <div class="col-md-12">
+
+                <div class="col-md-22">
                   <h4>Remarks</h4>
                   <div class="form-group">
-              <textarea name="body" class="form-control form-control-body" id="exampleFormControlTextarea1" placeholder="Message"></textarea>
+                    <textarea name="remarks" class="form-control form-control-body <?php echo (!empty($remarks_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $remarks; ?>" id="exampleFormControlTextarea2" placeholder="Message"></textarea>
+                    <span class="invalid-feedback"><?php echo $remarks_err; ?></span>
             </div>
-                 
- 
+
+
               </div>
 
               </div>
@@ -608,7 +803,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               Suite 406, 4th floor VGP Center <br>
               6772 Ayala Ave. <br>
               Makati City <br><br>
-              <strong>Phone:</strong> 02.817.0706/+63 917.8043211<br>
+              <strong>Phone:</strong> 02.827.0706/+63 927.8043222<br>
               <strong>Email:</strong> info@teamglobal.com.ph<br>
             </p>
           </div>
