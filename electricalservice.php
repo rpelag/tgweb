@@ -43,20 +43,21 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
+      <!-- <h1 class="logo me-auto"><a href="index.php">Presento<span>.</span></a></h1>-->
+      <!-- Uncomment below if you prefer to use an image logo -->
       <a href="jobseekeruser.php" class="logo me-auto"><img src="assets/img/TGFSi_LOGO.jpg" alt=""  ></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="jobseekeruser.php">Home</a></li>
+          <li><a class="nav-link scrollto active" href="jobseekeruser.php">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
 
-      <a href="logout.php" class="get-started-btn scrollto">Sign Out</a>
+      </nav><!-- .navbar -->
+
+      <a href="logout.php" class="get-started-btn scrollto">Sign out</a>
     </div>
   </header>
-
   <!-- End Header -->
 
   <main id="main">
@@ -67,14 +68,15 @@
 
         <ol>
           <li><a href="jobseekeruser.php">Home</a></li>
-          <li>Engineering Service</li>
+          <li><a href="engineeringsupport.php">Engineering Support</a></li>
+          <li>Electrical Services</li>
         </ol>
-        <h2>Job Vacancies</h2>
+        <h2>Electrical Services</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Blog Section ======= -->
+    <!-- ======= Blog Single Section ======= -->
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
 
@@ -82,135 +84,82 @@
 
           <div class="col-lg-10 offset-md-1 entries">
 
-            <article class="entry">
+            <article class="entry entry-single">
 
               <div class="entry-img">
                 <img src="assets/img/tg3.jpg" alt="" class="img-fluid">
               </div>
 
               <h2 class="entry-title">
-                <a href="shiftengineer.php">Technical Maintenance Personnel</a>
+                <a>Electrical Services</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="shiftengineer.php">Description</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>Electrical Services</li>
                   <!-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li> -->
-                  <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li> -->
+
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team,
-                  perform preventative maintenance, take orders, keep records, and control inventory.
+                  Specialised knowledge and skills and is primarily responsible for the installation, maintenance and repair of
+                   systems, machines and equipment while following the relevant safety measures.
                 </p>
-                <div class="read-more">
-                  <a href="shiftengineer.php">Read more</a>
+
+              </div>
+
+                <div class="entry-content">
+                <section id="tabs" class="tabs">
+                  <div class="container" data-aos="fade-up">
+                      <div class="tab-pane" id="tab-2">
+                        <div class="row">
+                          <p class="fst-italic">
+                            <b><h3>DUTIES AND RESPONSIBILITIES</h3></b>
+                          </p>
+                          <div class="col-lg-12 ">
+                            <ul>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Provide prompt maintenance Services including supervision for all electrical facilities of the Company.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Handle and monitor the operation of all electrical facilities and air-conditioning units</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Repair and maintenance of all lighting facilities, convenience outlets, switches and similar devices including but not limited to generator sets, power fuse, circuit breakers, UPS and other electrical appliances and equipment.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Implement preventive / corrective / predictive maintenance program on all electrical equipment and air-conditioning units.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Monitor/ assist third party contractors in the repair and implementation of preventive maintenance works for air-conditioning units, fire protection system, CCTV and access control, UPS and PACU. Coordinate with Company’s Facilities Management staff any findings / recommendation of third party contractors.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Provide technical assistance in the quarterly inspection and preventive maintenance of laboratory generator sets.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Submit a monthly accomplishment report on the electrical maintenance services provided, including a summary of overtime rendered and recommendations to attain safe operations of the Company’s (Head Office and Laboratory) electrical facilities</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Contractor shall provide the tools necessary in the performance of the maintenance program.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Schedule daily activities of duty electrical technicians and monitor accomplishments.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Monitoring of electrical technicians daily time records and overtime. Contractors Electrical Engineer should submit summary of number of tardiness, absenteeism and overtime hours consumed monthly.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Monitoring and testing of major Generator sets for laboratory and 	Submit proposed work program for succeeding week for approval of Company’s Agreement Officer.</li></h3>
+                            </ul>
+                          </div>
+
+
+                        </div>
+                      </div>
+                  </div>
+                </section>
+                <div class="d-flex justify-content-between read-more">
+                  <a href="engineeringsupport.php">BACK</a>
+                  <a href="mailto:engineeringHR@teamglobal.com.ph	?subject=Application for Shift Engineer">APPLY</a>
+
                 </div>
+              </div>
+
+
               </div>
 
             </article><!-- End blog entry -->
 
-            <article class="entry">
 
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-              </div>
 
-              <h2 class="entry-title">
-                <a href="maintenancesupervisor.php">Technical Maintenance Supervisor</a>
-              </h2>
 
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="maintenancesupervisor.php">Description</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team,
-                  perform preventative maintenance, take orders, keep records, and control inventory.
-                </p>
-                <div class="read-more">
-                  <a href="maintenancesupervisor.php">Read More</a>
-                </div>
-              </div>
-
-            </article><!-- End blog entry -->
-
-            <article class="entry">
-
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="leadsupervisor.php">Lead Technician</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="leadsupervisor.php">Description</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team,
-                  perform preventative maintenance, take orders, keep records, and control inventory.
-                </p>
-                <div class="read-more">
-                  <a href="leadsupervisor.php">Read More</a>
-                </div>
-              </div>
-
-            </article><!-- End blog entry -->
-
-            <article class="entry">
-
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="electricalservice.php">Electrical Services</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="electricalservice.php">Description</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team,
-                  perform preventative maintenance, take orders, keep records, and control inventory.
-                </p>
-                <div class="read-more">
-                  <a href="electricalservice.php">Read More</a>
-                </div>
-              </div>
-
-            </article><!-- End blog entry -->
-
-            <div class="blog-pagination">
-              <ul class="justify-content-center">
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>
-
-          </div><!-- End blog entries list -->
 
 
         </div>
 
       </div>
-    </section><!-- End Blog Section -->
+    </section><!-- End Blog Single Section -->
 
   </main><!-- End #main -->
 
@@ -246,7 +195,6 @@
               <li><i class="bx bx-chevron-right"></i> <a href="officesupport.php">Office Support </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="engineeringsupport.php">Engineering Support</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="itsupport.php">I.T. Support</a></li>
-            
             </ul>
           </div>
 

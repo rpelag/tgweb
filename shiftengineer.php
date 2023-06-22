@@ -150,11 +150,6 @@
 
             </article><!-- End blog entry -->
 
-
-
-
-
-
         </div>
 
       </div>
