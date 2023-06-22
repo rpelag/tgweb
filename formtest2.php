@@ -576,7 +576,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-            
 
                 <div class="col-md-12">
                   <h4>Remarks</h4>
