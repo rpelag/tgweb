@@ -516,6 +516,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   </div>
                 </div>
 
+                <div class="col-md-12">
+                  <h4>Remarks</h4>
+                  <div class="form-group">
+              <textarea name="body" class="form-control form-control-body" id="exampleFormControlTextarea1" placeholder="Message"></textarea>
+            </div>
+                 
+ 
+              </div>
+
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
           </form>
