@@ -2173,11 +2173,18 @@ section {
   color: #ff6600;
 }
 
- /* ul{
-  list-style-image: url(../img/logobullet.png);
-  font-size: 10px;
-} */
+.btn-primary1 {
+  background-color: #ff6600;
+  color: white;
+  width: 40%;
+  padding: 12px 24px; /* Adjust padding values to make the button larger */
+  font-size: 18px; /* Adjust font size to make the button larger */
+}
 
+.btn-primary1:hover {
+  background-color: #db5800;
+
+}
 
 
 
