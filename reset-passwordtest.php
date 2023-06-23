@@ -88,7 +88,7 @@ if (isset($_POST["email"]) && isset($_POST["action"]) && ($_POST["action"] == "u
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/login.css" rel="stylesheet">
+  <link href="assets/css/forgotpass.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Presento - v3.10.0
