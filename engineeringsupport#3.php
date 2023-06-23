@@ -89,14 +89,24 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="maintenancepersonel.php">Technical Maintenance Personnel</a>
+                <a href="shiftengineer.php">Technical Maintenance Personnel</a>
               </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="shiftengineer.php">Description</a></li>
+                  <!-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li> -->
+                  <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li> -->
+                </ul>
+              </div>
+
               <div class="entry-content">
                 <p>
-                Technical maintenance personnel are skilled professionals responsible for the upkeep, repair, and optimization of technical systems and equipment. They possess a strong understanding of various technologies and are proficient in troubleshooting and resolving technical issues. Their role involves conducting routine inspections, performing repairs, and ensuring the efficient operation of systems to minimize downtime and maintain functionality.
+                  Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team,
+                  perform preventative maintenance, take orders, keep records, and control inventory.
                 </p>
                 <div class="read-more">
-                  <a href="maintenancepersonel.php">Read more</a>
+                  <a href="shiftengineer.php">Read more</a>
                 </div>
               </div>
 
@@ -111,9 +121,17 @@
               <h2 class="entry-title">
                 <a href="maintenancesupervisor.php">Technical Maintenance Supervisor</a>
               </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="maintenancesupervisor.php">Description</a></li>
+                </ul>
+              </div>
+
               <div class="entry-content">
                 <p>
-                A Technical Maintenance Supervisor is a leadership role responsible for overseeing a team of technical maintenance personnel. They coordinate and prioritize maintenance tasks, assign resources, and ensure compliance with safety and quality standards. Additionally, they provide guidance, training, and support to their team, while also monitoring performance and implementing improvement initiatives to enhance overall maintenance operations.
+                Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team,
+                  perform preventative maintenance, take orders, keep records, and control inventory.
                 </p>
                 <div class="read-more">
                   <a href="maintenancesupervisor.php">Read More</a>
@@ -129,14 +147,22 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="leadtechnician.php">Lead Technician</a>
+                <a href="leadsupervisor.php">Lead Technician</a>
               </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="leadsupervisor.php">Description</a></li>
+                </ul>
+              </div>
+
               <div class="entry-content">
                 <p>
-                A Lead Technician is a senior-level position that involves supervising and guiding a team of technicians in a technical field. They possess expert knowledge and skills in their area of specialization and are responsible for coordinating and prioritizing tasks, assigning responsibilities, and ensuring timely completion of projects. Lead Technicians also provide technical guidance, troubleshoot complex issues, and serve as a point of contact for both team members and clients.
+                Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team,
+                  perform preventative maintenance, take orders, keep records, and control inventory.
                 </p>
                 <div class="read-more">
-                  <a href="leadtechnician.php">Read More</a>
+                  <a href="leadsupervisor.php">Read More</a>
                 </div>
               </div>
 
@@ -151,9 +177,17 @@
               <h2 class="entry-title">
                 <a href="electricalservice.php">Electrical Services</a>
               </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="electricalservice.php">Description</a></li>
+                </ul>
+              </div>
+
               <div class="entry-content">
                 <p>
-                Electrical services encompass a range of tasks related to electrical systems. They include installation, maintenance, and repair of electrical wiring, fixtures, and equipment. Electrical services ensure the safe and efficient functioning of electrical systems in residential, commercial, and industrial settings, and may also involve troubleshooting electrical issues and providing electrical upgrades or modifications.
+                Conducts maintenance operations and ensures a company's engineering policies are upheld. They supervise a team,
+                  perform preventative maintenance, take orders, keep records, and control inventory.
                 </p>
                 <div class="read-more">
                   <a href="electricalservice.php">Read More</a>
@@ -162,31 +196,11 @@
 
             </article><!-- End blog entry -->
 
-              <article class="entry">
-
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="technicalmaintenance.php">Technical Maintenance</a>
-              </h2>
-              <div class="entry-content">
-                <p>
-                Technical maintenance involves the regular inspection, upkeep, and repair of technical systems and equipment to ensure their optimal performance and longevity. It includes preventive maintenance tasks such as routine inspections, lubrication, cleaning, and calibration to prevent breakdowns and minimize downtime. Technical maintenance also involves troubleshooting and resolving issues promptly to minimize disruptions and maintain the functionality and reliability of systems.
-                </p>
-                <div class="read-more">
-                  <a href="technicalmaintenance.php">Read More</a>
-                </div>
-              </div>
-
-              </article><!-- End blog entry -->
-
             <div class="blog-pagination">
               <ul class="justify-content-center">
-                <li class="active"><a href="">1</a></li>
+               <li><a href="engineeringsupport.php">1</a></li>
                 <li><a href="engineeringsupport#2.php">2</a></li>
-                <li><a href="engineeringsupport#3.php">3</a></li>
+                <li class="active"><a href="">3</a></li>
               </ul>
             </div>
 

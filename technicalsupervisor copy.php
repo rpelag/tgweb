@@ -69,9 +69,9 @@
         <ol>
           <li><a href="jobseekeruser.php">Home</a></li>
           <li><a href="engineeringsupport.php">Engineering Support</a></li>
-          <li>Lead Supervisor</li>
+          <li>Technical Supervisor</li>
         </ol>
-        <h2>Lead Supervisor</h2>
+        <h2>Technical Supervisor</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
@@ -91,21 +91,18 @@
               </div>
 
               <h2 class="entry-title">
-                <a>Lead Supervisor</a>
+                <a>Technical Supervisor</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>Lead Supervisor</li>
-                  <!-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li> -->
-
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>Technical Supervisor</li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Specialised knowledge and skills and is primarily responsible for the installation, maintenance and repair of
-                   systems, machines and equipment while following the relevant safety measures.
+                A Technical Supervisor is responsible for overseeing and managing technical operations within a department or organization. They supervise a team of technical professionals, assign tasks, and ensure efficient and effective execution of projects. Additionally, they provide technical guidance, mentorship, and support to team members, while also monitoring progress, coordinating resources, and ensuring compliance with quality and safety standards.
                 </p>
 
               </div>
@@ -120,18 +117,11 @@
                           </p>
                           <div class="col-lg-12 ">
                             <ul>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Prepares the schedule for technician duty per cut-off at site.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Supervises the operation and maintenance of all electro-mechanical equipment at the building.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Maintain a good working relationship with subordinates at site.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Record and report hazards inside the building (fire hazards, obstructed aisles etc.) and facilitate solution to the hazard.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Maintain fire suppression system and equipment and regularly coordinate with the Building Admin to ensure that fire alarm systems located within the Company’s Facilities are integrated with the main system in the building. Secure site after intrusion or other event.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Follow published Company emergency procedures.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Maintain daily activity log of all facility equipment and related activities.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Regularly coordinate with building management for all concerns related to building services to ensure proper operations and maintenance scheduling of HVAC equipment for the purpose of energy efficiency, environmental control of conditioned spaces and air quality. </li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Ensure the building temperature is set correctly at 23 degrees Celsius.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Maintain regular meetings with building management to ensure building shut-downs are properly scheduled and will not disrupt Company operations.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Assist in the conduct of fire and earthquake drill.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Assist and monitor third party vendor in the implementation of works.</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Directly reports to the Property Manager or Engineering Manager/ Property Engineer of the managed property</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i> Prepares Overall Technical Maintenance Plan (52 week calendar for all the listed equipment of the property)</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Submits Monthly Technical Maintenance Accomplishment Report to the Property Manager or Engineering Manager/ Property Engineer</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Attends Daily Coordination Meeting and must conduct Daily Mounting with their technical maintenance for proper coordination of the work for each shift</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Undergo SPDG training and shall, at all times, be capable of conducting the training to his/ her technical maintenance personnel</li></h3>                   
                             </ul>
                           </div>
 
@@ -207,15 +197,6 @@
             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
             <a href="https://www.linkedin.com/company/team-global-facility-solutions-inc-/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
           </div>
-
-          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Description</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div> -->
-
         </div>
       </div>
     </div>

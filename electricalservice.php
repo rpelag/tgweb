@@ -104,8 +104,7 @@
 
               <div class="entry-content">
                 <p>
-                  Specialised knowledge and skills and is primarily responsible for the installation, maintenance and repair of
-                   systems, machines and equipment while following the relevant safety measures.
+                Electrical services encompass a range of tasks related to electrical systems. They include installation, maintenance, and repair of electrical wiring, fixtures, and equipment. Electrical services ensure the safe and efficient functioning of electrical systems in residential, commercial, and industrial settings, and may also involve troubleshooting electrical issues and providing electrical upgrades or modifications.
                 </p>
 
               </div>
@@ -133,8 +132,6 @@
                               <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Monitoring and testing of major Generator sets for laboratory and submit proposed work program for succeeding week for approval of Company’s Agreement Officer.</li></h3>
                             </ul>
                           </div>
-
-
                         </div>
                       </div>
                   </div>
@@ -150,12 +147,6 @@
               </div>
 
             </article><!-- End blog entry -->
-
-
-
-
-
-
         </div>
 
       </div>

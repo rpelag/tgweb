@@ -69,9 +69,9 @@
         <ol>
           <li><a href="jobseekeruser.php">Home</a></li>
           <li><a href="engineeringsupport.php">Engineering Support</a></li>
-          <li>Technical Maintenance Personnel</li>
+          <li>Technical Supervisor</li>
         </ol>
-        <h2>Technical Maintenance Personnel</h2>
+        <h2>Technical Supervisor</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
@@ -91,21 +91,18 @@
               </div>
 
               <h2 class="entry-title">
-                <a>Technical Maintenance Personnel</a>
+                <a>Technical Supervisor</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>Technical Support</li>
-                  <!-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li> -->
-
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i>Technical Supervisor</li>
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Specialised knowledge and skills and is primarily responsible for the installation, maintenance and repair of
-                   systems, machines and equipment while following the relevant safety measures.
+                A Technical Supervisor is responsible for overseeing and managing technical operations within a department or organization. They supervise a team of technical professionals, assign tasks, and ensure efficient and effective execution of projects. Additionally, they provide technical guidance, mentorship, and support to team members, while also monitoring progress, coordinating resources, and ensuring compliance with quality and safety standards.
                 </p>
 
               </div>
@@ -116,23 +113,18 @@
                       <div class="tab-pane" id="tab-2">
                         <div class="row">
                           <p class="fst-italic">
-                            <b><h3>QUALIFICATIONS</h3></b>
+                            <b><h3>DUTIES AND RESPONSIBILITIES</h3></b>
                           </p>
                           <div class="col-lg-12 ">
                             <ul>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Graduate of Technical Vocational or Industrial Technology course</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must have at least two years’ experience in the operation and maintenance of electro-mechanical equipment for buildings/properties.</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Customer-oriented</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be of good moral character, honest and has no criminal record</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must possess good communication skills</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Aged 18-40 years old</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be physically fit and have passed medical examinations</li></h3>
-                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Must be neat-looking, presentable and without evident tattoos</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Directly reports to the Property Manager or Engineering Manager/ Property Engineer of the managed property</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i> Prepares Overall Technical Maintenance Plan (52 week calendar for all the listed equipment of the property)</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Submits Monthly Technical Maintenance Accomplishment Report to the Property Manager or Engineering Manager/ Property Engineer</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Attends Daily Coordination Meeting and must conduct Daily Mounting with their technical maintenance for proper coordination of the work for each shift</li></h3>
+                              <h3><li><i class="ri-checkbox-blank-circle-fill"></i>Undergo SPDG training and shall, at all times, be capable of conducting the training to his/ her technical maintenance personnel</li></h3>                   
                             </ul>
                           </div>
 
-                       
-                        
 
                         </div>
                       </div>
@@ -149,6 +141,11 @@
               </div>
 
             </article><!-- End blog entry -->
+
+
+
+
+
 
         </div>
 
@@ -200,15 +197,6 @@
             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
             <a href="https://www.linkedin.com/company/team-global-facility-solutions-inc-/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
           </div>
-
-          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Description</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div> -->
-
         </div>
       </div>
     </div>

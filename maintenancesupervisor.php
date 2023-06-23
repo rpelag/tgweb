@@ -97,15 +97,13 @@
               <div class="entry-meta">
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i>Technical Support</li>
-                  <!-- <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li> -->
 
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  Specialised knowledge and skills and is primarily responsible for the installation, maintenance and repair of
-                   systems, machines and equipment while following the relevant safety measures.
+                A Technical Maintenance Supervisor is a leadership role responsible for overseeing a team of technical maintenance personnel. They coordinate and prioritize maintenance tasks, assign resources, and ensure compliance with safety and quality standards. Additionally, they provide guidance, training, and support to their team, while also monitoring performance and implementing improvement initiatives to enhance overall maintenance operations.
                 </p>
 
               </div>
@@ -209,15 +207,6 @@
             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
             <a href="https://www.linkedin.com/company/team-global-facility-solutions-inc-/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
           </div>
-
-          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Description</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div> -->
-
         </div>
       </div>
     </div>
